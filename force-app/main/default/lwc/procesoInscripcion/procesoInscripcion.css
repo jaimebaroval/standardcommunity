@@ -1,0 +1,439 @@
+.margin-elements {
+    margin-bottom: 70px;
+}
+
+.proceso-info-form {
+    height: fit-content;
+    transition: all .2s ease-in;
+}
+
+.height-none-proceso {
+    height: 0px;
+    transition: all .4s ease-in;
+}
+
+.datos-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.datos-input div[role="alert"] {
+    position: absolute;
+    top: 50px;
+}
+
+/* DATOS PERSONALES */
+
+.datos-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    min-width: 1440px;
+}
+
+.datos-label {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--mon-primary-color);
+}
+
+.datos-subtitle {
+    color: var(--mon-secondary-color);
+    font-weight: bold;
+    font-size: 23px;
+    margin: 20px 0;
+    border-bottom: 2px solid #12b9d47a;
+    width: fit-content;
+}
+
+.required-color {
+    color: red;
+}
+
+.discapacidad-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.discapacidad-texto {
+    width: 80%;
+    color: var(--content-inscripcion-text);
+}
+
+.datos-academicos {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.anim-section-form {
+    transform: scaleY(1);
+}
+
+.height-none {
+    -webkit-animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: .5s;
+}
+
+/* DATOS ACADÉMICOS */
+
+.proceso-info-form-academicos {
+    transition: all .2s ease-in;
+    height: fit-content;
+}
+
+.anim-section-form-academicos {
+    transform: scaleY(1);
+}
+
+.title-datos-academicos {
+    display: flex;
+}
+
+.datos-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    min-width: 1440px;
+}
+
+.datos-container-row {
+    align-items: normal;
+}
+
+.respuesta-container {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+.datos-label {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--mon-primary-color);
+}
+
+.datos-title {
+    color: var(--mon-primary-color);
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 0 20px 0;
+    width: fit-content;
+}
+
+.datos-subtitle {
+    color: var(--mon-secondary-color);
+    font-weight: bold;
+    font-size: 23px;
+    margin: 29px 0;
+    border-bottom: 2px solid #12b9d47a;
+    width: fit-content;
+}
+
+.required-color {
+    color: red;
+}
+
+.discapacidad-container {
+    display: flex;
+    width: 100%;
+}
+
+.check-container {
+    display: flex;
+    width: 100%;
+    margin-left: -47px;
+    margin-top: 5px;
+}
+
+.respuesta-texto {
+    margin: 0 23px 0 18px;
+    color: var(--content-inscripcion-text);
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.respuesta-texto-full-row {
+    margin: 0 10px;
+}
+
+.checkbox-margin {
+    margin-top: 10px;
+}
+
+/* DATOS DE FACTURACIÓN */
+
+.proceso-info-form-facturacion {
+    transition: all .2s ease-in;
+    height: fit-content;
+}
+
+.anim-section-form-facturacion {
+    transform: scaleY(0);
+}
+
+/* DOCUMENTACIÓN */
+
+.button-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.margin-top-elements {
+    margin-top: 150px;
+}
+
+
+/* Form Notifications */ 
+
+.save-alert-success {
+    position: fixed;
+    top: 20px;
+    width: 1440px;
+    margin: auto;
+    background-color: green;
+    padding: 10px 50px;
+    z-index: 200;
+    display: none;
+}
+
+.save-alert-success-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.save-alert-error {
+    position: fixed;
+    top: 20px;
+    width: 1440px;
+    margin: auto;
+    background-color: red;
+    padding: 10px 50px;
+    z-index: 200;
+    display: none;
+}
+
+.save-alert-title {
+    color: white;
+    font-size: 25px;
+}
+
+.save-alert-text {
+    color: white;
+    font-size: 18px;
+}
+
+/* ANIMATION */
+
+.scale-out-ver-top-anim {
+    -webkit-animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.slide-out-top-anim {
+    -webkit-animation: slide-out-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: slide-out-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.slide-in-top-anim {
+    -webkit-animation: slide-in-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: slide-in-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.slide-out-bottom-anim {
+    -webkit-animation: slide-out-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: slide-out-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.slide-out-top-section {
+    -webkit-animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: .2s;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-11-13 16:32:14
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-out-ver-top
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes scale-out-ver-top {
+    0% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes scale-out-ver-top {
+    0% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-11-13 16:45:21
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-out-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-out-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-out-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-out-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slide-out-top-section {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out-top-section {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+}

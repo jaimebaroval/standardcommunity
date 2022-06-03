@@ -1,0 +1,185 @@
+/* AZULES */
+
+:root {
+
+    --COLORS: ..................................................................................;
+    --primary-color: #024c72;
+    --light-primary: #2a8b9b7a;
+    --transparent-primary: #024c72cf;
+    --secondary-color: #7cd2d5;
+    --light-secondary: #07D7F9;
+    --light-grey-color: #CFCFD0;
+    --darkgrey-color: #666666;
+    --soft-black: #222428;
+    --validate-color: #10DC60;
+    --pending-color: #F39800;
+    --reject-color: #BE053D;
+
+    --background-site-color: whitesmoke;
+    --background-content-color: white;
+    --footer-color: #333333;
+
+    --NAVBAR: ..................................................................................;
+    --navbar-margin-left: 20px;
+    --navbar-items-space: 40px;
+    --navbar-items-font-size: 18px;
+    --navbar-items-font-weight: 400;
+
+    --HERO: ..................................................................................;
+    --hero-height: 650px;
+    --hero-overlay-opacity: .7;
+    --hero-overlay-color: rgb(0 178 255 / 30%) 100%;
+    --hero-subtitle-width: 40%;
+    --hero-text-animation: slide-in-bottom;
+    --hero-button-animation: slide-in-bottom;
+
+    --MARGIN-PADDING: ..................................................................................;
+    --sections: 60px;
+    --title-to-content: 25px;
+    --content-to-title: 15px;
+    --section-to-footer: 0px;
+    --section-left: 77px;
+
+    --BORDER-RADIUS: ...............................................................................;
+    --box-border-radius: 20px;
+
+    --FONTS: ..................................................................................;
+    --button-font-size: 20px;
+    --pancarta-title-font-size: 18px;
+
+    --ICONS: ..................................................................................;
+    --icon-size: 50px;
+    --icon-border-radius: 5px;
+
+    --LOGIN: ..................................................................................;
+    --login-overlay: #024c72;
+    --login-container: #024d7284;
+    --login-trasition: #024d7284;
+    --login-box-shadow: -4px -20px 114px -4px rgb(0 -4 -5 / 39%);
+
+    --OBJECT-SECTIONS: ..........................................................................;
+    --hero-object-section-animation: slide-in-bottom;
+
+
+    --RECORD-LIST: ...............................................................................;
+    --recList-border-radius: 20px;
+    --recList-padding-height: 10px;
+    --recList-padding-width: 30px;
+    --recList-margin-top: -40px;
+    --recList-webkit-box-shadow: -4px -20px 28px -4px rgb(126 126 126 / 10%);
+    --recList-moz-box-shadow: -4px -20px 28px -4px rgb(126 126 126 / 10%);
+    --recList-box-shadow: -4px -20px 28px -4px rgb(126 126 126 / 10%);
+
+    --RECORD-DETAIL: ......................................................................................................................................;
+    --recDetail-padding: 30px;
+    --recDetail-title-font-size: 16px;
+    --recDetail-title-margin: 10px;
+    --recDetail-title-font-weight: 400;
+    --recDetail-margin-bottom: 30px;
+}
+
+/* ROJOS 
+
+:root {
+    --COLORS: ..................................................................................;
+    --primary-color: #e20000;
+    --light-primary: #2a8b9b7a;
+    --secondary-color: var(--reject-color);
+    --light-secondary: #07D7F9;
+    --light-grey-color: #CFCFD0;
+    --darkgrey-color: #666666;
+    --soft-black: #222428;
+    --validate-color: #10DC60;
+    --pending-color: #F39800;
+    --reject-color: #BE053D;
+    --background-site-color: #ffefef;
+    --background-content-color: #ffe2e2;
+    --footer-color: #333333;
+    --NAVBAR: ..................................................................................;
+    --navbar-margin-left: 20px;
+    --navbar-items-space: 40px;
+    --navbar-items-font-size: 15px;
+    --navbar-items-font-weight: 400;
+    --HERO: ..................................................................................;
+    --hero-overlay-opacity: .7;
+    --hero-overlay-color: rgb(122 0 0 / 79%) 100%;
+    --hero-subtitle-width: 57%;
+    --MARGIN-PADDING: ..................................................................................;
+    --sections: 60px;
+    --title-to-content: 25px;
+    --content-to-title: 15px;
+    --section-to-footer: 100px;
+    --section-left: 77px;
+    --FONTS: ..................................................................................;
+    --button-font-size: 20px;
+    --pancarta-title-font-size: 18px;
+    --ICONS: ..................................................................................;
+    --icon-size: 50px;
+    --icon-border-radius: 5px;
+    --RECORD-LIST: ..................................................................................;
+    --recList-border-radius: 20px;
+    --recList-padding-height: 10px;
+    --recList-padding-width: 30px;
+    --recList-margin-top: -70px;
+    --recList-webkit-box-shadow: -4px -20px 28px -4px rgb(126 126 126 / 10%);
+    --recList-moz-box-shadow: -4px -20px 28px -4px rgb(126 126 126 / 10%);
+    --recList-box-shadow: -4px -20px 28px -4px rgb(126 126 126 / 10%);
+    --RECORD-DETAIL: ......................................................................................................................................;
+    --recDetail-padding: 30px;
+    --recDetail-title-font-size: 16px;
+    --recDetail-title-margin: 10px;
+    --recDetail-title-font-weight: 400;
+}
+
+/* MORADOS 
+
+:root {
+    --COLORS: ..................................................................................;
+    --primary-color: #6635bd;
+    --light-primary: #722a9b7a;
+    --secondary-color: #e0e0ff;
+    --light-secondary: #b907f9;
+    --light-grey-color: #CFCFD0;
+    --darkgrey-color: #666666;
+    --soft-black: #222428;
+    --validate-color: #10DC60;
+    --pending-color: #F39800;
+    --reject-color: #BE053D;
+    --background-site-color: whitesmoke;
+    --background-content-color: white;
+    --footer-color: #333333;
+    --NAVBAR: ..................................................................................;
+    --navbar-margin-left: 20px;
+    --navbar-items-space: 40px;
+    --navbar-items-font-size: 15px;
+    --navbar-items-font-weight: 400;
+    --HERO: ..................................................................................;
+    --hero-overlay-opacity: 1;
+    --hero-overlay-color: rgb(255 0 218 / 47%) 100%;
+    --hero-subtitle-width: 57%;
+    --MARGIN-PADDING: ..................................................................................;
+    --sections: 60px;
+    --title-to-content: 25px;
+    --content-to-title: 15px;
+    --section-to-footer: 150px;
+    --section-left: 77px;
+    --FONTS: ..................................................................................;
+    --button-font-size: 20px;
+    --pancarta-title-font-size: 18px;
+    --ICONS: ..................................................................................;
+    --icon-size: 50px;
+    --icon-border-radius: 5px;
+    --RECORD-LIST: ..................................................................................;
+    --recList-border-radius: 20px;
+    --recList-padding-height: 10px;
+    --recList-padding-width: 30px;
+    --recList-margin-top: -70px;
+    --recList-webkit-box-shadow: -4px -20px 28px -4px rgb(126 126 126 / 10%);
+    --recList-moz-box-shadow: -4px -20px 28px -4px rgb(126 126 126 / 10%);
+    --recList-box-shadow: -4px -20px 28px -4px rgb(126 126 126 / 10%);
+    --RECORD-DETAIL: ......................................................................................................................................;
+    --recDetail-padding: 30px;
+    --recDetail-title-font-size: 16px;
+    --recDetail-title-margin: 10px;
+    --recDetail-title-font-weight: 400;
+}

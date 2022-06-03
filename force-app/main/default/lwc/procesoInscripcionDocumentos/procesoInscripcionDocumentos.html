@@ -1,0 +1,37 @@
+<template>
+    <div class="proceso-header margin-elements-first">
+        <div class="slds-grid slds-gutters" style="align-items: center;">
+            <div class="slds-col slds-size_7-of-12">
+                <c-master-title icon="master-title" title="Master en ciencias gastrónomicas"></c-master-title>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                <c-inscripcion-step num="1" title="Inscripción" state="active"></c-inscripcion-step>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                <c-inscripcion-step num="2" title="Pruebas" state="inactive"></c-inscripcion-step>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                <c-inscripcion-step num="3" title="Preadmisión" state="inactive"></c-inscripcion-step>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                <c-inscripcion-step num="4" title="Selección" state="inactive"></c-inscripcion-step>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                <c-inscripcion-step num="5" title="Admisión" state="inactive"></c-inscripcion-step>
+            </div>
+        </div>
+    </div>
+    <div class="proceso-info margin-elements">
+        <c-info-inscripcion title="Adjunta los documentos necesarios"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id sagittis neque, gravida iaculis leo. Duis dictum sagittis augue, id sagittis massa dapibus sit amet. Aenean feugiat nisl in enim mattis eleifend.">
+        </c-info-inscripcion>
+    </div>
+    <div class="proceso-step margin-elements">
+        <c-inscripcion-progress></c-inscripcion-progress>
+    </div>
+    <div class="proceso-info-form margin-elements">
+        <c-mon-title-icon title="Documentación Inscripción"></c-mon-title-icon>
+    </div>
+    <!-- Tabla de documentos -->
+    <c-tabla-documentacion></c-tabla-documentacion>
+</template>

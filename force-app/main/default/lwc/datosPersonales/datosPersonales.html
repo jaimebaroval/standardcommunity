@@ -1,0 +1,133 @@
+<template>
+
+    <!-- Datos Generales -->
+    
+    <!-- <template if:true={state}> -->
+        <div class="slds-form anim-section-form">
+            <div class="datos-subtitle anim">{state}</div>
+            <div class="slds-form-element datos-container">
+                <div class="slds-grid slds-gutters slds-wrap slds-size_full">
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Tipo de
+                                documento <span class="required-color">*</span></label>
+                            <lightning-combobox name="progress" value={value} placeholder="Master en ciencias gastronómicas"
+                                options={options} onchange={handleChange} class="mon-select-list-proceso anim">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Número de
+                                documento <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-04" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Nombre <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-01" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Primer apellido <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-03" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Segundo apellido <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-05" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Sexo <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-06" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Fecha de nacimiento <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-07" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Pais de nacimiento <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-08" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>            
+                </div>
+            </div>
+            <div class="datos-subtitle anim">Dirección y Contacto</div>
+            <div class="slds-form-element datos-container">
+                <div class="slds-grid slds-gutters slds-wrap slds-size_full">
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Pais <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-09" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Dirección <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-10" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Provincia <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-11" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Código postal <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-12" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Sexo <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-13" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Teléfono estudiante <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-14" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Otro teléfono </label>
+                            <input type="text" id="form-element-15" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>            
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Email <span class="required-color">*</span></label>
+                            <input type="text" id="form-element-16" class="slds-input mon-select-list-proceso anim" />
+                        </div>
+                    </div>            
+                </div>
+            </div>
+            <div class="datos-subtitle anim">Otros Datos</div>
+            <div class="slds-form-element datos-container">
+                <div class="slds-grid slds-gutters slds-wrap slds-size_full">
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim" for="form-element-01">Discapacidad <span class="required-color">*</span></label>
+                            <div class="discapacidad-container anim">
+                                <lightning-input type="checkbox-button" value="discapacidad"></lightning-input>
+                                <span class="discapacidad-texto">Haz clic en la casilla si tu grado de discapacidad es igual o superior al 33%.</span>
+                            </div>
+                        </div>
+                    </div>           
+                </div>
+            </div>
+        </div>
+    <!-- </template> -->
+</template>

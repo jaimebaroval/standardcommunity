@@ -1,0 +1,41 @@
+body {
+    border: 0;
+}
+
+.hero-pr {
+    background: url("/sfsites/c/resource/clubresources/clubresources/images/mondragon.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mon-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.mon-title-h3 {
+    font-size: 30px;
+    color: var(--mon-primary-color);
+    border-bottom: 2px solid #2a8b9b73;
+}
+
+.mon-title-icon {
+    background-color: var(--mon-primary-color);
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.mon-title-icon img {
+    height: 35px;
+}

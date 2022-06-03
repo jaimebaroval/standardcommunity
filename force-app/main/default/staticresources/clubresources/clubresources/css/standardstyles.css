@@ -1,0 +1,689 @@
+/* 
+********************************
+//MARK: GENERAL 
+********************************
+*/
+
+body {
+    background-color: var(--background-site-color);
+}
+
+/* 
+********************************
+//MARK: Hero
+********************************
+*/
+
+.hero {
+    z-index: -1;
+    border-bottom: 2px solid var(--secondary-color);
+    min-height: var(--hero-height);
+}
+
+.bgOverlay.comm-is-absolute {
+    background: linear-gradient(180deg, rgb(0 0 0 / 35%) 0%, var(--hero-overlay-color)) !important;
+    opacity: var(--hero-overlay-opacity);
+}
+
+
+/* Hero Button */
+
+.forceCommunityThemeHeroStarter .ctaBtnOne {
+    background: var(--primary-color);
+    font-size: var(--button-font-size);
+    -webkit-animation: var(--hero-button-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: var(--hero-button-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: .5s;
+}
+
+/* 
+********************************
+//MARK: Navbar 
+********************************
+*/
+
+.logoImage {
+    width: 210px !important;
+    height: 80px !important;
+    margin-top: -8px;
+}
+
+.forceCommunityThemeNav.navMenuType-expanded .mainNavItem .linkBtn.comm-navigation__top-level-item-link--active {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+li.mainNavItem.comm-navigation__top-level-item.comm-navigation__menu-item {
+    padding-left: var(--navbar-items-space);
+    font-size: var(--navbar-items-font-size);
+    font-weight: var(--navbar-items-font-weight);
+}
+
+.forceCommunityThemeHeaderCompact .themeNav {
+    margin-left: var(--navbar-margin-left);
+}
+
+/* 
+********************************
+//MARK: Home 
+********************************
+*/
+
+.calendar.forceCommunityCalendar {
+    border-radius: var(--recList-border-radius);
+    -webkit-animation: slide-in-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: .2s;
+}
+
+.calendarHome .slds-page-header {
+    padding: 25px !important;
+}
+
+/* 
+********************************
+//MARK: Containers
+********************************
+*/
+
+/* Contenedor Componente */
+
+.forceCommunityObjectHome {
+    margin-bottom: var(--section-to-footer);
+}
+
+/* Contenedor Datos de Componente */
+
+.slds-table--header-fixed_container {
+    border-bottom-left-radius: var(--recList-border-radius);
+    border-bottom-right-radius: var(--recList-border-radius);
+}
+
+.siteforceContentArea .comm-layout-column:not(:empty) {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* 
+********************************
+//MARK: Icons 
+********************************
+*/
+
+.highlights-icon-container.slds-avatar.slds-m-right_small.icon {
+    background: linear-gradient(230deg, var(--light-secondary), var(--primary-color), var(--light-secondary));
+    background-size: 600% 600%;
+
+    -webkit-animation: gradient-effect 1.5s ease-in infinite;
+    -moz-animation: gradient-effect 1.5s ease-in infinite;
+    animation: gradient-effect 1.5s ease-in infinite;
+
+    animation-iteration-count: 1.4, infinite;
+}
+
+.highlights-icon-container.slds-avatar.slds-m-right_small.icon {
+    height: var(--icon-size);
+    width: var(--icon-size);
+    border-radius: var(--icon-border-radius);
+}
+
+.large.roundedSquare.slds-m-right_medium.forceEntityIcon {
+    background-color: var(--primary-color) !important;
+}
+
+/* Icon Calendar */
+
+.slds-icon-standard-event {
+    background: linear-gradient(230deg, var(--light-secondary), var(--primary-color), var(--light-secondary));
+    background-size: 600% 600%;
+
+    -webkit-animation: gradient-effect 1.5s ease-in infinite;
+    -moz-animation: gradient-effect 1.5s ease-in infinite;
+    animation: gradient-effect 1.5s ease-in infinite;
+
+    animation-iteration-count: 1.4, infinite;
+}
+
+.slds-icon-standard-event .slds-icon {
+    height: var(--icon-size);
+    width: var(--icon-size);
+}
+
+/* Icon Record Detail */
+
+.slds-media__figure.slds-icon.forceEntityIcon {
+    height: var(--icon-size);
+    width: var(--icon-size);
+}
+
+.slds-media__figure.slds-icon.forceEntityIcon {
+    background: linear-gradient(230deg, var(--light-secondary), var(--primary-color), var(--light-secondary));
+    background-size: 600% 600%;
+
+    -webkit-animation: gradient-effect 1.5s ease-in infinite;
+    -moz-animation: gradient-effect 1.5s ease-in infinite;
+    animation: gradient-effect 1.5s ease-in infinite;
+
+    animation-iteration-count: 1.4, infinite;
+    border-radius: var(--icon-border-radius);
+}
+
+.small.roundedSquare.forceEntityIcon {
+    background: linear-gradient(230deg, var(--light-secondary), var(--primary-color), var(--light-secondary));
+    background-size: 600% 600%;
+
+    -webkit-animation: gradient-effect 1.5s ease-in infinite;
+    -moz-animation: gradient-effect 1.5s ease-in infinite;
+    animation: gradient-effect 1.5s ease-in infinite;
+
+    animation-iteration-count: 1.4, infinite;
+    height: 50px;
+    width: 50px;
+
+}
+
+/* .small.roundedSquare.forceEntityIcon.span.uiImage img {
+
+    -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+} */
+
+.small.roundedSquare.forceEntityIcon img {
+    width: 50px !important;
+    height: 50px !important;
+    max-width: unset;
+}
+
+/* 
+********************************
+//MARK: Buttons 
+********************************
+*/
+
+button.slds-button.slds-button--brand {
+    background: var(--primary-color);
+}
+
+/* 
+********************************
+//MARK: Login 
+********************************
+*/
+
+.salesforceIdentityCommunityLogo2 .communityLogo {
+    max-width: 100%;
+    width: 70% !important;
+}
+
+.salesforceIdentityCommunityLogo2.communityLogoContainer {
+    text-align: left !important;
+}
+
+.salesforceIdentityLoginBody2 .ui-widget {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.login-overlay {
+    height: 100vh;
+    width: 100vw;
+    background: var(--login-overlay);
+    opacity: .8;
+    animation: opacity-anim 16s infinite ease-in-out;
+}
+
+.comm-page-login-home .mon-footer-container {
+    display: none;
+}
+
+.comm-page-login-home .slds-col--padded.contentRegion.comm-layout-column {
+    background: var(--login-container);
+    padding: 20px 50px;
+    border-radius: var(--box-border-radius);
+    animation: change-color 16s infinite ease-in-out;
+    box-shadow: var(--login-box-shadow);
+    border: 1px solid #18696c42;
+}
+
+.salesforceIdentityLoginForm2 .inputContainer {
+    display: flex;
+    align-items: center;
+}
+
+.comm-page-login-home button.slds-button.slds-button--brand {
+    background: var(--secondary-color);
+}
+
+/* 
+********************************
+//MARK: OBJECTS 
+********************************
+*/
+
+
+/* //MARK: Calendar 
+*/
+
+.calendar.forceCommunityCalendar {
+    -webkit-box-shadow: var(--recList-webkit-box-shadow);
+    -moz-box-shadow: var(--recList-moz-box-shadow);
+    box-shadow: var(--recList-box-shadow);
+    margin-bottom: 30px;
+}
+
+.forceCalendar .calendar {
+    top: 104px !important;
+}
+
+.forceCalendar>.calendarSidebar {
+    top: 104px !important;
+}
+
+.forceCalendar .slds-page-header {
+    background: #254c74b8;
+}
+
+div#calendarSidebar {
+    background-color: white;
+}
+
+.slds-grid.slds-grid_vertical.slds-scrollable_none.forceCalendarDayWeekView {
+    background-color: white;
+}
+
+.forceCalendar {
+    background-color: unset !important;
+}
+
+.forceCalendar .slds-media__body {
+    color: white;
+}
+
+.forceCalendar svg.slds-icon {
+    fill: white !important;
+}
+
+/* 
+********************************
+//MARK: COMPONENTS
+********************************
+*/
+
+/* //MARK: Record List 
+*/
+
+.test-listViewManager {
+    padding: var(--recList-padding-height) var(--recList-padding-width);
+    border-radius: var(--recList-border-radius);
+    z-index: 9999;
+    margin-top: var(--recList-margin-top) !important;
+    -webkit-box-shadow: var(--recList-webkit-box-shadow);
+    -moz-box-shadow: var(--recList-moz-box-shadow);
+    box-shadow: var(--recList-box-shadow);
+}
+
+.contentRegion {
+    padding: 0;
+    margin: 0;
+    /* background-color: white; */
+}
+
+.slds-col--padded.contentRegion.comm-layout-column {
+    padding: 0;
+}
+
+.test-listViewManager.slds-card.slds-card_boundary.slds-grid.slds-grid--vertical.forceListViewManager.forceCommunityRecordListDesktop.forceCommunityObjectHome {
+    background: linear-gradient(0deg, var(--background-site-color), var(--background-content-color));
+    -webkit-animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: .1s;
+}
+
+table.slds-table.forceRecordLayout.slds-table--header-fixed.slds-table--edit.slds-table--bordered.resizable-cols.slds-table--resizable-cols.uiVirtualDataTable {
+    background: var(--background-content-color);
+}
+
+.uiScroller.scroller-wrapper.scroll-bidirectional.native {
+    background: var(--background-content-color);
+}
+
+/* //MARK: Record Detail 
+*/
+
+/* Margin bottom card contenido detail */
+.forceDetailPanelDesktop.slds-card {
+    margin-bottom: var(--recDetail-margin-bottom) !important;
+}
+
+ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
+    background: transparent;
+}
+
+.slds-clearfix.slds-card.groupDependentFieldEnabled.forceDetailPanelDesktop.inlineEditEnabled {
+    background: linear-gradient(0deg, var(--background-site-color), var(--background-content-color));
+    -webkit-animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0.5s;
+}
+
+/* .siteforceSldsOneColLayout.siteforceContentArea {
+    margin-top: calc(var(--recList-margin-top) - 60px);
+} */
+
+.slds-page-header.slds-page-header_record-home {
+    background: var(--background-content-color) !important;
+    padding: var(--recDetail-padding) !important;
+    height: unset !important;
+    border-radius: var(--recList-border-radius) !important;
+    -webkit-animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.groupDependentFieldEnabled {
+    border-radius: var(--recList-border-radius);
+}
+
+.test-id__field-label-container.slds-form-element__label {
+    font-size: var(--recDetail-title-font-size);
+    margin: var(--recDetail-title-margin) 0 !important;
+    font-weight: var(--recDetail-title-font-weight);
+    color: var(--primary-color);
+}
+
+.slds-form-element.slds-form-element_readonly.slds-grow.slds-hint-parent.override--slds-form-element {
+    border-bottom: 1px solid var(--secondary-color) !important;
+}
+
+span.slds-form-element__label.slds-truncate {
+    font-size: var(--pancarta-title-font-size);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Account Detail */
+
+a[title="View Website"] {
+    display: none !important;
+}
+
+
+/* 
+********************************
+//MARK: ANIMATION
+********************************
+*/
+
+.slide-in-bottom-anim {
+    -webkit-animation: slide-in-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-out-bottom-anim {
+    -webkit-animation: slide-out-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-out-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.delay01 {
+    animation-delay: .1s;
+}
+
+.delay02 {
+    animation-delay: .2s;
+}
+
+.delay03 {
+    animation-delay: .3s;
+}
+
+.delay04 {
+    animation-delay: .4s;
+}
+
+.delay05 {
+    animation-delay: .5s;
+}
+
+.delay06 {
+    animation-delay: .6s;
+}
+
+.delay07 {
+    animation-delay: .7s;
+}
+
+.delay08 {
+    animation-delay: .8s;
+}
+
+.delay09 {
+    animation-delay: .9s;
+}
+
+
+@-webkit-keyframes gradient-effect {
+    0% {
+        background-position: 54% 0%
+    }
+
+    50% {
+        background-position: 47% 100%
+    }
+
+    100% {
+        background-position: 54% 0%;
+    }
+}
+
+@-moz-keyframes gradient-effect {
+    0% {
+        background-position: 54% 0%
+    }
+
+    50% {
+        background-position: 47% 100%
+    }
+
+    100% {
+        background-position: 54% 0%;
+    }
+}
+
+@keyframes gradient-effect {
+    0% {
+        background-position: 54% 0%
+    }
+
+    50% {
+        background-position: 47% 100%
+    }
+
+    100% {
+        background-position: 54% 0%;
+    }
+}
+
+@-webkit-keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-out-bottom {
+    0% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out-bottom {
+    0% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(.3);
+        transform: scale(.3);
+        opacity: 1;
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(.3);
+        transform: scale(.3);
+        opacity: 1;
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+/* //MARK: opac
+*/
+
+@-webkit-keyframes opacity-anim {
+    0% {
+        opacity: .9;
+    }
+
+    20% {
+        opacity: .8;
+    }
+
+    40% {
+        opacity: .77;
+    }
+
+    50% {
+        opacity: .65;
+    }
+
+    100% {
+        opacity: .9;
+    }
+}
+
+@keyframes opacity-anim {
+    0% {
+        opacity: .9;
+    }
+
+    20% {
+        opacity: .8;
+    }
+
+    40% {
+        opacity: .77;
+    }
+
+    50% {
+        opacity: .65;
+    }
+
+    100% {
+        opacity: .9;
+    }
+}
+
+@keyframes change-color {
+    0% {
+        background-color: var(--login-container);
+    }
+
+    50% {
+        background-color: var(--login-trasition);
+    }
+
+    100% {
+        background-color: var(--login-container);
+    }
+
+}

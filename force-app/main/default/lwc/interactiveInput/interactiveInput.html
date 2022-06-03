@@ -1,0 +1,17 @@
+<template>
+<span class="texto-rojo">TEXTO ROJO</span>
+    <lightning-combobox name="documento" data-name="documento" value="" label="Documento"
+    placeholder="Tipo Documento" options={identificacion} onchange={handleChangeInput}
+    class="upsa-input" required>
+    </lightning-combobox>
+    <div class="validation-container">
+        <div class="check-container">
+            <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                style="width:22px" class="jello-horizontal-anim" />
+        </div>
+        <div class="error-container">
+            <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                style="width:22px" class="shake-horizontal-anim" />
+        </div>
+    </div>
+</template>

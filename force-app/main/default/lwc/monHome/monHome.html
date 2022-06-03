@@ -1,0 +1,47 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_6-of-12">
+            <c-mon-title-icon icon="admision" title="Selecciona el proceso"></c-mon-title-icon>
+            <p class="mon-text-simple">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet
+                elementum urna. Suspendisse sagittis laoreet dapibus.</p>
+            <lightning-combobox name="progress" value={value} placeholder="Master en ciencias gastronómicas"
+                options={options} onchange={handleChange} class="mon-select-list-proceso"></lightning-combobox>
+        </div>
+        <div class="slds-col slds-size_6-of-12">
+            <c-mon-title-icon icon="pending" title="Documentación"></c-mon-title-icon>
+            <ul class="mon-documents">
+                <li class="mon-documents-row">Documentación General <img class="mon-document-row-icon"
+                        src="/sfsites/c/resource/clubresources/clubresources/images/arrow-icon.png" alt="go"></li>
+                <li class="mon-documents-row">Documentación Admisión <img class="mon-document-row-icon"
+                        src="/sfsites/c/resource/clubresources/clubresources/images/arrow-icon.png" alt="go"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_12-of-12">
+            <c-mon-title-icon icon="gearlines" title="Proceso de inscripción"></c-mon-title-icon>
+        </div>
+    </div>
+    <div class="mon-step-icons-container slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-5">
+            <c-mon-step-icons state="primary" icon="inscripcion" title="INSCRIPCIÓN" num="1"
+                text="Rellena el formulario con tus datos personales"></c-mon-step-icons>
+        </div>
+        <div class="slds-col slds-size_1-of-5">
+            <c-mon-step-icons state="secondary" icon="admision-2" title="PRUEBAS ESPECÍFICAS" num="2"
+                text="Consulta el resultado de las pruebas de específicas"></c-mon-step-icons>
+        </div>
+        <div class="slds-col slds-size_1-of-5">
+            <c-mon-step-icons state="light-grey" icon="pruebas" title="PREADMISIÓN" num="3"
+                text="Consulta el estado de tu admisión"></c-mon-step-icons>
+        </div>
+        <div class="slds-col slds-size_1-of-5">
+            <c-mon-step-icons state="light-grey" icon="seleccion" title="SELECCIÓN" num="4" text="Fase de selección">
+            </c-mon-step-icons>
+        </div>
+        <div class="slds-col slds-size_1-of-5">
+            <c-mon-step-icons state="light-grey" icon="admision-2" title="ADMISIÓN" num="5"
+                text="Datos sobre tu admisión"></c-mon-step-icons>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,32 @@
+<template>
+    <!-- <c-oa-slider></c-oa-slider> -->
+    <div class="slds-grid slds-gutters_xx-small">
+        <div class="slds-col slds-size_1-of-4">
+            <h1>Groups</h1>
+            <lightning-card variant="Narrow" title="Select Group" icon-name="standard:account">
+                <div class="slds-p-around_medium">
+                    <lightning-combobox name="group" value={value} onchange={handleChange} options={groupOptions}>
+                    </lightning-combobox>
+                </div>
+                <p slot="footer">Contacts Group</p>
+            </lightning-card>
+            <div class="slds-m-top_medium">
+                <lightning-card variant="Narrow" title="Config View" icon-name="standard:contact">
+                    <c-oa-col-config></c-oa-col-config>
+                </lightning-card>
+            </div>
+        </div>
+        <div class="slds-col slds-size_3-of-4">
+            <h1>Contacts</h1>
+            <div class="slds-grid slds-wrap slds-gutters_xx-small">
+                <template if:true={equipoContactList}>
+                    <template for:each={equipoContactList} for:item="eCont">
+                        <div key={eCont.contact.Id} class={classStyleString} style="box-sizing: border-box;">
+                            <c-oa-contact-card contact={eCont} onclonecard={cloneCardJS}></c-oa-contact-card>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

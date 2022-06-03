@@ -1,0 +1,66 @@
+<template>
+    <div class="form-content">
+        <lightning-input name="numerodocumento" data-name="numerodocumento" value="" type="text"
+            placeholder="Escribe tu número de documento" label="Número" class="date-field-upsa form-input"
+            onfocusout={validationFunc} required>
+        </lightning-input>
+        <div class="validation-container">
+            <div class="check-container">
+                <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png" style="width:22px"
+                    class="jello-horizontal-anim" />
+            </div>
+            <div class="error-container">
+                <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png" style="width:22px"
+                    class="shake-horizontal-anim" />
+            </div>
+        </div>
+        <lightning-input name="email" data-name="email" value="" type="email" placeholder="Escribe tu email"
+            label="Email" class="date-field-upsa form-input" onfocusout={validationFunc} required>
+        </lightning-input>
+        <div class="validation-container">
+            <div class="check-container">
+                <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png" style="width:22px"
+                    class="jello-horizontal-anim" />
+            </div>
+            <div class="error-container">
+                <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png" style="width:22px"
+                    class="shake-horizontal-anim" />
+            </div>
+        </div>
+    </div>
+    <div class="form-content">
+        <lightning-input name="telefono" data-name="telefono" value="" type="text" maxlength="9"
+            placeholder="Escribe tu teléfono" label="Teléfono" class="date-field-upsa form-input"
+            onfocusout={validationFunc} onchange={validationFunc} required>
+        </lightning-input>
+        <div class="validation-container">
+            <div class="check-container">
+                <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png" style="width:22px"
+                    class="jello-horizontal-anim" />
+            </div>
+            <div class="error-container">
+                <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png" style="width:22px"
+                    class="shake-horizontal-anim" />
+            </div>
+        </div>
+        <lightning-input name="movil" data-name="movil" value="" type="text" maxlength="9"
+            placeholder="Escribe tu móvil" label="Móvil" class="date-field-upsa form-input" onfocusout={validationFunc}
+            onchange={validationFunc} required>
+        </lightning-input>
+        <div class="validation-container">
+            <div class="check-container">
+                <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png" style="width:22px"
+                    class="jello-horizontal-anim" />
+            </div>
+            <div class="error-container">
+                <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png" style="width:22px"
+                    class="shake-horizontal-anim" />
+            </div>
+        </div>
+    </div>
+    <div class="slds-col slds-size_12-of-12" style="margin-top: 30px;">
+        <p class="upsa-required-text"><span class="required-color">*</span> Campos obligatorios</p>
+        <lightning-button variant="brand" label="Ir al paso 2" title="Ir al paso 2" class="upsa-button-paso2" disabled>
+        </lightning-button>
+    </div>
+</template>

@@ -1,0 +1,20 @@
+<template>
+    <lightning-card variant="Narrow" title={contact.contact.Id} icon-name="standard:contact">
+        <lightning-button label="Clone" slot="actions" onclick={cloneCard}></lightning-button>
+        <p class="slds-p-horizontal_small"><strong>First Name: </strong> {contact.contact.FirstName}</p>
+        <p class="slds-p-horizontal_small"><strong>Last Name: </strong>{contact.contact.LastName}</p>
+        <p class="slds-p-horizontal_small"><strong>Email: </strong>{contact.contact.Email}</p>
+        <p class="slds-p-horizontal_small"><strong>Equipo: </strong>
+            <!-- {contact.contact.EquipoId__c} -->
+        </p>
+        <div key={contact.contact.Id} class="icon-menu slds-col equipos" data-id="equipos">
+            <img style="height: 80px; margin-top:10px;" src={contact.contact.EquipoId__c} alt="Icon Menu" />
+        </div>
+        <!-- <template for:each={contact.contact.imgUrl} for:item="img">
+            <div key={contact.contact.Id} class="icon-menu slds-col">
+                <img style="height: 10px;" src={img} alt="Icon Menu" />
+            </div>
+        </template> -->
+        <p slot="footer">Contact Information</p>
+    </lightning-card>
+</template>

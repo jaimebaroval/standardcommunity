@@ -1,0 +1,12 @@
+<template>
+    <div class="slds-p-around_large">
+        <lightning-input label="Number of Columns" type="range" min="1" max={colConf.totalValue} step="1"
+            value={colConf.numValue} onchange={handleChangeNumColumn}>
+        </lightning-input>
+        <h1>{colConf.numValue}</h1>
+        <lightning-input label="Total of Columns" type="range" min="1" max="12" step="1" value={colConf.totalValue}
+            onchange={handleChangeTotalColumn}>
+        </lightning-input>
+        <h1>{colConf.totalValue}</h1>
+    </div>
+</template>

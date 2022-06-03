@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__Tab</target>
+        <target>lightning__FlowScreen</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <masterLabel>Custom Hero</masterLabel>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+        <property
+            name="recordId"
+            type="String"
+            label="Record Id"
+            description="Automatically bind the page's record id to the component variable"
+            default="{!recordId}" />
+            <property name="volume" type="Integer"/>
+            <property name="parallax" type="Integer"/>
+            <property name="objectPage" type="String" datasource="home,event,incidencias,contacts,account,inscripcion, homemon"/>
+            <property name="contentCaptionCustom" type="String"/>
+            <property name="contentTitleCustom" type="String"/>
+            <property name="contentSubtitleCustom" type="String"/>
+            <property name="heroHeight" type="String"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

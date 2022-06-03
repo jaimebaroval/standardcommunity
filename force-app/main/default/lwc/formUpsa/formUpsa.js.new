@@ -1,0 +1,349 @@
+import { LightningElement, track } from 'lwc';
+
+export default class FormUpsa extends LightningElement {
+
+    /* Common Var */
+    @track fieldStatus = {};
+    @track objIndex;
+    @track buttonActivation = null;
+    @track buttonActivationAcademicos = null;
+
+    /* Steps */
+    @track stepsContainers = ['datos-container', 'contacto-container', 'acceso-container'];
+    @track stepContent = [];
+    @track stepHeight = [];
+    @track stepFields = [];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Step 1 - Datos Personales */
+
+    valueIndentificacion = null;
+    valueTipoEstudio = null;
+    valueTitulaciones = null;
+
+    get identificacion() {
+        return [
+            { label: 'NIF', value: '1' },
+            { label: 'NIE', value: '2' },
+        ];
+    }
+
+    get tipoEstudios() {
+        return [
+            { label: 'Grados', value: '1' },
+            { label: 'Dobles Grados', value: '2' },
+        ];
+    }
+
+    get titulaciones() {
+        return [
+            { label: 'Grado en Periodismo', value: '1' },
+            { label: 'Doble Grado en Comunicación', value: '2' },
+        ];
+    }
+
+    @track datosPersonalesFields = [];
+    @track formDatos = [];
+    @track formDatosHeight;
+    @track formDatosFields = [];
+    @track step1Button;
+
+    /* Step 2 - Datos de Contacto */
+
+    @track academicosFields = [];
+    @track formPaso2 = [];
+    @track formPaso2Height;
+    @track formContactoFields = [];
+    @track step2Button;
+
+    /* Step 3 - Datos de Acceso */
+
+    @track accesoFields = [];
+    @track formPaso3 = [];
+    @track formPaso3Height;
+    @track formAccesoFields = [];
+    @track step3Button;
+
+
+    get titulo() {
+        return [
+            { label: 'Universitario', value: '1' },
+            { label: 'Mayores 30 Años', value: '2' },
+        ];
+    }
+
+    connectedCallback() {
+        setTimeout(() => {
+
+            this.stepsContainers.forEach(step => {
+                console.log(step);
+                this.formDatos = this.template.querySelector('.' + step);
+                this.stepContent.push(this.formDatos);
+                this.formDatosFields = this.template.querySelectorAll('.' + step + ' .upsa-input');
+                this.stepFields.push(this.formDatosFields);
+                console.log(JSON.stringify('this.formDatos: ' + this.formDatos))
+            });
+
+            this.stepContent.forEach(sC => {
+                console.log('sC: ' + sC.innerHTML);
+
+                this.stepHeight.push(sC.clientHeight)
+            })
+
+            this.stepFields.forEach(sF => {
+                console.log('sF: ' + sF.innerHTML)
+            });
+
+            console.log(JSON.stringify(this.stepHeight));
+            console.log(JSON.stringify(this.stepFields));
+
+            // this.stepFields.forEach(sF => console.log(JSON.stringify (sF)));
+
+
+
+
+
+
+
+
+            /* Paso 1 */
+            this.formDatos = this.template.querySelectorAll('.datos-container');
+            this.formDatosHeight = this.formDatos[0].clientHeight;
+            /* Paso 1 Form Fields */
+            this.formDatosFields = this.template.querySelectorAll('.datos-container .upsa-input');
+            /* Create Array Empty Paso 1 Fields */
+            this.formDatosFields.forEach(fF => {
+                this.fieldStatus = {};
+                this.fieldStatus.label = fF.dataset.name;
+                this.fieldStatus.value = false;
+                this.datosPersonalesFields.push(this.fieldStatus);
+            });
+
+            /* Paso 2 */
+            this.formPaso2 = this.template.querySelectorAll('.contacto-container');
+            this.formPaso2Height = this.formPaso2[0].clientHeight;
+            this.formPaso2[0].style.display = "none";
+            /* Paso 2 Form Fields */
+            this.formContactoFields = this.template.querySelectorAll('.contacto-container .upsa-input');
+            /* Create Array Empty Paso 2 Fields */
+            this.formContactoFields.forEach(fF => {
+                this.fieldStatus = {};
+                this.fieldStatus.label = fF.dataset.name;
+                this.fieldStatus.value = false;
+                this.academicosFields.push(this.fieldStatus);
+            });
+
+            /* Paso 3 */
+            this.formPaso3 = this.template.querySelectorAll('.contacto-container');
+            this.formPaso3Height = this.formPaso2[0].clientHeight;
+            this.formPaso3[0].style.display = "none";
+            /* Paso 2 Form Fields */
+            this.formAccesoFields = this.template.querySelectorAll('.acceso-container .upsa-input');
+            /* Create Array Empty Paso 3 Fields */
+            this.formAccesoFields.forEach(fF => {
+                this.fieldStatus = {};
+                this.fieldStatus.label = fF.dataset.name;
+                this.fieldStatus.value = false;
+                this.accesoFields.push(this.fieldStatus);
+            });
+
+            /* Button */
+            this.step1Button = this.template.querySelector('.upsa-button-paso1');
+            this.step2Button = this.template.querySelector('.upsa-button-paso2');
+            this.step3Button = this.template.querySelector('.upsa-button-paso3');
+
+        }, 100)
+
+    }
+
+    /* List Events Datos Personales */
+
+    handleChangeIndentificacion(event) {
+        this.valueIndentificacion = event.detail.value;
+        this.onChangeButtomActive(event);
+    }
+
+    handleChangeTipoEstudio(event) {
+        this.valueTipoEstudio = event.detail.value;
+        this.onChangeButtomActive(event);
+    }
+
+    handleChangeTitulaciones(event) {
+        this.valueTitulaciones = event.detail.value;
+        this.onChangeButtomActive(event);
+    }
+
+    /* List Events Datos Académicos */
+
+    handleChangeTitulo(event) {
+        this.valueIndentificacion = event.detail.value;
+        this.onChangeButtomActiveAcademic(event);
+    }
+
+
+    handleClickStep1(event) {
+        /* Paso 1 */
+        this.formDatos[0].style.display = "block";
+        this.formDatos[0].style.height = this.formDatosHeight + 'px';
+        /* Paso 2 */
+        this.formPaso2[0].style.display = "none";
+        this.formPaso2[0].style.height = '0px';
+    }
+
+    onChangeButtomActive(event) {
+        this.fieldStatus = {};
+        this.fieldStatus.label = event.target.name;
+        console.log(event.target.value);
+
+        if (event.target.value != '' && event.target.value != null) {
+            this.fieldStatus.value = true;
+        } else {
+            this.fieldStatus.value = false;
+        }
+
+        this.objIndex = this.datosPersonalesFields.findIndex((obj => obj.label == event.target.name));
+
+        if (this.objIndex < 0) {
+            this.datosPersonalesFields.push(this.fieldStatus);
+        } else {
+            this.datosPersonalesFields[this.objIndex].label = event.target.name;
+            this.datosPersonalesFields[this.objIndex].value = this.fieldStatus.value;
+        }
+
+        console.log(JSON.stringify(this.datosPersonalesFields));
+
+        this.buttonActivation = 0;
+        this.datosPersonalesFields.forEach(dP => {
+            if (dP.value === false) {
+                this.buttonActivation++
+            }
+        })
+        console.log('this.buttonActivation: ' + this.buttonActivation);
+
+        if (this.buttonActivation === 0) {
+            this.step2Button.disabled = false;
+        } else {
+            this.step2Button.disabled = true;
+
+        }
+    }
+
+    handleClickStep1(event) {
+        /* Paso 1 */
+        this.formDatos[0].style.display = "block";
+        this.formDatos[0].style.height = this.formPaso2Height + 'px';
+        /* Paso 2 */
+        this.formPaso2[0].style.display = "none";
+        this.formPaso2[0].style.height = '0px';
+    }
+
+    handleClickStep2(event) {
+        /* Paso 1 */
+        this.formDatos[0].style.display = "none";
+        this.formDatos[0].style.height = '0px';
+        /* Paso 2 */
+        this.formPaso2[0].style.display = "block";
+        this.formPaso2[0].style.height = this.formPaso2Height + 'px';
+    }
+
+    onChangeButtomActiveContacto(event) {
+        this.fieldStatus = {};
+        this.fieldStatus.label = event.target.name;
+        console.log(event.target.value);
+
+        if (event.target.value != '' && event.target.value != null) {
+            this.fieldStatus.value = true;
+        } else {
+            this.fieldStatus.value = false;
+        }
+
+        this.objIndex = this.academicosFields.findIndex((obj => obj.label == event.target.name));
+
+        if (this.objIndex < 0) {
+            this.academicosFields.push(this.fieldStatus);
+        } else {
+            this.academicosFields[this.objIndex].label = event.target.name;
+            this.academicosFields[this.objIndex].value = this.fieldStatus.value;
+        }
+
+        console.log(JSON.stringify('this.academicosFields: ' + this.academicosFields));
+
+        this.buttonActivationAcademicos = 0;
+        this.academicosFields.forEach(dP => {
+            if (dP.value === false) {
+                this.buttonActivationAcademicos++
+            }
+        })
+        console.log('this.buttonActivationAcademicos: ' + this.buttonActivationAcademicos);
+
+        if (this.buttonActivationAcademicos === 0) {
+            this.step3Button.disabled = false;
+        } else {
+            this.step3Button.disabled = true;
+
+        }
+    }
+
+    onChangeButtomActiveAcceso(event) {
+        this.fieldStatus = {};
+        this.fieldStatus.label = event.target.name;
+        console.log(event.target.value);
+
+        if (event.target.value != '' && event.target.value != null) {
+            this.fieldStatus.value = true;
+        } else {
+            this.fieldStatus.value = false;
+        }
+
+        this.objIndex = this.accesoFields.findIndex((obj => obj.label == event.target.name));
+
+        if (this.objIndex < 0) {
+            this.accesoFields.push(this.fieldStatus);
+        } else {
+            this.accesoFields[this.objIndex].label = event.target.name;
+            this.accesoFields[this.objIndex].value = this.fieldStatus.value;
+        }
+
+        console.log(JSON.stringify(this.accesoFields));
+
+        this.buttonActivationAcademicos = 0;
+        this.accesoFields.forEach(dP => {
+            if (dP.value === false) {
+                this.buttonActivation++
+            }
+        })
+        console.log('this.buttonActivationAcademicos: ' + this.buttonActivationAcademicos);
+
+        if (this.buttonActivationAcademicos === 0) {
+            this.step3Button.disabled = false;
+        } else {
+            this.step3Button.disabled = true;
+
+        }
+    }
+
+
+    handleClickStep3(event) {
+        /* Paso 2 */
+        this.formPaso2[0].style.display = "none";
+        this.formPaso2[0].style.height = '0px';
+        /* Paso 3 */
+        this.formPaso2[0].style.display = "block";
+        this.formPaso2[0].style.height = this.formPaso2Height + 'px';
+
+    }
+
+
+}

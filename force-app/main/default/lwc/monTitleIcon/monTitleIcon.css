@@ -1,0 +1,63 @@
+.mon-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+    width: 100%;
+    border-bottom: 2px solid #2a8b9b73;
+}
+
+.comm-page-custom-inscripcion-datos .mon-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+    width: 100%;
+    border-bottom: 2px solid #2a8b9b73;
+}
+
+.mon-title-container-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: var(--mon-sections);
+    width: 100%;
+}
+
+.mon-title-h3 {
+    font-size: var(--mon-title-h3);
+    color: var(--mon-primary-color);
+    width: 100%;
+}
+
+.mon-title-h3-icon {
+    font-size: var(--mon-title-h3);
+    color: var(--mon-primary-color);
+    width: 100%;
+    border-bottom: 2px solid #2a8b9b73;
+}
+
+.mon-title-icon {
+    background-color: var(--mon-primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: var(--mon-title-to-content);
+    padding: 10px;
+}
+
+.mon-title-icon img {
+    width: var(--mon-title-icon);
+}
+
+.mon-title-validate {
+    border-bottom: 2px solid #45c65a75;
+    background: #45c65a1f;
+    padding: 0 20px;
+    border-radius: 10px;
+}
+
+.mon-title-validate h3 {
+    color: #45c65a;
+}

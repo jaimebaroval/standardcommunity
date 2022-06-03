@@ -1,0 +1,39 @@
+:root {
+
+    /* Colors */
+
+    --mon-primary-color: #2A8B9B;
+    --mon-light-primary: #2a8b9b7a;
+    --mon-secondary-color: #12B9D4;
+    --mon-light-secondary: #07D7F9;
+    --mon-light-grey-color: #CFCFD0;
+    --mon-darkgrey-color: #666666;
+    --mon-soft-black: #222428;
+    --mon-validate-color: #10DC60;
+    --mon-pending-color: #F39800;
+    --mon-reject-color: #BE053D;
+    --mon-footer-color: #000000;
+    --content-inscripcion-text: #2a8b9b99;
+
+    /* Margin & Padding */
+
+    --mon-sections: 60px;
+    --mon-title-to-content: 25px;
+    --mon-content-to-title: 15px;
+    --mon-section-to-footer: 150px;
+    --mon-section-left: 105px;
+    --mon-home-left: 77px;
+
+    /* Fonts */
+
+    --mon-select-list: 16px;
+    --mon-text-simple: 20px;
+    --mon-title-h3: 30px;
+
+    /* Icons */
+
+    --mon-title-icon: 35px;
+    --mon-step-icon: 180px;
+
+
+}

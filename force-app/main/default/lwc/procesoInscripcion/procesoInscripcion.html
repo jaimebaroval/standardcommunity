@@ -1,0 +1,525 @@
+<template>
+    <div class="proceso-info margin-elements">
+    </div>
+    <div id="datos-personales" style="height: 30px;"></div>
+    <div class="proceso-info-form margin-elements">
+        <a href="#datos-personales">
+            <template if:true={datosPersonalesCheck}>
+                <c-ca-title-icon title="Datos personales" check="true" onclick={handlePressGeneralForm}
+                    menuopen={menuGeneral}>
+                </c-ca-title-icon>
+            </template>
+            <template if:false={datosPersonalesCheck}>
+                <c-ca-title-icon title="Datos personales" onclick={handlePressGeneralForm} menuopen={menuGeneral}
+                    iconright="utility:add">
+                </c-ca-title-icon>
+            </template>
+
+        </a>
+
+        <!-- check="true" validate="true" -->
+
+
+        <!-- Datos Personales -->
+
+        <div class="slds-form anim-section-form">
+            <div class="datos-subtitle anim slide-in-top-anim">Datos Generales</div>
+            <div class="slds-form-element datos-container">
+                <div class="slds-grid slds-gutters slds-wrap slds-size_full">
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Tipo de
+                                documento <span class="required-color">*</span></label>
+                            <lightning-combobox name="MU_Document_Type" data-name="MU_Document_Type" value=""
+                                placeholder="Selecciona el tipo de documento" options={doctype} onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" style="z-index: 300" required>
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Número de
+                                documento <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="MU_Document_Number" data-name="MU_Document_Number"
+                                value="53009556F" onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Nombre <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="FirstName" data-name="FirstName" value=""
+                                onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Primer apellido <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="LastName" data-name="LastName" value=""
+                                onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Segundo apellido <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="MU_Second_Name" data-name="MU_Second_Name" value=""
+                                onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Fecha de nacimiento <span class="required-color">*</span></span>
+                            <lightning-input type="date" name="Birthdate" data-name="Birthdate" value=""
+                                onchange={handleChange} date-style="short"
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input input-list-zindex"
+                                required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Sexo <span class="required-color">*</span></span>
+                            <lightning-combobox name="Gender" data-name="Gender" value="Hombre" placeholder="Género"
+                                options={genderPickListValues} onchange={handleChange} class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">País de nacimiento <span class="required-color">*</span></span>
+                            <lightning-combobox name="MU_Origin_Country" data-name="MU_Origin_Country" value="País"
+                                placeholder="Selecciona un país" options={originCountryPickListValues}
+                                onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="datos-subtitle anim slide-in-top-anim">Dirección y Contacto</div>
+            <div class="slds-form-element datos-container">
+                <div class="slds-grid slds-gutters slds-wrap slds-size_full">
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">País <span class="required-color">*</span></span>
+                            <lightning-combobox name="MailingCountryCode" data-name="MailingCountryCode" value="País"
+                                options={mailingCountryCodeOptions} onchange={handleChange}
+                             placeholder="Selecciona un país"
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Dirección <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="MailingStreet" data-name="MailingStreet" value=""
+                                onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Localidad <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="MailingCity" data-name="MailingCity" value=""
+                                onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Provincia <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="MailingState" data-name="MailingState" value=""
+                                onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Código postal <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="MailingPostalCode" data-name="MailingPostalCode" value=""
+                                onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Nº de teléfono del estudiante <span
+                                    class="required-color">*</span></span>
+                            <lightning-input type="text" name="MobilePhone" data-name="MobilePhone" value=""
+                                onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Otro teléfono</span>
+                            <lightning-input type="text" name="Phone" data-name="Phone" value="" onchange={handleChange}
+                            
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input">
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Email <span class="required-color">*</span></span>
+                            <lightning-input type="email" name="Email" data-name="Email" value="" onchange={handleChange}
+                            
+                                class="mon-select-list-proceso anim slide-in-top-anim dp-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="datos-subtitle anim slide-in-top-anim">Otros Datos</div>
+            <div class="slds-form-element datos-container">
+                <div class="slds-grid slds-gutters slds-wrap slds-size_full">
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <div class="discapacidad-container">
+                                <label class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                    for="form-element-01">Discapacidad</label>
+                                <p class="discapacidad-texto">Haz clic en la casilla si tu grado de discapacidad es
+                                    igual o superior al 33%.</p>
+                            </div>
+                            <div class="check-container">
+                                <lightning-radio-group options={options} name="MU_Limited_Capabilities"
+                                    data-name="MU_Limited_Capabilities" value="Si" type="radio"
+                                    onchange={handleChangeCheckbox} class="anim slide-in-top-anim dp-mu-input">
+                                </lightning-radio-group>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 datos-academicos">
+                        <div class="slds-grid slds-gutters slds-wrap slds-size_full" style="justify-content: flex-end;">
+                            <div class="slds-col slds-size_6-of-12 datos-academicos"></div>
+                            <div class="slds-col slds-size_6-of-12 datos-academicos" style="padding-left: 0;">
+                                <a href="#datos-personales" style="width: 100%;">
+                                    <lightning-button variant="brand" label="Siguiente" title="Siguiente"
+                                        icon-name="utility:forward" icon-position="right" class="slds-m-left_x-small"
+                                        onclick={handlePressAcademicosForm}></lightning-button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="proceso-info-form-academicos margin-elements">
+        <a href="#datos-personales">
+            <template if:true={datosAcademicosCheck}>
+                <c-ca-title-icon title="Datos académicos" class="title-datos" check="true"
+                onclick={handlePressAcademicosForm} menuopen={menuAcademicos}></c-ca-title-icon>
+            </template>
+            <template if:false={datosAcademicosCheck}>
+                <c-ca-title-icon title="Datos académicos" class="title-datos" iconright="utility:add"
+                onclick={handlePressAcademicosForm} menuopen={menuAcademicos}></c-ca-title-icon>
+            </template>
+        </a>
+
+        <!-- Datos Académicos -->
+
+        <div class="slds-form anim-section-form-academicos">
+            <div class="datos-subtitle anim slide-out-top-anim">Estudios</div>
+            <div class="slds-form-element datos-container">
+                <div class="slds-grid slds-gutters slds-wrap slds-size_full datos-container-row">
+                    <div class="slds-col slds-size_9-of-12">
+                        <div class="datos-title anim slide-out-top-anim">¿Has estudiado en el sistema educativo español?
+                        </div>
+                    </div>
+
+                    <div class="slds-col slds-size_3-of-12">
+                        <div class="check-container">
+                            <lightning-radio-group options={options} name="MU_Studied_Abroad" data-name="MU_Studied_Abroad" value="Si" type="radio"
+                                onchange={handleChangeCheckbox} class="anim slide-in-top-anim da-mu-input">
+                            </lightning-radio-group>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="slds-form-element datos-container">
+                <div class="slds-grid slds-gutters slds-wrap slds-size_full">
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim slide-out-top-anim"
+                                for="form-element-01">Tipo de estudio <span class="required-color">*</span></label>
+                            <lightning-combobox name="MU_Studiy_Type" data-name="MU_Studiy_Type" value="Tipo Estudio" placeholder="Estudios Universitarios"
+                                options={studyTypePickListValues} onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-out-top-anim da-mu-input">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Modalidad <span class="required-color">*</span></span>
+                            <lightning-combobox name="MU_Modality" data-name="MU_Modality" value="Modalidad" placeholder="Modalidad estudios"
+                                options={modalityPickListValues} onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-out-top-anim da-mu-input">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Título <span class="required-color">*</span></span>
+                            <lightning-combobox name="MU_Degree" data-name="MU_Degree" value="Título" placeholder="Tipo de titulación"
+                                options={degreePickListValues} onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-out-top-anim da-mu-input">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Titulación <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="MU_Degree_Name" data-name="MU_Degree_Name" value="Titulación" onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim da-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">País de estudio<span class="required-color">*</span></span>
+                            <lightning-combobox name="MU_Country_Study" data-name="MU_Country_Study" value="Country" placeholder="Estudios Universitarios"
+                                options={countryStudyPickListValues} onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-out-top-anim da-mu-input">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Univesidad / Centro <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="MU_University_School" data-name="MU_University_School" value="" onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim da-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12"></div>
+                    <div class="slds-col slds-size_6-of-12"></div>
+
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input checkbox-margin">
+                            <label class="slds-form-element__label datos-label anim slide-out-top-anim"
+                                for="form-element-01">Comenzado <span class="required-color">*</span></label>
+                            <div class="check-container">
+                                <lightning-radio-group options={options} name="MU_Started" data-name="MU_Started" value="Si" type="radio"
+                                    onchange={handleChangeCheckbox} class="anim slide-in-top-anim da-mu-input">
+                                </lightning-radio-group>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input checkbox-margin">
+                            <label class="slds-form-element__label datos-label anim slide-out-top-anim"
+                                for="form-element-01">Terminado o previsto
+                                terminar este curso <span class="required-color">*</span></label>
+                            <div class="check-container">
+                                <lightning-radio-group options={options} name="MU_Finish_Plan_Finish_Course" data-name="MU_Finish_Plan_Finish_Course" value="Si"
+                                    type="radio" onchange={handleChangeCheckbox} class="anim slide-in-top-anim da-mu-input">
+                                </lightning-radio-group>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="datos-subtitle anim slide-out-top-anim">Experiencia Laboral</div>
+            <div class="slds-form-element datos-container">
+                <div class="slds-grid slds-gutters slds-wrap slds-size_full">
+
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim slide-out-top-anim"
+                                for="form-element-01">¿Tienes alguna
+                                experiencia laboral? <span class="required-color">*</span></label>
+                            <div class="check-container">
+                                <lightning-radio-group options={options} name="MU_Work_Experience" data-name="MU_Work_Experience" value="Si" type="radio"
+                                    onchange={handleChangeCheckbox} class="anim slide-in-top-anim da-mu-input">
+                                </lightning-radio-group>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="slds-form-element__control datos-input">
+                            <label class="slds-form-element__label datos-label anim slide-out-top-anim"
+                                for="form-element-01">¿Estás trajando actualmente? <span
+                                    class="required-color">*</span></label>
+                            <div class="check-container">
+                                <lightning-radio-group options={options} name="MU_Currently_Working" data-name="MU_Currently_Working" value="Si"
+                                    type="radio" onchange={handleChangeCheckbox} class="anim slide-in-top-anim da-mu-input">
+                                </lightning-radio-group>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input checkbox-margin">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Lugar de trabajo <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="MU_Workplace" data-name="MU_Workplace" value="" onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim da-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input checkbox-margin">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Experiencia <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="MU_Experience" data-name="MU_Experience" value="" onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim da-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Puesto de trabajo <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="MU_Job" data-name="MU_Job" value="" onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim da-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+
+                    <!-- Botones de cambio de sección -->
+                    <!-- <div class="slds-col slds-size_6-of-12"></div> -->
+                    <div class=" slds-col slds-size_6-of-12 datos-academicos">
+                        <div class="slds-grid slds-gutters slds-wrap slds-size_full"
+                            style="justify-content: flex-end; margin-top: 70px;">
+                            <div class="slds-col slds-size_6-of-12"></div>
+                            <div class="slds-col slds-size_6-of-12" style="padding-left: 0;">
+                                <a href="#datos-personales" style="width: 100%;">
+                                    <lightning-button variant="brand" label="Siguiente" title="Siguiente"
+                                        icon-name="utility:forward" icon-position="right" class="slds-m-left_x-small"
+                                        onclick={handlePressFacturacionForm}></lightning-button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="proceso-info-form-facturacion margin-elements">
+        <a href="#datos-personales">
+            <template if:true={datosFacturacionCheck}>
+                <c-ca-title-icon title="Datos de facturación" class="title-datos" check="true"
+                onclick={handlePressFacturacionForm} menuopen={menuFacturacion}></c-ca-title-icon>
+            </template>
+            <template if:false={datosFacturacionCheck}>
+                <c-ca-title-icon title="Datos de facturación" class="title-datos"
+                iconright="utility:add" onclick={handlePressFacturacionForm} menuopen={menuFacturacion}>
+            </c-ca-title-icon>
+            </template>
+            
+        </a>
+
+        <!-- Datos de Facturación -->
+
+        <div class="slds-form anim-section-form-facturacion">
+            <div class="datos-subtitle anim slide-out-top-anim">Dirección y Contacto</div>
+            <div class="slds-form-element datos-container">
+                <div class="slds-grid slds-gutters slds-wrap slds-size_full">
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">País <span class="required-color">*</span></span>
+                            <lightning-combobox name="OtherCountryCode" data-name="OtherCountryCode" value="País" options={otherCountryCodeOptions}
+                                onchange={handleChange} placeholder="Selecciona un país"
+                                class="mon-select-list-proceso anim slide-in-top-anim df-mu-input">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Dirección <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="OtherStreet" data-name="OtherStreet" value="" onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim df-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Localidad <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="OtherCity" data-name="OtherCity" value="" onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim df-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Provincia <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="OtherState" data-name="OtherState" value="" onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim df-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <div class="datos-input">
+                            <span class="slds-form-element__label datos-label anim slide-in-top-anim"
+                                for="form-element-01">Código postal <span class="required-color">*</span></span>
+                            <lightning-input type="text" name="OtherPostalCode" data-name="OtherPostalCode" value="" onchange={handleChange}
+                                class="mon-select-list-proceso anim slide-in-top-anim df-mu-input" required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                    <div class=" slds-col slds-size_6-of-12 datos-academicos">
+                        <div class="slds-grid slds-gutters slds-wrap slds-size_full"
+                            style="justify-content: flex-end; margin-top: 70px;">
+                            <div class="slds-col slds-size_6-of-12"></div>
+                            <div class="slds-col slds-size_6-of-12" style="padding-left: 0;">
+                                <a class="comm-navigation__top-level-item-link js-top-level-menu-item linkBtn comm-navigation__top-level-item-link--active"
+                                    aria-current="page" id="3" data-aura-rendered-by="530:0">
+                                    <lightning-button variant="brand" label="Guardar" title="Guardar"
+                                        icon-name="utility:save" icon-position="right"
+                                        class="slds-m-left_x-small save-button-disabled " onclick={handleSave}>
+                                    </lightning-button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

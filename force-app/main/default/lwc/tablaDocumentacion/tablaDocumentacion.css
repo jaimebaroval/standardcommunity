@@ -1,0 +1,22 @@
+.t-doc-title {
+    font-size: 22px;
+    color: var(--mon-primary-color);
+    font-weight: bold;
+    border-bottom: 2px solid #2a8b9b73;
+}
+
+.t-doc-td {
+    padding: 12px 0;
+    font-size: 18px;
+    border-bottom: 2px solid #2a8b9b73;
+}
+
+.t-doc-state-container {
+    display: flex;
+    margin-bottom: -1px;
+    height: 55px;
+}
+
+.t-doc-state-text {
+    margin-left: 15px;
+}

@@ -1,0 +1,9 @@
+<template>
+    <p><b>User:</b> {userId}</p>
+    <p><b>Contact:</b> {contactId}</p>
+    <template for:each={nombresList} for:item="nombre">
+        <div key={nombre.Id}>
+            <span>{nombre.Name}</span>
+        </div>
+    </template>
+</template>

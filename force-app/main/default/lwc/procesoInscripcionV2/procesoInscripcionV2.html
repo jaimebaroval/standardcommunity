@@ -1,0 +1,77 @@
+<template>
+    <div class="proceso-header margin-elements-first">
+        <div class="slds-grid slds-gutters" style="align-items: center;">
+            <div class="slds-col slds-size_7-of-12">
+                <c-master-title icon="master-title" title="Master en ciencias gastrónomicas"></c-master-title>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                <c-inscripcion-step num="1" title="Inscripción" state="active"></c-inscripcion-step>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                <c-inscripcion-step num="2" title="Pruebas" state="inactive"></c-inscripcion-step>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                <c-inscripcion-step num="3" title="Preadmisión" state="inactive"></c-inscripcion-step>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                <c-inscripcion-step num="4" title="Selección" state="inactive"></c-inscripcion-step>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                <c-inscripcion-step num="5" title="Admisión" state="inactive"></c-inscripcion-step>
+            </div>
+        </div>
+    </div>
+    <div class="proceso-info margin-elements">
+        <c-info-inscripcion title="Rellena el formulario con tus datos"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id sagittis neque, gravida iaculis leo. Duis dictum sagittis augue, id sagittis massa dapibus sit amet. Aenean feugiat nisl in enim mattis eleifend. Quisque eu euismod libero. Proin et lorem tristique, porta nisl id, malesuada lectus. Donec non massa tincidunt, laoreet ante vel, bibendum nisl. Aenean porta, nulla ut egestas pharetra, lorem eros commodo libero, ac suscipit nisi mauris molestie eros. Cras eros nulla, efficitur sit amet lorem vel, tempus tempor risus. Aliquam in augue a orci egestas pharetra.">
+        </c-info-inscripcion>
+    </div>
+    <div class="proceso-step margin-elements">
+        <c-inscripcion-progress></c-inscripcion-progress>
+    </div>
+
+    
+    
+    <!-- Datos Personales -->
+
+    <div class="proceso-info-form margin-elements">
+        <c-mon-title-icon title="Datos personales" check={datosPersonales}></c-mon-title-icon>
+        <c-datos-personales state={myState}></c-datos-personales>
+        <div class="slds-col slds-size_12-of-12">
+            <div class="slds-grid slds-gutters slds-wrap slds-size_full" style="justify-content: flex-end;">
+                <div class="slds-col slds-size_6-of-12"></div>
+                <div class="slds-col slds-size_6-of-12" style="padding-left: 0;">
+                    <div class="slds-grid slds-gutters slds-wrap slds-size_full" style="justify-content: flex-end;">
+                        <div class="slds-col slds-size_6-of-12"></div>
+                        <div class="slds-col slds-size_6-of-12 datos-next-step">
+                            <a href="#" style="width: 100%;">
+                                <lightning-button variant="brand" label="Datos Académicos" title="Datos Académicos" icon-name="utility:forward" icon-position="right" class="slds-m-left_x-small" onclick={HandleNextForm}></lightning-button>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        
+        
+        <!-- Datos Académicos -->
+
+        <c-mon-title-icon title="Datos académicos" check={datosAcademicos}></c-mon-title-icon>
+        <c-datos-personales state=""></c-datos-personales>
+        <div class="slds-col slds-size_12-of-12">
+            <div class="slds-grid slds-gutters slds-wrap slds-size_full" style="justify-content: flex-end;">
+                <div class="slds-col slds-size_6-of-12"></div>
+                <div class="slds-col slds-size_6-of-12" style="padding-left: 0;">
+                    <div class="slds-grid slds-gutters slds-wrap slds-size_full" style="justify-content: flex-end;">
+                        <div class="slds-col slds-size_6-of-12"></div>
+                        <div class="slds-col slds-size_6-of-12 datos-next-step">
+                            <a href="#" style="width: 100%;">
+                                <lightning-button variant="brand" label="Datos de Facturación" title="Datos de Facturación" icon-name="utility:forward" icon-position="right" class="slds-m-left_x-small" onclick={HandleNextForm}></lightning-button>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

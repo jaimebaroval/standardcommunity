@@ -1,0 +1,13 @@
+.navbar-full {
+    border-bottom: 1px solid #d2d4da;
+}
+
+.navbar-container {
+    max-width:1440px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.step-disabled{
+    color: #999;
+}

@@ -1,0 +1,55 @@
+.std-hero-container {
+    background-size: cover;
+    height: calc(var(--hero-height) - 2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.std-hero-overlay {
+    position: absolute;
+    height: calc(var(--hero-height) - 2px);
+    background: linear-gradient(180deg, rgb(0 0 0 / 35%) 0%, var(--hero-overlay-color)) !important;
+    opacity: var(--hero-overlay-opacity);
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.std-hero-content {
+    max-width: 1440px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    padding: 180px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--lwc-fontFamilyHeader, Montserrat) !important;
+}
+
+h1.contentCaptionCustom {
+    font-size: 24px;
+    color: white;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
+}
+
+h2.contentTitleCustom {
+    font-size: 56px;
+    color: white;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
+}
+
+p.contentSubtitleCustom {
+    font-size: 24px;
+    color: white;
+    max-width: var(--hero-subtitle-width);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
+
+}

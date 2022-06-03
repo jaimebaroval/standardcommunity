@@ -1,0 +1,36 @@
+.mon-select-list-proceso {
+    margin-top: var(--mon-content-to-title);
+    margin-left: var(--mon-home-left);
+    ;
+    border-radius: 0px !important;
+}
+
+.mon-step-icons-container {
+    margin-bottom: var(--mon-section-to-footer);
+    padding-left: 60px;
+}
+
+.mon-document-row-icon {
+    width: 30px;
+    margin-right: 5px;
+}
+
+ul.mon-documents {
+    margin-top: calc(var(--mon-content-to-title) + 30px);
+    font-size: var(--mon-text-simple);
+    margin-left: var(--mon-home-left);
+}
+
+li.mon-documents-row {
+    border-top: 2px solid var(--mon-light-primary);
+    border-bottom: 2px solid var(--mon-light-primary);
+    margin-bottom: 10px;
+    padding: 9px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.mon-documents-row:hover {
+    background: aliceblue;
+}

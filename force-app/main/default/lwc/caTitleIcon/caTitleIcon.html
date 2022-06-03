@@ -1,0 +1,33 @@
+<template>
+    <template if:true={icon}>
+        <div class="mon-title-container-icon">
+            <template if:true={icon}>
+                <div class="mon-title-icon">
+                    <img src={imagePng} alt="admision">
+                </div>
+            </template>
+            <h3 class="mon-title-h3-icon">{title}</h3>
+            <template if:true={check}>
+                <lightning-button variant="base" icon-name="utility:check" class="check-button"></lightning-button>
+            </template>
+        </div>
+    </template>
+    <template if:false={icon}>
+        <div class={validate}>
+            <template if:true={icon}>
+                <div class="mon-title-icon">
+                    <img src={imagePng} alt="admision">
+                </div>
+            </template>
+            <h3 class="mon-title-h3">{title}</h3>
+            <template if:true={check}>
+                <lightning-button variant="base" icon-name="utility:check" class="check-button"></lightning-button>
+            </template>
+            <template if:true={iconright}>
+                <template if:false={check}>
+                    <lightning-button variant="base" icon-name={iconright} class="check-button"></lightning-button>
+                </template>
+            </template>
+        </div>
+    </template>
+</template>

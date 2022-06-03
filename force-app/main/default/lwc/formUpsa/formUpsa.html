@@ -1,0 +1,396 @@
+<template>
+    <div class="navbar-full">
+        <div class="navbar-container">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_4-of-12">
+                    <img src="/sfsites/c/resource/clubresources/clubresources/images/logo-upsa.svg" alt="logo">
+                </div>
+                <!-- <div class="slds-col slds-size_8-of-12" style=" display:flex; align-items: baseline;">
+                    <div class="slds-grid" style="width: 100%;">
+                        <div class="slds-col steps1-timeline">
+                            <span class="step-icon">
+                                <lightning-icon icon-name="utility:user" size="small" title="Image"></lightning-icon>
+                            </span>
+                            <div class="step-timeline-line step-progress-01"></div>
+                        </div>
+                        <div class="slds-col step-disabled">
+                            <span class="step-icon">
+                                <lightning-icon icon-name="utility:identity" size="small" title="Image">
+                                </lightning-icon>
+                            </span>
+                            <div class="step-timeline-line step-progress-01"></div>
+                        </div>
+                        <div class="slds-col step-disabled">
+                            <span class="step-icon">3</span>
+                            <div class="step-timeline-line step-progress-01"></div>
+                        </div>
+                    </div>
+                    <div class="final-step step-disabled">
+                        <span style="margin-top: 10px; padding: 2px 15px;" class="step-icon">4</span>
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+    <div style="height: 40px;"></div>
+    <div class="upsa-container" style="padding-bottom: 20px;">
+
+        <!-- Datos Personales -->
+        <div class="datos-container form-margin form-container-event">
+            <div class="slds grid" style="margin-bottom: 30px">
+                <div class="slds-col slds-size_12-of-12" style=" display:flex; align-items: baseline;">
+                    <div class="slds-grid" style="width: 100%;">
+                        <div class="slds-col steps1-timeline">
+                            <h1>DatosPersonales</h1>
+                            <span class="step-icon">
+                                <lightning-icon icon-name="utility:user" size="small" title="Image"></lightning-icon>
+                            </span>
+                            <div class="step-timeline-line step-progress-01"></div>
+                        </div>
+                        <div class="slds-col step-disabled">
+                            <span class="step-icon">
+                                <lightning-icon icon-name="utility:identity" size="small" title="Image">
+                                </lightning-icon>
+                            </span>
+                            <div class="step-timeline-line step-progress-01"></div>
+                        </div>
+                        <div class="slds-col step-disabled">
+                            <span class="step-icon">3</span>
+                            <div class="step-timeline-line step-progress-01"></div>
+                        </div>
+                    </div>
+                    <div class="final-step step-disabled">
+                        <span style="margin-top: 10px; padding: 2px 15px;" class="step-icon">4</span>
+                    </div>
+                </div>
+            </div>
+            <!-- <h1 class="upsa-title-form">
+                <lightning-icon icon-name="utility:user" size="small" title="Image" class="title-icon">
+                </lightning-icon> Datos
+                personales
+            </h1> -->
+            <div class="slds-grid slds-gutters slds-wrap" style="padding-bottom: 20px;">
+                <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-small-size_1-of-1">
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-small-size_1-of-1">
+                            <lightning-combobox name="documento" data-name="documento" value="" label="Documento"
+                                placeholder="Tipo Documento" options={identificacion} onchange={handleChangeInput}
+                                onfocusout={handleChangeInput} class="upsa-input" required>
+                            </lightning-combobox>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-large-size_8-of-12 slds-medium-size_8-of-12 slds-small-size_1-of-1">
+                            <lightning-input name="numerodocumento" data-name="numerodocumento" value="" type="text"
+                                placeholder="Escribe tu número" label="Número" onchange={handleChangeButton}
+                                onfocusout={handleChangeInput} class="upsa-input" required>
+                            </lightning-input>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slds-col slds-size_12-of-12">
+                            <lightning-input name="nombre" data-name="nombre" value="" type="text" label="Nombre"
+                                placeholder="Escribe tu nombre" onfocusout={handleChangeInput} class="upsa-input"
+                                required>
+                            </lightning-input>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_12-of-12">
+                            <lightning-input name="apellidos" data-name="apellidos" value="" type="text"
+                                label="Apellidos" placeholder="Escribe tus apellidos" onfocusout={handleChangeInput}
+                                class="upsa-input" required>
+                            </lightning-input>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-small-size_1-of-1">
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-size_12-of-12">
+                            <lightning-input type="date" name="fechanacimiento" data-name="fechanacimiento"
+                                label="Fecha de Nacimiento" placeholder="dd/mm/aaaa" value="" date-style="short"
+                                class="date-field-upsa upsa-input" onchange={handleChangeInput}
+                                onfocusout={handleChangeInput} required>
+                            </lightning-input>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_12-of-12">
+                            <lightning-input name="lugarnacimiento" data-name="lugarnacimiento" value="" type="text"
+                                label="Lugar de Nacimiento" placeholder="Escribe el lugar"
+                                onfocusout={handleChangeInput} class="upsa-input" required>
+                            </lightning-input>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-small-size_1-of-1">
+                            <lightning-combobox name="tipo-estudio" data-name="tipo-estudio" value={valueTipoEstudio}
+                                label="Tipo de estudio" options={tipoEstudios} placeholder="Tipo de estudio"
+                                onchange={handleChangeInput} onfocusout={handleChangeInput} class="upsa-input" required>
+                            </lightning-combobox>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-small-size_1-of-1">
+                            <lightning-combobox name="titulaciones" data-name="titulaciones" value={valueTitulaciones}
+                                label="Titulaciones" options={titulaciones} placeholder="Titulaciones"
+                                onchange={handleChangeInput} onfocusout={handleChangeInput} class="upsa-input" required>
+                            </lightning-combobox>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_12-of-12">
+                    <p class="upsa-required-text"><span class="required-color">*</span> Campos obligatorios</p>
+                    <lightning-button variant="brand" label="Ir al paso 2" title="Ir al paso 2"
+                        onclick={handleClickStep2} class="upsa-button-paso2"></lightning-button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Datos de Contacto -->
+        <div class="paso2-container form-margin form-container-event" style="display:none;">
+            <h1 class="upsa-title-form"><b>2.</b> Datos de Contacto</h1>
+            <div class="slds-grid slds-gutters slds-wrap" style="padding-bottom: 20px;">
+                <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-small-size_1-of-1">
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_1-of-1">
+                            <lightning-input type="text" name="domicilio" data-name="domicilio"
+                                placeholder="Escribe tu domicilio" label="Domicilio" onfocusout={handleChangeInput}
+                                class="upsa-input" required>
+                            </lightning-input>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-small-size_1-of-1">
+                            <lightning-input name="codigopostal" data-name="codigopostal" value="" type="text"
+                                placeholder="Escribe tu localidad" label="Código Postal" onfocusout={handleChangeInput}
+                                class="upsa-input" required>
+                            </lightning-input>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slds-col slds-large-size_8-of-12 slds-medium-size_8-of-12 slds-small-size_1-of-1">
+                            <lightning-input name="localidad" data-name="localidad" value="" type="text"
+                                placeholder="Escribe tu localidad" label="Localidad" onfocusout={handleChangeInput}
+                                class="upsa-input" required>
+                            </lightning-input>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slds-col slds-size_12-of-12">
+                            <lightning-input name="pais" data-name="pais" value="" type="text" label="País"
+                                placeholder="Escribe tu país" onfocusout={handleChangeInput} class="upsa-input"
+                                required>
+                            </lightning-input>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-small-size_1-of-1">
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-size_12-of-12">
+                            <lightning-input type="text" name="provincia" data-name="provincia"
+                                placeholder="Escribe tu domicilio" label="Provincia" onfocusout={handleChangeInput}
+                                class="upsa-input" required>
+                            </lightning-input>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slds-col slds-size_12-of-12">
+                            <lightning-input type="email" name="email" data-name="email" placeholder="Escribe tu email"
+                                label="Email" onfocusout={handleChangeInput} class="upsa-input" required>
+                            </lightning-input>
+                            <div class="validation-container">
+                                <div class="check-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png"
+                                        style="width:22px" class="jello-horizontal-anim" />
+                                </div>
+                                <div class="error-container">
+                                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                                        style="width:22px" class="shake-horizontal-anim" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-size_12-of-12">
+                    <p class="upsa-required-text"><span class="required-color">*</span> Campos obligatorios</p>
+                    <lightning-button variant="brand" label="Ir al paso 1" title="Ir al paso 2"
+                        onclick={handleClickStep1} class="upsa-button-paso1"></lightning-button>
+                </div>
+                <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-size_12-of-12">
+                    <p class="upsa-required-text">&nbsp;</p>
+                    <lightning-button variant="brand" label="Ir al paso 3" title="Ir al paso 3"
+                        onclick={handleClickStep3} class="upsa-button-paso3"></lightning-button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Datos de Acceso -->
+        <div class="acceso-container form-margin form-container-event" style="display: none;">
+            <h1 class="upsa-title-form"><b>3.</b> Como nos conociste - <span style="color: #f1b434; font-weight: bold;">Selecciona </span></h1>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_2-of-12">
+                    <div class="conocenos-card conocenos-card-disabled" onclick={handleClickSelect}>
+                        <!-- <lightning-icon icon-name="utility:close" alternative-text="Connected" title="Connected">
+                        </lightning-icon> -->
+                        <img src="/sfsites/c/resource/clubresources/clubresources/images/news.png" alt="">
+                        <span class="conocenos-title">
+                            Medios de comunicación
+                        </span>
+                    </div> 
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <div class="conocenos-card conocenos-card-disabled" onclick={handleClickSelect}>
+                        <img src="/sfsites/c/resource/clubresources/clubresources/images/graduating-student.png" alt="">
+                        <span class="conocenos-title">Visita Colegio</span>
+                    </div> 
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <div class="conocenos-card conocenos-card-disabled" onclick={handleClickSelect}>
+                        <img src="/sfsites/c/resource/clubresources/clubresources/images/worldwide.png" alt="">
+                        <span class="conocenos-title">Internet</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <div class="conocenos-card conocenos-card-disabled" onclick={handleClickSelect}>
+                        <img src="/sfsites/c/resource/clubresources/clubresources/images/family.png" alt="">
+                        <span class="conocenos-title">Familia / Amigos</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <div class="conocenos-card conocenos-card-disabled" onclick={handleClickSelect}>
+                        <img src="/sfsites/c/resource/clubresources/clubresources/images/conversation.png" alt="">
+                        <span class="conocenos-title">Ferias</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <div class="conocenos-card conocenos-card-disabled" onclick={handleClickSelect}>
+                        <img src="/sfsites/c/resource/clubresources/clubresources/images/doorway.png" alt="">
+                        <span class="conocenos-title">Puertas Abierta</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

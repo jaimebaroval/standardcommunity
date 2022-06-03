@@ -1,0 +1,29 @@
+.margin-elements-first {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.margin-elements {
+    margin-bottom: 70px;
+}
+
+.proceso-info-form {
+    height: fit-content;
+    transition: all .2s ease-in;
+}
+
+.height-none-proceso {
+    height: 0px;
+    transition: all .4s ease-in;
+}
+
+/* // MARK : Form Section
+*/
+
+/* Next Step */
+
+.datos-next-step {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}

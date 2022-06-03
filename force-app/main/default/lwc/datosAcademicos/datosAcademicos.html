@@ -1,0 +1,123 @@
+<template>
+    <div class="slds-form">
+        <div class="slds-form-element datos-container">
+            <div class="slds-grid slds-gutters slds-wrap slds-size_full datos-container-row">
+                <div class="slds-col slds-size_10-of-12">
+                    <div class="datos-title">¿Has estudiado en el sistema educativo español?</div>
+                </div>
+                <div class="slds-col slds-size_1-of-12 respuesta-container">
+                    <lightning-input type="checkbox-button" value="Si"></lightning-input>
+                    <span class="respuesta-texto">Si</span>
+                </div>
+                <div class="slds-col slds-size_1-of-12 respuesta-container">
+                    <lightning-input type="checkbox-button" value="No"></lightning-input>
+                    <span class="respuesta-texto">No</span>
+                </div>
+            </div>
+        </div>
+        <div class="slds-form-element datos-container">
+            <div class="slds-grid slds-gutters slds-wrap slds-size_full">
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">Tipo de
+                            estudio <span class="required-color">*</span></label>
+                        <lightning-combobox name="progress" value={value} placeholder="Master en ciencias gastronómicas"
+                            options={options} onchange={handleChange} class="mon-select-list-proceso">
+                        </lightning-combobox>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12"></div>
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">Modalidad <span
+                                class="required-color">*</span></label>
+                        <input type="text" class="slds-input mon-select-list-proceso" />
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">Título <span
+                                class="required-color">*</span></label>
+                        <input type="text" class="slds-input mon-select-list-proceso" />
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">Titulación <span
+                                class="required-color">*</span></label>
+                        <input type="text" class="slds-input mon-select-list-proceso" />
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">País <span
+                                class="required-color">*</span></label>
+                        <input type="text" class="slds-input mon-select-list-proceso" />
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">Universidad / Centro
+                            <span class="required-color">*</span></label>
+                        <input type="text" class="slds-input mon-select-list-proceso" />
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12"></div>
+
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">Comenzado <span
+                                class="required-color">*</span></label>
+                        <div class="check-container">
+                            <lightning-input type="checkbox-button" value="comenzado"></lightning-input>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">Termina o previsto
+                            terminar este curso <span class="required-color">*</span></label>
+                        <div class="check-container">
+                            <lightning-input type="checkbox-button" value="terminado"></lightning-input>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">¿Tienes alguna
+                            experiencia laboral? <span class="required-color">*</span></label>
+                        <div class="check-container">
+                            <lightning-input type="checkbox-button" value="experiencia"></lightning-input>
+                            <span class="respuesta-texto">Si</span>
+                            <lightning-input type="checkbox-button" value="experiencia"></lightning-input>
+                            <span class="respuesta-texto">No</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12"></div>
+
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">Lugar de trabajo <span
+                                class="required-color">*</span></label>
+                        <input type="text" class="slds-input mon-select-list-proceso" />
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">Experiencia
+                            <span class="required-color">*</span></label>
+                        <input type="text" class="slds-input mon-select-list-proceso" />
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-form-element__control datos-input">
+                        <label class="slds-form-element__label datos-label" for="form-element-01">Puesto de trabajo
+                            <span class="required-color">*</span></label>
+                        <input type="text" class="slds-input mon-select-list-proceso" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

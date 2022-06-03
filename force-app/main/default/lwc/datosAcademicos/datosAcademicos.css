@@ -1,0 +1,66 @@
+.datos-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    min-width: 1440px;
+}
+
+.datos-container-row {
+    align-items: center;
+}
+
+.respuesta-container {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+.datos-label {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--mon-primary-color);
+}
+
+.datos-input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.datos-title {
+    color: var(--mon-primary-color);
+    font-weight: bold;
+    font-size: 25px;
+    margin: 29px 0;
+    width: fit-content;
+}
+
+.datos-subtitle {
+    color: var(--mon-secondary-color);
+    font-weight: bold;
+    font-size: 23px;
+    margin: 29px 0;
+    border-bottom: 2px solid #12b9d47a;
+    width: fit-content;
+}
+
+.required-color {
+    color: red;
+}
+
+.discapacidad-container {
+    display: flex;
+    width: 100%;
+}
+
+.check-container {
+    display: flex;
+    width: 100%;
+}
+
+.respuesta-texto {
+    margin: 0 25px;
+        color: var(--content-inscripcion-text);
+        font-size: 22px;
+        text-align: center;
+    }

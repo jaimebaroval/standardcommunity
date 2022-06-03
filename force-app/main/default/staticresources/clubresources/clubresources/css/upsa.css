@@ -1,0 +1,666 @@
+/* Quitar Menu y User Menu */
+
+ul.visible-links.themeNav-align-right {
+    display: none;
+}
+
+.themeUtilsContainer {
+    display: none !important;
+}
+
+.region-main.region-full-width {
+    background: white;
+    border-radius: 5px;
+    box-shadow: var(--sds-c-card-shadow, var(--lwc-cardShadow, 0 2px 2px 0 rgba(0, 0, 0, 0.5)));
+}
+
+.slds-grid.slds-wrap.slds-col.slds-size_1-of-1.row.row-main.column {
+    margin: 0;
+}
+
+.upsa-container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0px;
+    width: 100%;
+    background: white;
+}
+
+.upsa-container .slds-input,
+button.slds-combobox__input {
+    border: 1px solid #a1a1a1 !important;
+    padding: 10px 32px 10px 16px;
+    width: 100%;
+    max-width: 100%;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    background-color: white;
+    color: black;
+    line-height: 20px;
+    border-radius: 0;
+    height: 48px !important;
+}
+
+.upsa-container .slds-input::placeholder {
+    color: lightgrey;
+}
+
+button.slds-combobox__input>span {
+    margin-top: 3px;
+}
+
+.upsa-container lightning-base-combobox-item {
+    font-size: 16px !important;
+}
+
+.upsa-container .slds-input__icon-group_right .slds-input__icon_right,
+.slds-input__icon-group_right .slds-input__icon--right {
+    right: 14px;
+}
+
+.upsa-container .slds-icon-text-default {
+    fill: #f1b434;
+}
+
+.upsa-container .slds-form-element {
+    min-height: 90px;
+}
+
+.upsa-container label.slds-form-element__label {
+    font-size: 14px;
+    color: #797f8f;
+    margin-bottom: 10px;
+}
+
+/* Required */
+
+.slds-required {
+    margin-right: 10px;
+}
+
+/* // MARK: Button
+*/
+
+.upsa-container .upsa-button-paso1 button,
+.upsa-container .upsa-button-paso2 button,
+.upsa-container .upsa-button-paso3 button,
+.upsa-container .upsa-button-paso4 button,
+.upsa-button-paso-save button {
+    width: 100%;
+    background-color: #f1b434;
+    min-height: 40px;
+    padding: 9px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    color: #5c606c;
+    border-radius: 0;
+}
+
+.upsa-container .upsa-button-paso1 button:hover,
+.upsa-container .upsa-button-paso2 button:hover,
+.upsa-container .upsa-button-paso3 button:hover,
+.upsa-container .upsa-button-paso4 button:hover,
+.upsa-button-paso-save button:hover {
+    background-color: #202a44;
+    border: 2px solid #f1b434;
+    color: #f1b434;
+    text-decoration: none;
+}
+
+.upsa-container .upsa-button-paso1 button:disabled,
+.upsa-container .upsa-button-paso2 button:disabled,
+.upsa-container .upsa-button-paso3 button:disabled,
+.upsa-container .upsa-button-paso4 button:disabled,
+.upsa-button-paso-save button:disabled {
+    width: 100%;
+    background-color: lightgrey;
+    min-height: 40px;
+    padding: 9px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    color: white;
+    border-radius: 0;
+}
+
+.mt20 button {
+    margin-top: 20px !important;
+}
+
+/* //MARK: CHECKBOX
+*/
+
+/* span.slds-checkbox_faux {
+    width: 16px !important;
+} */
+
+.legal-checkbox .slds-checkbox {
+    display: flex;
+}
+
+
+/* //MARK: VALIDACIÓN DE FORMULARIOS 
+*/
+
+.padleft-validate button {
+    padding-left: 40px !important;
+    transition: all .2s ease-in-out;
+    background-color: #0080001f !important;
+}
+
+.padleft-validate button[disabled] {
+    background-color: #f3f3f3 !important;
+}
+
+.padleft-error button {
+    padding-left: 40px !important;
+    transition: all .2s ease-in-out;
+    background-color: #ff00001f !important;
+}
+
+.padleft-error input::placeholder {
+    color: #ff000047 !important;
+}
+
+.upsa-input.disabled-upsa-input {
+    pointer-events: none !important;
+}
+
+.upsa-input span.slds-truncate {
+    color: lightgrey;
+}
+
+lightning-base-combobox-item.slds-listbox__option span.slds-media__body span {
+    color: black !important;
+}
+
+.padleft-validate input[disabled] {
+    background-color: #f3f3f3 !important;
+}
+
+/* Calendar Button */
+
+.date-field-upsa button {
+    padding-left: unset !important;
+    transition: unset;
+    background-color: unset !important;
+}
+
+.date-field-upsa button {
+    padding-left: unset !important;
+    transition: unset;
+    background-color: unset !important;
+}
+
+.date-field-upsa button::placeholder {
+    color: uset !important;
+}
+
+/* Inputs */
+
+.padleft-validate input {
+    padding-left: 40px !important;
+    transition: all .2s ease-in-out;
+    background-color: #0080001f !important;
+    color: black !important;
+}
+
+.padleft-error input {
+    padding-left: 40px !important;
+    transition: all .2s ease-in-out;
+    background-color: #ff00001f !important;
+}
+
+.padleft-error button span {
+    color: #ff000047 !important;
+}
+
+.padleft-validate.padleft-error button span {
+    color: #ff000047 !important;
+}
+
+.padleft-validate button span {
+    color: black !important;
+}
+
+.slds-has-error .slds-form-element__help {
+    display: none;
+}
+
+.siteforceSldsOneColLayout.siteforceContentArea {
+    margin-top: -50px;
+}
+
+.upsa-input .slds-input[disabled] {
+    background-color: #f3f3f3;
+}
+
+/* FORM STEP */
+
+.slds-icon_container svg {
+    fill: #00000059 !important;
+}
+
+lightning-icon.slds-icon-utility-user.title-icon.slds-icon_container svg {
+    height: 40px;
+    width: 40px;
+}
+
+/* MARK: ALERT ERROR BUTTON
+*/
+
+.close-button button.slds-button.slds-button_neutral {
+    font-size: 25px;
+    padding: 7px;
+    width: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+}
+
+.close-button button.slds-button.slds-button_neutral svg {
+    height: 20px;
+    width: 20px;
+    margin-left: 0px;
+    transition: all .2s ease-out;
+}
+
+
+/* // MARK: ANIMATION
+*/
+
+.slide-in-top-anim {
+    -webkit-animation: slide-in-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: slide-in-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.slide-out-top-anim {
+    -webkit-animation: slide-out-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: slide-out-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-11-13 16:45:21
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-out-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-out-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform:
+            translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* // MARK: ANIMATION DELAY 0.05s SCCS
+
+/* @for $i from 1 through 100 {
+  .delay#{$i} {
+    -webkit-animation-delay:(#{$i*0.05s});
+    animation-delay:(#{$i*0.05s});
+  }
+}
+
+*/
+
+.delay1 {
+    -webkit-animation-delay: 0.01s !important;
+    animation-delay: 0.01s !important;
+}
+
+.delay2 {
+    -webkit-animation-delay: 0.02s !important;
+    animation-delay: 0.02s !important;
+}
+
+.delay3 {
+    -webkit-animation-delay: 0.03s !important;
+    animation-delay: 0.03s !important;
+}
+
+.delay4 {
+    -webkit-animation-delay: 0.04s !important;
+    animation-delay: 0.04s !important;
+}
+
+.delay5 {
+    -webkit-animation-delay: 0.05s !important;
+    animation-delay: 0.05s !important;
+}
+
+.delay6 {
+    -webkit-animation-delay: 0.06s !important;
+    animation-delay: 0.06s !important;
+}
+
+.delay7 {
+    -webkit-animation-delay: 0.07s !important;
+    animation-delay: 0.07s !important;
+}
+
+.delay8 {
+    -webkit-animation-delay: 0.08s !important;
+    animation-delay: 0.08s !important;
+}
+
+.delay9 {
+    -webkit-animation-delay: 0.09s !important;
+    animation-delay: 0.09s !important;
+}
+
+.delay10 {
+    -webkit-animation-delay: 0.1s !important;
+    animation-delay: 0.1s !important;
+}
+
+.delay11 {
+    -webkit-animation-delay: 0.11s !important;
+    animation-delay: 0.11s !important;
+}
+
+.delay12 {
+    -webkit-animation-delay: 0.12s !important;
+    animation-delay: 0.12s !important;
+}
+
+.delay13 {
+    -webkit-animation-delay: 0.13s !important;
+    animation-delay: 0.13s !important;
+}
+
+.delay14 {
+    -webkit-animation-delay: 0.14s !important;
+    animation-delay: 0.14s !important;
+}
+
+.delay15 {
+    -webkit-animation-delay: 0.15s !important;
+    animation-delay: 0.15s !important;
+}
+
+.delay16 {
+    -webkit-animation-delay: 0.16s !important;
+    animation-delay: 0.16s !important;
+}
+
+.delay17 {
+    -webkit-animation-delay: 0.17s !important;
+    animation-delay: 0.17s !important;
+}
+
+.delay18 {
+    -webkit-animation-delay: 0.18s !important;
+    animation-delay: 0.18s !important;
+}
+
+.delay19 {
+    -webkit-animation-delay: 0.19s !important;
+    animation-delay: 0.19s !important;
+}
+
+.delay20 {
+    -webkit-animation-delay: 0.2s !important;
+    animation-delay: 0.2s !important;
+}
+
+.delay21 {
+    -webkit-animation-delay: 0.21s !important;
+    animation-delay: 0.21s !important;
+}
+
+.delay22 {
+    -webkit-animation-delay: 0.22s !important;
+    animation-delay: 0.22s !important;
+}
+
+.delay23 {
+    -webkit-animation-delay: 0.23s !important;
+    animation-delay: 0.23s !important;
+}
+
+.delay24 {
+    -webkit-animation-delay: 0.24s !important;
+    animation-delay: 0.24s !important;
+}
+
+.delay25 {
+    -webkit-animation-delay: 0.25s !important;
+    animation-delay: 0.25s !important;
+}
+
+.delay26 {
+    -webkit-animation-delay: 0.26s !important;
+    animation-delay: 0.26s !important;
+}
+
+.delay27 {
+    -webkit-animation-delay: 0.27s !important;
+    animation-delay: 0.27s !important;
+}
+
+.delay28 {
+    -webkit-animation-delay: 0.28s !important;
+    animation-delay: 0.28s !important;
+}
+
+.delay29 {
+    -webkit-animation-delay: 0.29s !important;
+    animation-delay: 0.29s !important;
+}
+
+.delay30 {
+    -webkit-animation-delay: 0.3s !important;
+    animation-delay: 0.3s !important;
+}
+
+.delay31 {
+    -webkit-animation-delay: 0.31s !important;
+    animation-delay: 0.31s !important;
+}
+
+.delay32 {
+    -webkit-animation-delay: 0.32s !important;
+    animation-delay: 0.32s !important;
+}
+
+.delay33 {
+    -webkit-animation-delay: 0.33s !important;
+    animation-delay: 0.33s !important;
+}
+
+.delay34 {
+    -webkit-animation-delay: 0.34s !important;
+    animation-delay: 0.34s !important;
+}
+
+.delay35 {
+    -webkit-animation-delay: 0.35s !important;
+    animation-delay: 0.35s !important;
+}
+
+.delay36 {
+    -webkit-animation-delay: 0.36s !important;
+    animation-delay: 0.36s !important;
+}
+
+.delay37 {
+    -webkit-animation-delay: 0.37s !important;
+    animation-delay: 0.37s !important;
+}
+
+.delay38 {
+    -webkit-animation-delay: 0.38s !important;
+    animation-delay: 0.38s !important;
+}
+
+.delay39 {
+    -webkit-animation-delay: 0.39s !important;
+    animation-delay: 0.39s !important;
+}
+
+.delay40 {
+    -webkit-animation-delay: 0.4s !important;
+    animation-delay: 0.4s !important;
+}
+
+.delay41 {
+    -webkit-animation-delay: 0.41s !important;
+    animation-delay: 0.41s !important;
+}
+
+.delay42 {
+    -webkit-animation-delay: 0.42s !important;
+    animation-delay: 0.42s !important;
+}
+
+.delay43 {
+    -webkit-animation-delay: 0.43s !important;
+    animation-delay: 0.43s !important;
+}
+
+.delay44 {
+    -webkit-animation-delay: 0.44s !important;
+    animation-delay: 0.44s !important;
+}
+
+.delay45 {
+    -webkit-animation-delay: 0.45s !important;
+    animation-delay: 0.45s !important;
+}
+
+.delay46 {
+    -webkit-animation-delay: 0.46s !important;
+    animation-delay: 0.46s !important;
+}
+
+.delay47 {
+    -webkit-animation-delay: 0.47s !important;
+    animation-delay: 0.47s !important;
+}
+
+.delay48 {
+    -webkit-animation-delay: 0.48s !important;
+    animation-delay: 0.48s !important;
+}
+
+.delay49 {
+    -webkit-animation-delay: 0.49s !important;
+    animation-delay: 0.49s !important;
+}
+
+.delay50 {
+    -webkit-animation-delay: 0.5s !important;
+    animation-delay: 0.5s !important;
+}
+
+.delay51 {
+    -webkit-animation-delay: 0.51s !important;
+    animation-delay: 0.51s !important;
+}
+
+.delay52 {
+    -webkit-animation-delay: 0.52s !important;
+    animation-delay: 0.52s !important;
+}
+
+.delay53 {
+    -webkit-animation-delay: 0.53s !important;
+    animation-delay: 0.53s !important;
+}
+
+.delay54 {
+    -webkit-animation-delay: 0.54s !important;
+    animation-delay: 0.54s !important;
+}
+
+.delay55 {
+    -webkit-animation-delay: 0.55s !important;
+    animation-delay: 0.55s !important;
+}
+
+.delay56 {
+    -webkit-animation-delay: 0.56s !important;
+    animation-delay: 0.56s !important;
+}
+
+.delay57 {
+    -webkit-animation-delay: 0.57s !important;
+    animation-delay: 0.57s !important;
+}
+
+.delay58 {
+    -webkit-animation-delay: 0.58s !important;
+    animation-delay: 0.58s !important;
+}
+
+.delay59 {
+    -webkit-animation-delay: 0.59s !important;
+    animation-delay: 0.59s !important;
+}
+
+.delay60 {
+    -webkit-animation-delay: 0.6s !important;
+    animation-delay: 0.6s !important;
+}

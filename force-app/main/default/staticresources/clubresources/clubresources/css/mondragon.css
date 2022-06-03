@@ -1,0 +1,668 @@
+@import 'variables.css';
+
+* {
+    box-sizing: border-box;
+}
+
+/* lightning-input.mon-select-list-proceso {
+    width: 105%;
+} */
+
+
+
+/* // MARK: Fonts
+*/
+
+@font-face {
+    font-family: 'Gotham Light';
+    font-weight: normal;
+    src: url('/sfsites/c/resource/Gotham/Gotham-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    font-weight: normal;
+    src: url('/sfsites/c/resource/Gotham/GothamBook.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    font-weight: normal;
+    src: url('/sfsites/c/resource/Gotham/Gotham-Bold.otf') format('opentype');
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* // MARK: Footer
+*/
+
+.footer {
+    padding-top: 100px;
+}
+
+/* // MARK: Hero
+*/
+
+.hero {
+    border-bottom: 2px solid var(--mon-primary-color);
+}
+
+h2.contentTitle,
+h1.contentCaption {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0 rgb(42 139 155 / 70%) !important;
+}
+
+a.ctaBtnOne.slds-button.slds-truncate {
+    background: var(--mon-primary-color);
+    font-size: 22px;
+}
+
+p.contentSubtitle {
+    width: 70%;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0 rgb(42 139 155 / 70%) !important;
+}
+
+.citizenHomeHero.dummyCommThemeGroupId.commThemeCmp.comm-is-relative.forceCommunityThemeHeroBase.forceCommunityThemeHeroStarter {
+    padding: 180px 30px !important;
+}
+
+.citizenInnerHero.dummyCommThemeGroupId.commThemeCmp.comm-is-relative.forceCommunityThemeHeroBase.forceCommunityThemeHeroStarter {
+    padding: 180px 30px !important;
+}
+
+.forceCommunityThemeHeroStarter .ctaBtnOne,
+.forceCommunityThemeHeroStarter .ctaBtnTwo {
+    padding: 10px 24px !important;
+}
+
+/* // MARK: Sections
+*/
+
+.margin-elements-first {
+    margin: 30px 0 50px 0;
+}
+
+.margin-elements {
+    margin-bottom: 60px;
+}
+
+.content-inscripcion {
+    font-size: 16px;
+    color: var(--mon-primary-color);
+}
+
+.title-inscripcion {
+    font-size: 22px;
+    color: var(--mon-primary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* // MARK: Inscripción
+*/
+.siteforceSldsOneColLayout.siteforceContentArea {
+    margin-top: -50px;
+}
+
+/* 
+*********************************
+Gutters Separación entre columnas
+*********************************
+ */
+
+.slds-gutters .slds-col {
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+
+/* // MARK: Home Mondragón
+*/
+
+.comm-page-home .siteforceSldsOneColLayout.siteforceContentArea {
+    margin-top: 15px;
+}
+
+.comm-page-home lightning-combobox.mon-select-list-proceso.slds-form-element {
+    width: unset;
+}
+
+.comm-page-home .mon-text-simple {
+    margin-left: var(--mon-home-left);
+    padding-top: 19px;
+}
+
+/* // MARK: Input List 
+*/
+
+.mon-select-list-proceso input {
+    border-radius: 0px !important;
+    height: 50px;
+    border: 2px solid var(--mon-light-primary) !important;
+    font-size: var(--mon-select-list) !important;
+}
+
+.mon-select-list-proceso span.slds-media__body {
+    font-size: 15px;
+}
+
+.slds-dropdown {
+    border-radius: 0px;
+}
+
+.slds-icon-text-default {
+    fill: var(--mon-primary-color);
+}
+
+lightning-icon.slds-icon-utility-down.slds-input__icon.slds-input__icon_right.slds-icon_container {
+    margin-right: 6px;
+}
+
+.mon-text-simple {
+    font-size: var(--mon-text-simple);
+    font-weight: 400;
+    color: var(--mon-primary-color);
+    margin-left: var(--mon-section-left);
+    margin-top: var(--mon-content-to-title);
+}
+
+.slds-form-element__control.datos-input {
+    display: flex;
+    align-items: center;
+}
+
+lightning-combobox.mon-select-list-proceso.slds-form-element {
+    width: 100% !important;
+}
+
+.input-list-zindex {
+    z-index: 1000 !important;
+}
+
+/* // MARK: Input 
+*/
+
+.slds-input {
+    min-height: 50px;
+    border-radius: 0px;
+    border: 2px solid var(--mon-light-primary) !important;
+    font-size: var(--mon-select-list) !important;
+}
+
+.mon-select-list-proceso label.slds-form-element__label {
+    display: none;
+}
+
+lightning-input {
+    width: 100%;
+}
+
+.discapacidad-container lightning-input {
+    width: unset;
+}
+
+.check-container lightning-input {
+    width: unset;
+}
+
+.check-container .slds-form-element__control {
+    display: flex;
+    margin-left: 27px;
+}
+
+.datos-input div[role="alert"] {
+    position: absolute;
+    top: 48px;
+    font-size: 10px;
+}
+
+/* // MARK: Radio Button 
+*/
+
+.check-container .slds-radio [type=radio]:checked+.slds-radio__label .slds-radio_faux,
+.slds-radio [type=radio]+.slds-radio__label .slds-radio_faux {
+    width: 30px !important;
+    height: 30px !important;
+    border: 1px solid var(--mon-primary-color) !important;
+}
+
+.check-container .slds-radio [type=radio]:checked+.slds-radio__label .slds-radio_faux:after {
+    width: 20px;
+    height: 20px;
+    background-color: var(--mon-primary-color);
+}
+
+
+.check-container span.slds-form-element__label {
+    margin: 0 23px 0 18px;
+    color: var(--content-inscripcion-text);
+    font-size: 22px !important;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+label.slds-radio__label {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+/* // MARK: Checkbox 
+*/
+
+.slds-checkbox_add-button .slds-checkbox_faux:before,
+.slds-checkbox_add-button .slds-checkbox_faux:after {
+    background: unset;
+}
+
+label.slds-checkbox_faux {
+    border: 2px solid var(--mon-primary-color) !important;
+}
+
+/* // MARK: Combobox 
+*/
+
+lightning-combobox {
+    z-index: 100;
+}
+
+/* // MARK: Button 
+*/
+
+button.slds-button.slds-button_brand {
+    font-size: 25px;
+    padding: 6px 10px;
+    width: 100%;
+    background-color: var(--mon-primary-color);
+    border: 1px solid var(--mon-secondary-color);
+}
+
+.button-large button.slds-button.slds-button_brand {
+    font-size: 25px;
+    padding: 6px 45px;
+    width: 100%;
+    background-color: var(--mon-primary-color);
+    border: 1px solid var(--mon-secondary-color);
+}
+
+button.slds-button.slds-button_brand:hover {
+    background-color: #1e6974;
+    border: 1px solid var(--mon-secondary-color);
+}
+
+button.slds-button.slds-button_brand svg {
+    height: 20px;
+    width: 20px;
+    margin-left: 30px;
+    width: 50%;
+    transition: all .2s ease-out;
+}
+
+button.slds-button.slds-button_brand:hover svg {
+    height: 20px;
+    width: 20px;
+    margin-left: 30px;
+    width: 100%;
+    transition: all .2s ease-in;
+}
+
+button.slds-button.slds-button_neutral svg {
+    height: 20px;
+    width: 20px;
+    margin-left: 30px;
+    width: 50%;
+    transition: all .2s ease-out;
+}
+
+button.slds-button.slds-button_neutral:hover svg {
+    height: 20px;
+    width: 20px;
+    margin-left: 30px;
+    width: 100%;
+    transition: all .2s ease-in;
+}
+
+button.slds-button.slds-button_neutral {
+    font-size: 25px;
+    padding: 6px 45px;
+    width: 100%;
+    background-color: var(--mon-secondary-color);
+    border: 1px solid var(--mon-secondary-color);
+    color: white;
+}
+
+.pruebas-button-pendiente button.slds-button.slds-button_neutral {
+    font-size: 25px;
+    padding: 6px 45px;
+    width: 100%;
+    background-color: var(--mon-light-grey-color);
+    color: white;
+    border: none;
+}
+
+.pruebas-button-pendiente button.slds-button.slds-button_neutral:hover {
+    font-size: 25px;
+    padding: 6px 45px;
+    width: 100%;
+    background-color: var(--mon-darkgrey-color);
+    color: white;
+    border: none;
+}
+
+button.slds-button.slds-button_neutral:hover {
+    font-size: 25px;
+    padding: 6px 45px;
+    width: 100%;
+    background-color: #2ab3ba;
+    border: 1px solid var(--mon-secondary-color);
+    color: white;
+}
+
+.check-button .slds-button__icon {
+    width: 30px;
+    fill: var(--mon-secondary-color);
+}
+
+.delete-button .slds-button__icon {
+    width: 30px;
+    fill: var(--mon-secondary-color);
+}
+
+.mon-title-validate svg.slds-button__icon.slds-button__icon_left {
+    width: 20px;
+    height: 20px;
+    fill: var(--lwc-colorBackgroundPathComplete);
+}
+
+svg.slds-button__icon.slds-button__icon_left {
+    width: 55px;
+    height: 20px;
+    fill: var(--mon-primary-color);
+}
+
+.check-button .slds-button:focus {
+    outline: 0;
+    box-shadow: unset;
+    fill: var(--lwc-colorBackgroundPathComplete);
+}
+
+.delete-button .slds-button:focus {
+    outline: 0;
+    box-shadow: unset;
+    fill: var(--mon-secondary-color);
+}
+
+lightning-button.delete-button svg {
+    fill: #2a8b9b !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.button-validate button.slds-button.slds-button_brand {
+    background-color: #45c65a;
+}
+
+.button-validate button.slds-button.slds-button_brand:hover {
+    background-color: #2a8b3a;
+}
+
+.save-button-disabled button.slds-button.slds-button_brand {
+    background-color: #d3d3d3;
+    border: none;
+    cursor: default;
+    box-shadow: none !important;
+}
+
+/* .save-button-disabled button.slds-button.slds-button_brand:hover {
+    background-color: #d3d3d3;
+} */
+
+.save-button-disabled button.slds-button.slds-button_brand:hover svg {
+    width: 50% !important;
+}
+
+lightning-button.button-pruebas button {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* // MARK: Alert Messege
+*/
+
+.close-button button.slds-button.slds-button_neutral {
+    font-size: 25px;
+    padding: 7px;
+    width: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+}
+
+.close-button button.slds-button.slds-button_neutral svg {
+    height: 20px;
+    width: 20px;
+    margin-left: 0px;
+    transition: all .2s ease-out;
+}
+
+
+/* // MARK: Calendar 
+*/
+
+lightning-calendar .slds-datepicker {
+    width: 100% !important;
+}
+
+.slds-has-error .slds-form-element__help {
+    font-size: 10px;
+    position: absolute;
+    top: 48px;
+}
+
+
+/* // MARK: Navbar 
+*/
+
+.forceCommunityThemeLogo .logoImage {
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    height: var(--mon-section-left) !important;
+    background-position: center center;
+}
+
+.forceCommunityThemeLogo .logoImage {
+    background: url("/sfsites/c/resource/commstyles/commstyles/images/BCC-Logo.svg") !important;
+    width: 168px !important;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    height: var(--mon-section-left) !important;
+    background-position: center center;
+}
+
+li.mainNavItem.comm-navigation__top-level-item.comm-navigation__menu-item {
+    font-size: 15px;
+}
+
+span.slds-avatar.slds-avatar_circle.slds-avatar_x-small.slds-m-top_xxx-small {
+    height: 35px;
+    width: 35px;
+}
+
+.forceCommunityThemeNav.navMenuType-expanded .mainNavItem .linkBtn.comm-navigation__top-level-item-link--mon-active {
+    border-bottom: 2px solid var(--mon-primary-color);
+}
+
+/* // MARK: Steps 
+*/
+
+a.slds-path__link {
+    padding: 25px;
+    text-decoration: none !important;
+}
+
+.slds-path__item:last-child:before,
+.slds-path__item:last-child:after {
+    right: 150rem;
+}
+
+span.slds-path__title {
+    font-size: 25px;
+    color: white;
+}
+
+.slds-path__item:first-child:before,
+.slds-path__item:first-child:after {
+    left: 150rem;
+}
+
+svg.slds-icon.slds-icon_x-small {
+    width: 25px;
+    height: 25px;
+}
+
+.slds-path__nav .slds-is-current {
+    background-color: var(--mon-light-grey-color);
+}
+
+.slds-path__item:before,
+.slds-path__item:after {
+    left: unset;
+    right: unset;
+}
+
+/* // MARK: Tabla Documentos
+*/
+
+.t-doc-files-container {
+    height: 20px;
+}
+
+.t-doc-files-container lightning-input.slds-form-element {
+    height: 90px;
+}
+
+/* // MARK: ANIMATION
+*/
+
+.jello-vertical-anim {
+    -webkit-animation: jello-vertical 0.4s both;
+    animation: jello-vertical 0.4s both;
+}
+
+.text-focus-in-anim {
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-12-21 23:59:32
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation jello-vertical
+ * ----------------------------------------
+ */
+@-webkit-keyframes jello-vertical {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(1.01, 0.99, 1);
+        transform: scale3d(1.01, 0.99, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(0.99, 1.01, 1);
+        transform: scale3d(0.99, 1.01, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes jello-vertical {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(1.01, 0.99, 1);
+        transform: scale3d(1.01, 0.99, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(0.99, 1.01, 1);
+        transform: scale3d(0.99, 1.01, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-12-22 0:10:46
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
