@@ -1,11 +1,12 @@
 import { LightningElement, track } from 'lwc';
 
 export default class OppForm extends LightningElement {
-    
+
     @track dataTableSorter = [];
     @track formContent = [];
     @track inputElement = [];
-    @track inputValidationType = 
+    @track buttonSubmit = [];
+    @track inputValidationType =
         {
             numerodocumento: 'text',
             email: 'firstEmail',
@@ -17,6 +18,7 @@ export default class OppForm extends LightningElement {
 
         setTimeout(() => {
             this.formContent = this.template.querySelectorAll('.form-content');
+            this.buttonSubmit = this.template.querySelector('.upsa-button');
             this.formContent.forEach(fc => {
                 this.inputElement = fc.querySelectorAll('.form-input');
                 this.inputElement.forEach(ie => {
@@ -34,7 +36,7 @@ export default class OppForm extends LightningElement {
         if(inputEventObj.completeField(event)){
             if(validationType == 'text'){
                 inputEventObj.validateField(event)
-            } 
+            }
             if(validationType == 'firstEmail') {
                 inputEventObj.emailValidationField(event) ? inputEventObj.validateField(event) : inputEventObj.rejectField(event);
             }
@@ -44,8 +46,31 @@ export default class OppForm extends LightningElement {
         } else {
             inputEventObj.rejectField(event);
         }
+
+        this.buttonValidation() ? this.buttonSubmit.disabled = false : this.buttonSubmit.disabled = true;
+
     }
-    
+
+    buttonValidation() {
+        let objKeys;
+        let validationButton = [];
+
+        objKeys = Object.keys(this.dataTableSorter);
+
+        objKeys.forEach(ok => {
+            console.log('this.dataTableSorter[ok].inputValidated:', this.dataTableSorter[ok].inputValidated);
+            if(!this.dataTableSorter[ok].inputValidated) {
+                validationButton.push(false);
+
+            } else {
+                validationButton.push(true);
+
+            }
+        })
+
+        return validationButton.every(element => element);
+    }
+
 }
 
 
@@ -56,9 +81,10 @@ export class InputObject {
 
     inputFormObject;
     inputFormType;
+    inputValidated = false;
 
     constructor(inputForm) {
-        
+
         this.inputFormObject = inputForm;
         console.log('inputFormObject:', this.inputFormObject);
     }
@@ -78,8 +104,10 @@ export class InputObject {
         rejectIcon.style.display = 'none';
         event.currentTarget.classList.add("padleft-validate");
         event.currentTarget.classList.remove("padleft-error");
+
+        this.inputValidated = true;
     }
-            
+
     rejectField(event) {
         let validationIcon = event.currentTarget.nextElementSibling;
         let successIcon = validationIcon.children[0];
@@ -90,6 +118,8 @@ export class InputObject {
         rejectIcon.style.display = 'flex';
         event.currentTarget.classList.remove("padleft-validate");
         event.currentTarget.classList.add("padleft-error");
+
+        this.inputValidated = false;
     }
 
     phoneValidationField(event) {
@@ -110,8 +140,8 @@ export class InputObject {
 
         return emailValidationFormat(event);
     }
-    
-    
+
+
 
     // Button Validation
 
@@ -124,7 +154,7 @@ export class InputObject {
     //     fieldsOnForm.forEach(fof => {
     //         if(this.completeField(event)) {
     //             if(event.currentTarget) {
-                    
+
     //             }
     //         }
     //     })
@@ -139,7 +169,7 @@ export class InputObject {
     //     };
     // }
 
-    
+
 
     // rejectField(event) {
     //     if(event.currentTarget) {
@@ -151,5 +181,5 @@ export class InputObject {
     //     }
     // }
 
-    
+
 }

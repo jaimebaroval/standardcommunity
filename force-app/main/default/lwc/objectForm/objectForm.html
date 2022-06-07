@@ -1,0 +1,81 @@
+<template>
+    <div class="form-container">
+
+        <!-- Form Content 1 -->
+        <h1>Datos Generales</h1>
+        <div class="form-content" data-name="datosGenerales">
+            <lightning-input name="numerodocumento" data-name="numerodocumento" data-valid="dninie" value="" type="text"
+                placeholder="Escribe tu número de documento" label="Número" class="date-field-upsa form-input"
+                onfocusout={validationForm} required>
+            </lightning-input>
+            <div class="validation-container">
+                <div class="check-container">
+                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png" style="width:22px"
+                        class="jello-horizontal-anim" />
+                </div>
+                <div class="error-container">
+                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                        style="width:22px" class="shake-horizontal-anim" />
+                </div>
+            </div>
+            <lightning-input name="email" data-name="email" data-valid="firstemail" value="" type="email"
+                placeholder="Escribe tu email" label="Email" class="date-field-upsa form-input"
+                onfocusout={validationForm} required>
+            </lightning-input>
+            <div class="validation-container">
+                <div class="check-container">
+                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png" style="width:22px"
+                        class="jello-horizontal-anim" />
+                </div>
+                <div class="error-container">
+                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                        style="width:22px" class="shake-horizontal-anim" />
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size_12-of-12" style="margin-top: 15px; margin-bottom: 30px;">
+            <lightning-button data-name="datosGenerales" variant="brand" label="Ir al paso 2" title="Ir al paso 2"
+                class="form-button" disabled>
+            </lightning-button>
+        </div>
+
+        <!-- Form Content 2 -->
+
+        <h1>Números de Contacto</h1>
+        <div class="form-content" data-name="numerosContacto">
+            <lightning-input name="telefono" data-name="telefono" data-valid="phonenumber" value="" type="text"
+                maxlength="9" placeholder="Escribe tu teléfono" label="Teléfono" class="date-field-upsa form-input"
+                onfocusout={validationForm} onchange={validationForm} required>
+            </lightning-input>
+            <div class="validation-container">
+                <div class="check-container">
+                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png" style="width:22px"
+                        class="jello-horizontal-anim" />
+                </div>
+                <div class="error-container">
+                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                        style="width:22px" class="shake-horizontal-anim" />
+                </div>
+            </div>
+            <lightning-input name="movil" data-name="movil" data-valid="phonenumber" value="" type="text" maxlength="9"
+                placeholder="Escribe tu móvil" label="Móvil" class="date-field-upsa form-input"
+                onfocusout={validationForm} onchange={validationForm} required>
+            </lightning-input>
+            <div class="validation-container">
+                <div class="check-container">
+                    <img src="/sfsites/c/resource/clubresources/clubresources/images/checked.png" style="width:22px"
+                        class="jello-horizontal-anim" />
+                </div>
+                <div class="error-container">
+                    <img src="/sfsites/c/resource/clubresources/clubresources/images/complete-field.png"
+                        style="width:22px" class="shake-horizontal-anim" />
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size_12-of-12" style="margin-top: 15px;">
+            <lightning-button variant="brand" label="Ir al paso 3" title="Ir al paso 3" class="form-button" disabled>
+            </lightning-button>
+        </div>
+    </div>
+
+</template>
