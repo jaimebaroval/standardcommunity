@@ -29,8 +29,6 @@ export default class ObjectForm extends LightningElement {
     validationForm(event) {
         let formSectionName = event.currentTarget.parentElement.dataset.name;
         let eventFieldName = event.currentTarget.dataset.name;
-        // let validationType = this.inputValidationType[eventFieldName];
-        // let inputEventObj = this.dataTableSorter[eventFieldName];
 
         let formKeys = [];
         let inputSectionElements = {};
@@ -53,17 +51,10 @@ export default class ObjectForm extends LightningElement {
                             buttonElement = this.formElements[fk].buttonElementObject[fk];
                             inputElement.completeField(event) ? inputElement.validateField(event) : inputElement.rejectField(event);
                             inputElement.helpText(event);
-                            console.log('inputElement:',inputElement)
                         }
                     })
-                    // formSectionValidation = this.formElements[fk].inputElementObject.inputsValidated(event);
                     formSectionValidation = this.formElements[fk].inputsValidated();
                     formSectionValidation ? buttonElement.validateButton(true) : buttonElement.validateButton(false);
-
-                    console.log('inputSectionElements[fk]:',inputSectionElements);
-                    console.log('formSectionValidation:',formSectionValidation);
-                    console.log('eventFieldName:',eventFieldName);
-                    
                 }
             })
     }
@@ -77,7 +68,6 @@ export class FormObject {
 
     formDataName;
     inputElementObject = {};
-    inputElementType = [];
     buttonElementObject = {};
 
     constructor(formElement) {
@@ -161,7 +151,6 @@ export class InputObject {
         let successIcon = validationIcon.children[0];
         let rejectIcon = validationIcon.children[1];
 
-        console.log('reject');
         successIcon.style.display = 'none';
         rejectIcon.style.display = 'flex';
         event.currentTarget.classList.remove("padleft-validate");
@@ -177,7 +166,6 @@ export class EmailInput extends InputObject {
 
     constructor(inputForm) {
         super(inputForm);
-        console.log('email input');
     }
 
     completeField(event) {
@@ -201,7 +189,6 @@ export class PhoneInput extends InputObject {
 
     constructor(inputForm) {
         super(inputForm);
-        console.log('phone input');
     }
 
     completeField(event) {
