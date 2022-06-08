@@ -36,6 +36,7 @@ export default class ObjectForm extends LightningElement {
         let inputSectionElements = {};
         let inputSectionElementsKeys = [];
         let inputElement;
+        let buttonElement;
         let formSectionValidation = false;
 
         formKeys = Object.keys(this.formElements);
@@ -49,12 +50,14 @@ export default class ObjectForm extends LightningElement {
                     inputSectionElementsKeys.forEach(isek => {
                         if(isek == eventFieldName) {
                             inputElement = this.formElements[fk].inputElementObject[isek];
+                            buttonElement = this.formElements[fk].buttonElementObject[fk];
                             inputElement.completeField(event);
                             console.log('inputElement:',inputElement)
                         }
                     })
                     // formSectionValidation = this.formElements[fk].inputElementObject.inputsValidated(event);
                     formSectionValidation = this.formElements[fk].inputsValidated(event);
+                    formSectionValidation ? buttonElement.validateButton(true) : buttonElement.validateButton(false);
 
                     console.log('inputSectionElements[fk]:',inputSectionElements);
                     console.log('formSectionValidation:',formSectionValidation);
@@ -73,12 +76,16 @@ export class FormObject {
 
     formDataName;
     inputElementObject = {};
+    buttonElementObject = {};
 
     constructor(formElement) {
         this.formDataName = formElement.dataset.name;
 
         formElement.querySelectorAll('.form-input').forEach(ie => {
             this.inputElementObject[ie.dataset.name] = new InputObject(ie);
+        })
+        formElement.querySelectorAll('.form-button').forEach(be => {
+            this.buttonElementObject = {[be.dataset.name]: new ButtonObject(be)} ;
         })
     }
 
@@ -87,10 +94,11 @@ export class FormObject {
         let inputElementsKeys = Object.keys(inputElements);
         let formInputsValidation = [];
 
+        let buttonElements = this.buttonElementObject;
+
         
         inputElementsKeys.forEach(ie => {
             inputElements[ie].inputValidated ? formInputsValidation.push(true) : formInputsValidation.push(false);
-            // console.log('inputElementObject.inputValidated:', this.inputElementObject[ie].inputValidated);
         })
 
         return formInputsValidation.every(fiv => fiv);
@@ -150,5 +158,20 @@ export class InputObject {
         event.currentTarget.classList.add("padleft-error");
 
         this.inputValidated = false;
+    }
+}
+
+// Button Object
+
+export class ButtonObject { 
+
+    buttonFormObject;
+
+    constructor(buttonForm) {
+        this.buttonFormObject = buttonForm;
+    }
+
+    validateButton(cond) {
+        cond ? this.buttonFormObject.disabled = false : this.buttonFormObject.disabled = true;
     }
 }
