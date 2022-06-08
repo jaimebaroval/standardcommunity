@@ -51,12 +51,13 @@ export default class ObjectForm extends LightningElement {
                         if(isek == eventFieldName) {
                             inputElement = this.formElements[fk].inputElementObject[isek];
                             buttonElement = this.formElements[fk].buttonElementObject[fk];
-                            inputElement.completeField(event);
+                            inputElement.completeField(event) ? inputElement.validateField(event) : inputElement.rejectField(event);
+                            inputElement.helpText(event);
                             console.log('inputElement:',inputElement)
                         }
                     })
                     // formSectionValidation = this.formElements[fk].inputElementObject.inputsValidated(event);
-                    formSectionValidation = this.formElements[fk].inputsValidated(event);
+                    formSectionValidation = this.formElements[fk].inputsValidated();
                     formSectionValidation ? buttonElement.validateButton(true) : buttonElement.validateButton(false);
 
                     console.log('inputSectionElements[fk]:',inputSectionElements);
@@ -76,27 +77,35 @@ export class FormObject {
 
     formDataName;
     inputElementObject = {};
+    inputElementType = [];
     buttonElementObject = {};
 
     constructor(formElement) {
         this.formDataName = formElement.dataset.name;
 
         formElement.querySelectorAll('.form-input').forEach(ie => {
-            this.inputElementObject[ie.dataset.name] = new InputObject(ie);
+            let inputType;
+
+            inputType = ie.dataset.valid;
+            console.log('inputType:', inputType);
+            if(inputType == 'firstemail') {
+                this.inputElementObject[ie.dataset.name] = new EmailInput(ie);
+            } else if (inputType == 'phonenumber') {
+                this.inputElementObject[ie.dataset.name] = new PhoneInput(ie);
+            } else {
+                this.inputElementObject[ie.dataset.name] = new InputObject(ie);
+            }
         })
         formElement.querySelectorAll('.form-button').forEach(be => {
             this.buttonElementObject = {[be.dataset.name]: new ButtonObject(be)} ;
         })
     }
 
-    inputsValidated(event) {
+    inputsValidated() {
         let inputElements = this.inputElementObject;
         let inputElementsKeys = Object.keys(inputElements);
         let formInputsValidation = [];
 
-        let buttonElements = this.buttonElementObject;
-
-        
         inputElementsKeys.forEach(ie => {
             inputElements[ie].inputValidated ? formInputsValidation.push(true) : formInputsValidation.push(false);
         })
@@ -121,8 +130,9 @@ export class InputObject {
         this.inputFormValidation = inputForm.dataset.valid;
     }
 
-    testComent(event) {
-        console.log('name:',event.currentTarget.dataset.name);
+    helpText(event) {
+        event.currentTarget.placeholder = event.currentTarget.dataset.help;
+        console.log('helpText:',event.currentTarget.dataset.help);
     }
 
     completeField(event) {
@@ -158,6 +168,52 @@ export class InputObject {
         event.currentTarget.classList.add("padleft-error");
 
         this.inputValidated = false;
+    }
+}
+
+// Input Child Objects
+
+export class EmailInput extends InputObject {
+
+    constructor(inputForm) {
+        super(inputForm);
+        console.log('email input');
+    }
+
+    completeField(event) {
+        this.inputValidated = this.validationInputType(event);
+
+        return this.inputValidated;
+    }
+
+    validationInputType(event) {
+        const emailValidationFormat = (event) => {
+            return event.currentTarget.value.match(
+                /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                );
+        }
+
+        return emailValidationFormat(event);
+    }
+}
+
+export class PhoneInput extends InputObject {
+
+    constructor(inputForm) {
+        super(inputForm);
+        console.log('phone input');
+    }
+
+    completeField(event) {
+        this.inputValidated = this.validationInputType(event);
+        return this.inputValidated;
+    }
+
+    validationInputType(event) {
+        let onlyNum = /^\d+$/.test(event.currentTarget.value);
+        let phoneLength = event.currentTarget.value.length === 9;
+
+        return onlyNum && phoneLength;
     }
 }
 

@@ -4,9 +4,10 @@
         <!-- Form Content 1 -->
         <h1>Datos Generales</h1>
         <div class="form-content" data-name="datosGenerales">
-            <lightning-input name="numerodocumento" data-name="numerodocumento" data-valid="dninie" value="" type="text"
-                placeholder="Escribe tu número de documento" label="Número" class="date-field-upsa form-input"
-                onfocusout={validationForm} required>
+            <lightning-input name="numerodocumento" data-name="numerodocumento" data-valid="dninie"
+                data-help="Introduzca un número válido de documento" value="" type="text"
+                placeholder="Número de documento" class="date-field-upsa form-input" onfocusout={validationForm}
+                required>
             </lightning-input>
             <div class="validation-container">
                 <div class="check-container">
@@ -18,9 +19,9 @@
                         style="width:22px" class="shake-horizontal-anim" />
                 </div>
             </div>
-            <lightning-input name="email" data-name="email" data-valid="firstemail" value="" type="email"
-                placeholder="Escribe tu email" label="Email" class="date-field-upsa form-input"
-                onfocusout={validationForm} required>
+            <lightning-input name="email" data-name="email" data-valid="firstemail"
+                data-help="Introduzca un email válido" value="" type="email" placeholder="Escribe tu email"
+                label="Email" class="date-field-upsa form-input" onfocusout={validationForm} required>
             </lightning-input>
             <div class="validation-container">
                 <div class="check-container">
@@ -43,8 +44,9 @@
 
         <h1>Números de Contacto</h1>
         <div class="form-content" data-name="numerosContacto">
-            <lightning-input name="telefono" data-name="telefono" data-valid="phonenumber" value="" type="text"
-                maxlength="9" placeholder="Escribe tu teléfono" label="Teléfono" class="date-field-upsa form-input"
+            <lightning-input name="telefono" data-name="telefono" data-valid="phonenumber"
+                data-help="Introduzca un teléfono de 9 dígitos" value="" type="text" maxlength="9"
+                placeholder="Escribe tu teléfono" label="Teléfono" class="date-field-upsa form-input"
                 onfocusout={validationForm} onchange={validationForm} required>
             </lightning-input>
             <div class="validation-container">
@@ -57,7 +59,8 @@
                         style="width:22px" class="shake-horizontal-anim" />
                 </div>
             </div>
-            <lightning-input name="movil" data-name="movil" data-valid="phonenumber" value="" type="text" maxlength="9"
+            <lightning-input name="movil" data-name="movil" data-valid="phonenumber"
+                data-help="Introduzca un móvil de 9 dígitos" value="" type="text" maxlength="9"
                 placeholder="Escribe tu móvil" label="Móvil" class="date-field-upsa form-input"
                 onfocusout={validationForm} onchange={validationForm} required>
             </lightning-input>
