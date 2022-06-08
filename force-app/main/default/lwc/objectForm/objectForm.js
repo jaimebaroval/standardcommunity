@@ -77,7 +77,6 @@ export class FormObject {
             let inputType;
 
             inputType = ie.dataset.valid;
-            console.log('inputType:', inputType);
             if(inputType == 'firstemail') {
                 this.inputElementObject[ie.dataset.name] = new EmailInput(ie);
             } else if (inputType == 'phonenumber') {
