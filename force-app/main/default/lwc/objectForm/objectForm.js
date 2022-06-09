@@ -41,6 +41,9 @@ export default class ObjectForm extends LightningElement {
 
             formKeys.forEach(fk => {
                 if(fk == formSectionName) {
+
+                    console.log('this.formElements:', this.formElements[fk]);
+
                     inputSectionElements[fk] = this.formElements[fk].inputElementObject;
                     inputSectionElementsKeys = Object.keys(inputSectionElements[fk]);
 
