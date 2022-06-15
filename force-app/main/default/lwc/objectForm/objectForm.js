@@ -2,16 +2,21 @@ import { LightningElement, track } from 'lwc';
 
 export default class ObjectForm extends LightningElement {
 
+    @track formSubmitButton = [];
     @track formContent = [];
     @track formElements = [];
     @track inputFormGroup = [];
+    
 
     connectedCallback() {
 
         let formKeys = [];
 
         setTimeout(() => {
+            this.formSubmitButton = this.template.querySelector('.form-submit-button');
             this.formContent = this.template.querySelectorAll('.form-content');
+
+            console.log('this.formSubmitButton:', this.formSubmitButton.outerHTML);
 
             this.formContent.forEach(fc => {
                 this.formElements[fc.dataset.name] = new FormObject(fc);
@@ -36,6 +41,10 @@ export default class ObjectForm extends LightningElement {
         let inputElement;
         let buttonElement;
         let formSectionValidation = false;
+        let buttonSectionValidation = {};
+        let submitButtonValidation = [];
+        let valueButtonKeys = [];
+        let valueButton = [];
 
         formKeys = Object.keys(this.formElements);
 
@@ -53,14 +62,37 @@ export default class ObjectForm extends LightningElement {
                             inputElement = this.formElements[fk].inputElementObject[isek];
                             buttonElement = this.formElements[fk].buttonElementObject[fk];
                             inputElement.completeField(event) ? inputElement.validateField(event) : inputElement.rejectField(event);
-                            inputElement.helpText(event);
+                            // inputElement.helpText(event);
                         }
                     })
                     formSectionValidation = this.formElements[fk].inputsValidated();
-                    formSectionValidation ? buttonElement.validateButton(true) : buttonElement.validateButton(false);
+                    if(formSectionValidation) {
+                        buttonElement.validateButton(true);
+                        buttonSectionValidation = {[fk]:true};
+                    } else {
+                        buttonElement.validateButton(false);
+                        buttonSectionValidation = {[fk]:false};
+                    }
+                    submitButtonValidation.push(buttonSectionValidation);
+                } else {
+                    formSectionValidation = this.formElements[fk].inputsValidated();
+                    if(formSectionValidation) {
+                        buttonSectionValidation = {[fk]:true};
+                    } else {
+                        buttonSectionValidation = {[fk]:false};
+                    }
+                    submitButtonValidation.push(buttonSectionValidation);
                 }
+                
             })
-    }
+            
+            submitButtonValidation.forEach(sbv => {
+                valueButtonKeys = Object.keys(sbv);
+                sbv[valueButtonKeys] ? valueButton.push(true): valueButton.push(false);
+            })
+
+            valueButton.every(vb => vb) ? this.formSubmitButton.disabled = false : this.formSubmitButton.disabled = true;
+        }
 
 }
 
@@ -211,12 +243,19 @@ export class PhoneInput extends InputObject {
 export class ButtonObject { 
 
     buttonFormObject;
+    buttonValidated = false;
 
     constructor(buttonForm) {
         this.buttonFormObject = buttonForm;
     }
 
     validateButton(cond) {
-        cond ? this.buttonFormObject.disabled = false : this.buttonFormObject.disabled = true;
+        if(cond){
+            this.buttonFormObject.disabled = false;
+            this.buttonValidated = true;
+        } else {
+            this.buttonFormObject.disabled = true;
+            this.buttonValidated = false;
+        }
     }
 }
