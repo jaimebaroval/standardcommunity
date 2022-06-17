@@ -21,17 +21,17 @@ export default class ObjectForm extends LightningElement {
 
             this.formContainerObject = new FormObject(this.formContainer);
 
-            // this.formContent.forEach(fc => {
-            //     this.formElements[fc.dataset.name] = new FormSectionObject(fc);
-            // });
+            this.formContent.forEach(fc => {
+                this.formElements[fc.dataset.name] = new FormSectionObject(fc);
+            });
 
             console.log('formContainerObject:', this.formContainerObject);
 
             formKeys = Object.keys(this.formElements);
 
-            // formKeys.forEach(fk => {
-            //     console.log('this.formElements:', this.formElements[fk]);
-            // })
+            formKeys.forEach(fk => {
+                console.log('this.formElements:', this.formElements[fk]);
+            })
             console.log('fin SetTimeOut');
 
         }, 100);
