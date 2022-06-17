@@ -3,6 +3,8 @@ import { LightningElement, track } from 'lwc';
 export default class ObjectForm extends LightningElement {
 
     @track formSubmitButton = [];
+    @track formContainer = [];
+    @track formContainerObject = [];
     @track formContent = [];
     @track formElements = [];
     @track inputFormGroup = [];
@@ -13,20 +15,24 @@ export default class ObjectForm extends LightningElement {
         let formKeys = [];
 
         setTimeout(() => {
-            this.formSubmitButton = this.template.querySelector('.form-submit-button');
+            this.formContainer = this.template.querySelector('.form-container');
             this.formContent = this.template.querySelectorAll('.form-content');
+            this.formSubmitButton = this.template.querySelector('.form-submit-button');
 
-            console.log('this.formSubmitButton:', this.formSubmitButton.outerHTML);
+            this.formContainerObject = new FormObject(this.formContainer);
 
-            this.formContent.forEach(fc => {
-                this.formElements[fc.dataset.name] = new FormObject(fc);
-            });
+            // this.formContent.forEach(fc => {
+            //     this.formElements[fc.dataset.name] = new FormSectionObject(fc);
+            // });
+
+            console.log('formContainerObject:', this.formContainerObject);
 
             formKeys = Object.keys(this.formElements);
 
-            formKeys.forEach(fk => {
-                console.log('this.formElements:', this.formElements[fk]);
-            })
+            // formKeys.forEach(fk => {
+            //     console.log('this.formElements:', this.formElements[fk]);
+            // })
+            console.log('fin SetTimeOut');
 
         }, 100);
     }
@@ -85,10 +91,10 @@ export default class ObjectForm extends LightningElement {
                 }
                 
             })
-            
+
             submitButtonValidation.forEach(sbv => {
                 valueButtonKeys = Object.keys(sbv);
-                sbv[valueButtonKeys] ? valueButton.push(true): valueButton.push(false);
+                sbv[valueButtonKeys] ? valueButton.push(true) : valueButton.push(false);
             })
 
             valueButton.every(vb => vb) ? this.formSubmitButton.disabled = false : this.formSubmitButton.disabled = true;
@@ -97,16 +103,31 @@ export default class ObjectForm extends LightningElement {
 }
 
 
-// Form Object
+// Form Objects
 
 export class FormObject {
 
-    formDataName;
+    formName;
+    formSectionElements = {};
+
+    constructor(formCont) {
+        this.formName = formCont.dataset.name;
+
+        formCont.querySelectorAll('.form-content').forEach(fc => {
+            this.formSectionElements[fc.dataset.name] = new FormSectionObject(fc);
+        });
+
+    }
+}
+
+export class FormSectionObject {
+
+    formSectionName;
     inputElementObject = {};
     buttonElementObject = {};
 
     constructor(formElement) {
-        this.formDataName = formElement.dataset.name;
+        this.formSectionName = formElement.dataset.name;
 
         formElement.querySelectorAll('.form-input').forEach(ie => {
             let inputType;
