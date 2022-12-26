@@ -3,11 +3,13 @@ import { LightningElement, track } from 'lwc';
 export default class ObjectForm extends LightningElement {
 
     @track formSubmitButton = [];
+    @track formSectionButton = [];
     @track formContainer = [];
     @track formContainerObject = [];
     @track formContent = [];
     @track formElements = [];
     @track inputFormGroup = [];
+    @track formSection = '';
     
 
     connectedCallback() {
@@ -16,88 +18,104 @@ export default class ObjectForm extends LightningElement {
 
         setTimeout(() => {
             this.formContainer = this.template.querySelector('.form-container');
-            this.formContent = this.template.querySelectorAll('.form-content');
-            this.formSubmitButton = this.template.querySelector('.form-submit-button');
+            // this.formContent = this.template.querySelectorAll('.form-content');
+            
 
             this.formContainerObject = new FormObject(this.formContainer);
 
-            this.formContent.forEach(fc => {
-                this.formElements[fc.dataset.name] = new FormSectionObject(fc);
-            });
+            console.log('this.formContainerObject:', this.formContainerObject);
 
-            console.log('formContainerObject:', this.formContainerObject);
+            // this.formContent.forEach(fc => {
+            //     this.formElements[fc.dataset.name] = new FormSectionObject(fc);
+            // });
 
-            formKeys = Object.keys(this.formElements);
+            console.log('formSubmitButton:', this.formSubmitButton);
 
-            formKeys.forEach(fk => {
-                console.log('this.formElements:', this.formElements[fk]);
-            })
+            // formKeys = Object.keys(this.formElements);
+
+            // formKeys.forEach(fk => {
+            //     console.log('this.formElements:', this.formElements[fk]);
+            // })
             console.log('fin SetTimeOut');
 
-        }, 100);
+        }, 200);
     }
     
     validationForm(event) {
-        let formSectionName = event.currentTarget.parentElement.dataset.name;
-        let eventFieldName = event.currentTarget.dataset.name;
 
-        let formKeys = [];
-        let inputSectionElements = {};
-        let inputSectionElementsKeys = [];
-        let inputElement;
-        let buttonElement;
-        let formSectionValidation = false;
-        let buttonSectionValidation = {};
-        let submitButtonValidation = [];
-        let valueButtonKeys = [];
-        let valueButton = [];
+        this.formContainerObject.formValidation(event);
 
-        formKeys = Object.keys(this.formElements);
+        // let formSectionName = event.currentTarget.parentElement.dataset.name;
+        // let formContainerName = event.currentTarget.parentElement.parentElement.dataset.name;
+        // let formContainer = event.currentTarget.parentElement.parentElement.dataset.name;
 
-            formKeys.forEach(fk => {
-                if(fk == formSectionName) {
+        // console.log('focus out:', formContainerName);
+        // let eventFieldName = event.currentTarget.dataset.name;
 
-                    console.log('this.formElements:', this.formElements[fk]);
+        // let formSectionKeys = [];
+        // let inputSectionElements = {};
+        // let inputSectionElementsKeys = [];
+        // let inputElement;
+        // let buttonElement;
+        // let formSectionValidation = false;
+        // let buttonSectionValidation = {};
+        // let submitButtonValidation = [];
+        // let valueButtonKeys = [];
+        // let valueButton = [];
 
-                    inputSectionElements[fk] = this.formElements[fk].inputElementObject;
-                    inputSectionElementsKeys = Object.keys(inputSectionElements[fk]);
+        // formSectionKeys = Object.keys(this.formContainerObject.formSectionElements);
+
+        // formSectionKeys.forEach(fk => {
+        //     if(fk == formSectionName) {
+        //         console.log('formSectionName:',formSectionName);
+        //         console.log('fk:',fk);
+        //         console.log('this.formContainerObject.formSectionElements:', this.formContainerObject.formSectionElements[fk].inputElementObject[eventFieldName].inputValidated);
+
+                //     inputSectionElementsKeys = Object.keys(fk.inputElementObject);
+                //     inputSectionElementsKeys.forEach(isek => { console.log('isek:'. isek)})
+                // }
+            // }
+        // })
+
+            //         inputSectionElements[fk] = this.formElements[fk].inputElementObject;
+            //         inputSectionElementsKeys = Object.keys(inputSectionElements[fk]);
 
                     
-                    inputSectionElementsKeys.forEach(isek => {
-                        if(isek == eventFieldName) {
-                            inputElement = this.formElements[fk].inputElementObject[isek];
-                            buttonElement = this.formElements[fk].buttonElementObject[fk];
-                            inputElement.completeField(event) ? inputElement.validateField(event) : inputElement.rejectField(event);
-                            // inputElement.helpText(event);
-                        }
-                    })
-                    formSectionValidation = this.formElements[fk].inputsValidated();
-                    if(formSectionValidation) {
-                        buttonElement.validateButton(true);
-                        buttonSectionValidation = {[fk]:true};
-                    } else {
-                        buttonElement.validateButton(false);
-                        buttonSectionValidation = {[fk]:false};
-                    }
-                    submitButtonValidation.push(buttonSectionValidation);
-                } else {
-                    formSectionValidation = this.formElements[fk].inputsValidated();
-                    if(formSectionValidation) {
-                        buttonSectionValidation = {[fk]:true};
-                    } else {
-                        buttonSectionValidation = {[fk]:false};
-                    }
-                    submitButtonValidation.push(buttonSectionValidation);
-                }
+            //         inputSectionElementsKeys.forEach(isek => {
+            //             if(isek == eventFieldName) {
+            //                 inputElement = this.formElements[fk].inputElementObject[isek];
+            //                 buttonElement = this.formElements[fk].buttonElementObject[fk];
+            //                 inputElement.completeField(event) ? inputElement.validateField(event) : inputElement.rejectField(event);
+            //                 // inputElement.helpText(event);
+            //             }
+            //         })
+            //         formSectionValidation = this.formElements[fk].inputsValidated();
+            //         if(formSectionValidation) {
+            //             buttonElement.validateButton(true);
+            //             buttonSectionValidation = {[fk]:true};
+            //         } else {
+            //             buttonElement.validateButton(false);
+            //             buttonSectionValidation = {[fk]:false};
+            //         }
+            //         submitButtonValidation.push(buttonSectionValidation);
+            //     } else {
+            //         formSectionValidation = this.formElements[fk].inputsValidated();
+            //         if(formSectionValidation) {
+            //             buttonSectionValidation = {[fk]:true};
+            //         } else {
+            //             buttonSectionValidation = {[fk]:false};
+            //         }
+            //         submitButtonValidation.push(buttonSectionValidation);
+            //     }
                 
-            })
+            // })
 
-            submitButtonValidation.forEach(sbv => {
-                valueButtonKeys = Object.keys(sbv);
-                sbv[valueButtonKeys] ? valueButton.push(true) : valueButton.push(false);
-            })
+            // submitButtonValidation.forEach(sbv => {
+            //     valueButtonKeys = Object.keys(sbv);
+            //     sbv[valueButtonKeys] ? valueButton.push(true) : valueButton.push(false);
+            // })
 
-            valueButton.every(vb => vb) ? this.formSubmitButton.disabled = false : this.formSubmitButton.disabled = true;
+            // valueButton.every(vb => vb) ? this.formSubmitButton.disabled = false : this.formSubmitButton.disabled = true;
         }
 
 }
@@ -109,6 +127,8 @@ export class FormObject {
 
     formName;
     formSectionElements = {};
+    formSubmitButton = [];
+    
 
     constructor(formCont) {
         this.formName = formCont.dataset.name;
@@ -116,20 +136,60 @@ export class FormObject {
         formCont.querySelectorAll('.form-content').forEach(fc => {
             this.formSectionElements[fc.dataset.name] = new FormSectionObject(fc);
         });
+        this.formSubmitButton = formCont.querySelector('.form-submit-button');
+
+    }
+
+    formValidation(event) {
+        let formSectionKeys = Object.keys(this.formSectionElements);
+        let inputSectionElements = {};
+        let inputSectionElementsKeys = [];
+        let inputValidatedForm = [];
+        let inputEvent = event.currentTarget.dataset.name;
+        let formSectionName = event.currentTarget.parentElement.dataset.name;
+
+        formSectionKeys.forEach(fsk => {
+            inputSectionElements[fsk] = this.formSectionElements[fsk].inputElementObject;
+            inputSectionElementsKeys = Object.keys(inputSectionElements[fsk]);
+
+            if(formSectionName == fsk) {
+                console.log('formSectionName:', formSectionName);
+                console.log('inputSectionElements[fsk]', inputSectionElements[fsk]);
+                console.log('inputSectionElementsKeys:', inputSectionElementsKeys); 
+                
+                inputSectionElementsKeys.forEach(isek => {
+                    let inputElement = this.formSectionElements[fsk].inputElementObject[isek];
+                    console.log('inputElement:', inputElement);
+    
+                    
+                    if(inputElement.inputFormObject.dataset.name == inputEvent) {
+                        inputElement.completeField(event) ? inputElement.validateField(event) : inputElement.rejectField(event);
+                    }
+                    
+                    inputElement.inputValidated ? inputValidatedForm.push(true) : inputValidatedForm.push(false);
+                })
+            }
+
+        })
+
+        inputValidatedForm.every(ivf => ivf) ? this.formSubmitButton.disabled = false : this.formSubmitButton.disabled = true;
 
     }
 }
 
 export class FormSectionObject {
 
-    formSectionName;
+    formSectionName = [];
     inputElementObject = {};
     buttonElementObject = {};
 
     constructor(formElement) {
         this.formSectionName = formElement.dataset.name;
+        console.log('this.formSectionName', this.formSectionName);
 
         formElement.querySelectorAll('.form-input').forEach(ie => {
+
+            
             let inputType;
 
             inputType = ie.dataset.valid;
@@ -143,16 +203,25 @@ export class FormSectionObject {
         })
         formElement.querySelectorAll('.form-button').forEach(be => {
             this.buttonElementObject = {[be.dataset.name]: new ButtonObject(be)} ;
+            console.log('this.buttonElementObject:',this.buttonElementObject);
         })
     }
 
     inputsValidated() {
-        let inputElements = this.inputElementObject;
+        let inputElements = this;
         let inputElementsKeys = Object.keys(inputElements);
         let formInputsValidation = [];
 
+        console.log('this.inputElementObject:', this.inputElementObject);
+
+
         inputElementsKeys.forEach(ie => {
+            console.log('ie:', ie);
             inputElements[ie].inputValidated ? formInputsValidation.push(true) : formInputsValidation.push(false);
+        })
+
+        formInputsValidation.forEach(fiv => {
+            console.log('fiv:',fiv);
         })
 
         return formInputsValidation.every(fiv => fiv);

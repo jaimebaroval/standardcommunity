@@ -23,6 +23,7 @@
     position: absolute;
     top: 0;
     padding: 180px 0;
+    width: 100%;
 }
 
 h1,
@@ -51,5 +52,4 @@ p.contentSubtitleCustom {
     color: white;
     max-width: var(--hero-subtitle-width);
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
-
 }

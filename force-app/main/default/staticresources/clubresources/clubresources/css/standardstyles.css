@@ -25,15 +25,14 @@ body {
     opacity: var(--hero-overlay-opacity);
 }
 
-
 /* Hero Button */
 
 .forceCommunityThemeHeroStarter .ctaBtnOne {
     background: var(--primary-color);
     font-size: var(--button-font-size);
-    -webkit-animation: var(--hero-button-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: var(--hero-button-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation-delay: .5s;
+    -webkit-animation: var(--hero-button-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: var(--hero-button-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.5s;
 }
 
 /* 
@@ -49,7 +48,7 @@ body {
 }
 
 .forceCommunityThemeNav.navMenuType-expanded .mainNavItem .linkBtn.comm-navigation__top-level-item-link--active {
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px dotted white;
 }
 
 li.mainNavItem.comm-navigation__top-level-item.comm-navigation__menu-item {
@@ -70,9 +69,9 @@ li.mainNavItem.comm-navigation__top-level-item.comm-navigation__menu-item {
 
 .calendar.forceCommunityCalendar {
     border-radius: var(--recList-border-radius);
-    -webkit-animation: slide-in-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slide-in-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation-delay: .2s;
+    -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.2s;
 }
 
 .calendarHome .slds-page-header {
@@ -113,11 +112,11 @@ li.mainNavItem.comm-navigation__top-level-item.comm-navigation__menu-item {
     background: linear-gradient(230deg, var(--light-secondary), var(--primary-color), var(--light-secondary));
     background-size: 600% 600%;
 
-    -webkit-animation: gradient-effect 1.5s ease-in infinite;
-    -moz-animation: gradient-effect 1.5s ease-in infinite;
-    animation: gradient-effect 1.5s ease-in infinite;
+    -webkit-animation: gradient-effect 3.5s ease-in infinite;
+    -moz-animation: gradient-effect 3.5s ease-in infinite;
+    animation: gradient-effect 3.5s ease-in infinite;
 
-    animation-iteration-count: 1.4, infinite;
+    animation-iteration-count: 0.8, infinite;
 }
 
 .highlights-icon-container.slds-avatar.slds-m-right_small.icon {
@@ -136,11 +135,11 @@ li.mainNavItem.comm-navigation__top-level-item.comm-navigation__menu-item {
     background: linear-gradient(230deg, var(--light-secondary), var(--primary-color), var(--light-secondary));
     background-size: 600% 600%;
 
-    -webkit-animation: gradient-effect 1.5s ease-in infinite;
-    -moz-animation: gradient-effect 1.5s ease-in infinite;
-    animation: gradient-effect 1.5s ease-in infinite;
+    -webkit-animation: gradient-effect 3.5s ease-in infinite;
+    -moz-animation: gradient-effect 3.5s ease-in infinite;
+    animation: gradient-effect 3.5s ease-in infinite;
 
-    animation-iteration-count: 1.4, infinite;
+    animation-iteration-count: 0.8, infinite;
 }
 
 .slds-icon-standard-event .slds-icon {
@@ -159,11 +158,11 @@ li.mainNavItem.comm-navigation__top-level-item.comm-navigation__menu-item {
     background: linear-gradient(230deg, var(--light-secondary), var(--primary-color), var(--light-secondary));
     background-size: 600% 600%;
 
-    -webkit-animation: gradient-effect 1.5s ease-in infinite;
-    -moz-animation: gradient-effect 1.5s ease-in infinite;
-    animation: gradient-effect 1.5s ease-in infinite;
+    -webkit-animation: gradient-effect 3.5s ease-in infinite;
+    -moz-animation: gradient-effect 3.5s ease-in infinite;
+    animation: gradient-effect 3.5s ease-in infinite;
 
-    animation-iteration-count: 1.4, infinite;
+    animation-iteration-count: 0.8, infinite;
     border-radius: var(--icon-border-radius);
 }
 
@@ -171,14 +170,13 @@ li.mainNavItem.comm-navigation__top-level-item.comm-navigation__menu-item {
     background: linear-gradient(230deg, var(--light-secondary), var(--primary-color), var(--light-secondary));
     background-size: 600% 600%;
 
-    -webkit-animation: gradient-effect 1.5s ease-in infinite;
-    -moz-animation: gradient-effect 1.5s ease-in infinite;
-    animation: gradient-effect 1.5s ease-in infinite;
+    -webkit-animation: gradient-effect 3.5s ease-in infinite;
+    -moz-animation: gradient-effect 3.5s ease-in infinite;
+    animation: gradient-effect 3.5s ease-in infinite;
 
-    animation-iteration-count: 1.4, infinite;
+    animation-iteration-count: 0.8, infinite;
     height: 50px;
     width: 50px;
-
 }
 
 /* .small.roundedSquare.forceEntityIcon.span.uiImage img {
@@ -227,7 +225,7 @@ button.slds-button.slds-button--brand {
     height: 100vh;
     width: 100vw;
     background: var(--login-overlay);
-    opacity: .8;
+    opacity: 0.8;
     animation: opacity-anim 16s infinite ease-in-out;
 }
 
@@ -259,7 +257,6 @@ button.slds-button.slds-button--brand {
 ********************************
 */
 
-
 /* //MARK: Calendar 
 */
 
@@ -274,7 +271,7 @@ button.slds-button.slds-button--brand {
     top: 104px !important;
 }
 
-.forceCalendar>.calendarSidebar {
+.forceCalendar > .calendarSidebar {
     top: 104px !important;
 }
 
@@ -333,9 +330,9 @@ div#calendarSidebar {
 
 .test-listViewManager.slds-card.slds-card_boundary.slds-grid.slds-grid--vertical.forceListViewManager.forceCommunityRecordListDesktop.forceCommunityObjectHome {
     background: linear-gradient(0deg, var(--background-site-color), var(--background-content-color));
-    -webkit-animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation-delay: .1s;
+    -webkit-animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.1s;
 }
 
 table.slds-table.forceRecordLayout.slds-table--header-fixed.slds-table--edit.slds-table--bordered.resizable-cols.slds-table--resizable-cols.uiVirtualDataTable {
@@ -360,8 +357,8 @@ ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
 
 .slds-clearfix.slds-card.groupDependentFieldEnabled.forceDetailPanelDesktop.inlineEditEnabled {
     background: linear-gradient(0deg, var(--background-site-color), var(--background-content-color));
-    -webkit-animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation-delay: 0.5s;
 }
 
@@ -374,8 +371,8 @@ ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
     padding: var(--recDetail-padding) !important;
     height: unset !important;
     border-radius: var(--recList-border-radius) !important;
-    -webkit-animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: var(--hero-object-section-animation) .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .groupDependentFieldEnabled {
@@ -390,7 +387,7 @@ ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
 }
 
 .slds-form-element.slds-form-element_readonly.slds-grow.slds-hint-parent.override--slds-form-element {
-    border-bottom: 1px solid var(--secondary-color) !important;
+    border-bottom: 1px solid #00638e4a !important;
 }
 
 span.slds-form-element__label.slds-truncate {
@@ -405,7 +402,6 @@ a[title="View Website"] {
     display: none !important;
 }
 
-
 /* 
 ********************************
 //MARK: ANIMATION
@@ -413,59 +409,58 @@ a[title="View Website"] {
 */
 
 .slide-in-bottom-anim {
-    -webkit-animation: slide-in-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slide-in-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .slide-out-bottom-anim {
-    -webkit-animation: slide-out-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slide-out-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: slide-out-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-out-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .delay01 {
-    animation-delay: .1s;
+    animation-delay: 0.1s;
 }
 
 .delay02 {
-    animation-delay: .2s;
+    animation-delay: 0.2s;
 }
 
 .delay03 {
-    animation-delay: .3s;
+    animation-delay: 0.3s;
 }
 
 .delay04 {
-    animation-delay: .4s;
+    animation-delay: 0.4s;
 }
 
 .delay05 {
-    animation-delay: .5s;
+    animation-delay: 0.5s;
 }
 
 .delay06 {
-    animation-delay: .6s;
+    animation-delay: 0.6s;
 }
 
 .delay07 {
-    animation-delay: .7s;
+    animation-delay: 0.7s;
 }
 
 .delay08 {
-    animation-delay: .8s;
+    animation-delay: 0.8s;
 }
 
 .delay09 {
-    animation-delay: .9s;
+    animation-delay: 0.9s;
 }
-
 
 @-webkit-keyframes gradient-effect {
     0% {
-        background-position: 54% 0%
+        background-position: 54% 0%;
     }
 
     50% {
-        background-position: 47% 100%
+        background-position: 47% 100%;
     }
 
     100% {
@@ -475,11 +470,11 @@ a[title="View Website"] {
 
 @-moz-keyframes gradient-effect {
     0% {
-        background-position: 54% 0%
+        background-position: 54% 0%;
     }
 
     50% {
-        background-position: 47% 100%
+        background-position: 47% 100%;
     }
 
     100% {
@@ -489,11 +484,11 @@ a[title="View Website"] {
 
 @keyframes gradient-effect {
     0% {
-        background-position: 54% 0%
+        background-position: 54% 0%;
     }
 
     50% {
-        background-position: 47% 100%
+        background-position: 47% 100%;
     }
 
     100% {
@@ -587,8 +582,8 @@ a[title="View Website"] {
 
 @-webkit-keyframes scale-in-center {
     0% {
-        -webkit-transform: scale(.3);
-        transform: scale(.3);
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
         opacity: 1;
     }
 
@@ -607,8 +602,8 @@ a[title="View Website"] {
 
 @keyframes scale-in-center {
     0% {
-        -webkit-transform: scale(.3);
-        transform: scale(.3);
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
         opacity: 1;
     }
 
@@ -623,7 +618,6 @@ a[title="View Website"] {
         transform: scale(1);
         opacity: 1;
     }
-
 }
 
 /* //MARK: opac
@@ -631,45 +625,45 @@ a[title="View Website"] {
 
 @-webkit-keyframes opacity-anim {
     0% {
-        opacity: .9;
+        opacity: 0.9;
     }
 
     20% {
-        opacity: .8;
+        opacity: 0.8;
     }
 
     40% {
-        opacity: .77;
+        opacity: 0.77;
     }
 
     50% {
-        opacity: .65;
+        opacity: 0.65;
     }
 
     100% {
-        opacity: .9;
+        opacity: 0.9;
     }
 }
 
 @keyframes opacity-anim {
     0% {
-        opacity: .9;
+        opacity: 0.9;
     }
 
     20% {
-        opacity: .8;
+        opacity: 0.8;
     }
 
     40% {
-        opacity: .77;
+        opacity: 0.77;
     }
 
     50% {
-        opacity: .65;
+        opacity: 0.65;
     }
 
     100% {
-        opacity: .9;
+        opacity: 0.9;
     }
 }
 
@@ -685,5 +679,4 @@ a[title="View Website"] {
     100% {
         background-color: var(--login-container);
     }
-
 }

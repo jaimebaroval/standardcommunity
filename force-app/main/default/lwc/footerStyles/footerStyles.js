@@ -10,7 +10,7 @@ export default class FooterStyles extends LightningElement {
 
     connectedCallback() {
         loadStyle(this, clubresources + '/clubresources/css/variables.css');
-        // loadStyle(this, clubresources + '/clubresources/css/commonstyles.css');
+        loadStyle(this, clubresources + '/clubresources/css/commonstyles.css');
         loadStyle(this, clubresources + '/clubresources/css/standardvariables.css');
         // loadStyle(this, clubresources + '/clubresources/css/standardstyles.css');
         loadStyle(this, clubresources + '/clubresources/css/upsa.css');
@@ -31,6 +31,6 @@ export default class FooterStyles extends LightningElement {
     //         // console.log(JSON.stringify(this.template.querySelectorAll('.mon-footer-container')[0].outerHTML));
 
     //     }, 2000)
-
+    
     // }
 }

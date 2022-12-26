@@ -19,7 +19,7 @@
 
 .mon-footer-content-logo-info {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .mon-footer-content-info {
@@ -53,5 +53,5 @@ p.mon-footer-content-privacity {
 }
 
 .mon-footer-content-logo img {
-    width: 140px;
+    width: 200px;
 }

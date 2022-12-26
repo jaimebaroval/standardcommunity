@@ -20,7 +20,7 @@
             default="{!recordId}" />
             <property name="volume" type="Integer"/>
             <property name="parallax" type="Integer"/>
-            <property name="objectPage" type="String" datasource="home,event,incidencias,contacts,account,inscripcion, homemon"/>
+            <property name="objectPage" type="String" datasource="home,event,incidencias,contacts,account,inscripcion,campaign"/>
             <property name="contentCaptionCustom" type="String"/>
             <property name="contentTitleCustom" type="String"/>
             <property name="contentSubtitleCustom" type="String"/>

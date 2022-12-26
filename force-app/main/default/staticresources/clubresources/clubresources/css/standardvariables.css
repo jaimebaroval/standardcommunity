@@ -28,7 +28,7 @@
     --HERO: ..................................................................................;
     --hero-height: 650px;
     --hero-overlay-opacity: .7;
-    --hero-overlay-color: rgb(0 178 255 / 30%) 100%;
+    --hero-overlay-color: rgb(0 178 255) 100%;
     --hero-subtitle-width: 40%;
     --hero-text-animation: slide-in-bottom;
     --hero-button-animation: slide-in-bottom;

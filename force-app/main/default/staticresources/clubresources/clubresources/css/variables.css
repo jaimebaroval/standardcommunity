@@ -1,18 +1,17 @@
 :root {
-
     /* Colors */
 
-    --mon-primary-color: #2A8B9B;
+    --mon-primary-color: #2a8b9b;
     --mon-light-primary: #2a8b9b7a;
-    --mon-secondary-color: #12B9D4;
-    --mon-light-secondary: #07D7F9;
-    --mon-light-grey-color: #CFCFD0;
+    --mon-secondary-color: #12b9d4;
+    --mon-light-secondary: #07d7f9;
+    --mon-light-grey-color: #cfcfd0;
     --mon-darkgrey-color: #666666;
     --mon-soft-black: #222428;
-    --mon-validate-color: #10DC60;
-    --mon-pending-color: #F39800;
-    --mon-reject-color: #BE053D;
-    --mon-footer-color: #000000;
+    --mon-validate-color: #10dc60;
+    --mon-pending-color: #f39800;
+    --mon-reject-color: #be053d;
+    --mon-footer-color: rgb(0 99 142);
     --content-inscripcion-text: #2a8b9b99;
 
     /* Margin & Padding */
@@ -34,6 +33,4 @@
 
     --mon-title-icon: 35px;
     --mon-step-icon: 180px;
-
-
 }

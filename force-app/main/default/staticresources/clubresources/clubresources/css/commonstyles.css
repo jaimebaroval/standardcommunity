@@ -1,25 +1,24 @@
-@import 'variables.css';
-
+@import "variables.css";
 
 /* // MARK: Fonts
 */
 
 @font-face {
-    font-family: 'Gotham Light';
+    font-family: "Gotham Light";
     font-weight: normal;
-    src: url('/sfsites/c/resource/Gotham/Gotham-Light.otf') format('opentype');
+    src: url("/sfsites/c/resource/Gotham/Gotham-Light.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'Gotham Book';
+    font-family: "Gotham Book";
     font-weight: normal;
-    src: url('/sfsites/c/resource/Gotham/GothamBook.ttf') format('truetype');
+    src: url("/sfsites/c/resource/Gotham/GothamBook.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Gotham Bold';
+    font-family: "Gotham Bold";
     font-weight: normal;
-    src: url('/sfsites/c/resource/Gotham/Gotham-Bold.otf') format('opentype');
+    src: url("/sfsites/c/resource/Gotham/Gotham-Bold.otf") format("opentype");
 }
 
 body {
@@ -33,7 +32,6 @@ html {
 a:hover {
     text-decoration: none;
 }
-
 
 /* // MARK: Footer
 */
@@ -51,7 +49,7 @@ a:hover {
 
 h2.contentTitle,
 h1.contentCaption {
-    color: #FFFFFF;
+    color: #ffffff;
     text-shadow: 1px 1px 0 rgb(42 139 155 / 70%) !important;
 }
 
@@ -62,7 +60,7 @@ a.ctaBtnOne.slds-button.slds-truncate {
 
 p.contentSubtitle {
     width: 70%;
-    color: #FFFFFF;
+    color: #ffffff;
     text-shadow: 1px 1px 0 rgb(42 139 155 / 70%) !important;
 }
 
@@ -85,7 +83,6 @@ p.contentSubtitle {
     margin-top: -102px;
 }
 
-
 /* // MARK: Home Mondragón
 */
 
@@ -100,6 +97,10 @@ p.contentSubtitle {
 .comm-page-custom-homemon .mon-text-simple {
     margin-left: var(--mon-home-left);
     padding-top: 19px;
+}
+
+.oneActionsRibbon li.slds-button--neutral > a {
+    color: var(--lwc-brandAccessible, rgb(6, 143, 199));
 }
 
 /* // MARK: Input List 
@@ -148,17 +149,16 @@ lightning-combobox.mon-select-list-proceso.slds-form-element {
 /* // MARK: Input 
 */
 
-.slds-input {
+/* .slds-input {
     min-height: 50px;
     border-radius: 0px;
     border: 2px solid var(--mon-light-primary) !important;
     font-size: var(--mon-select-list) !important;
-}
+} */
 
 .mon-select-list-proceso label.slds-form-element__label {
     display: none;
 }
-
 
 /* // MARK: Checkbox 
 */
@@ -186,34 +186,34 @@ lightning-combobox {
     margin-top: 20px !important;
 }
 
-button.slds-button.slds-button_brand {
+/* button.slds-button.slds-button_brand {
     font-size: 25px;
     padding: 6px 10px;
     width: 100%;
     background-color: var(--mon-primary-color);
     border: 1px solid var(--mon-secondary-color);
-}
+} */
 
 button.slds-button.slds-button_brand:hover {
     background-color: #1e6974;
     border: 1px solid var(--mon-secondary-color);
 }
 
-button.slds-button.slds-button_brand svg {
+/* button.slds-button.slds-button_brand svg {
     height: 20px;
     width: 20px;
     margin-left: 30px;
     width: 50%;
-    transition: all .2s ease-out;
-}
+    transition: all 0.2s ease-out;
+} */
 
-button.slds-button.slds-button_brand:hover svg {
+/* button.slds-button.slds-button_brand:hover svg {
     height: 20px;
     width: 20px;
     margin-left: 30px;
     width: 100%;
-    transition: all .2s ease-in;
-}
+    transition: all 0.2s ease-in;
+} */
 
 .comm-page-custom-upsa-form button.slds-button.slds-button_neutral {
     font-size: 25px;
@@ -315,10 +315,10 @@ span.slds-path__title {
     left: 150rem;
 }
 
-svg.slds-icon.slds-icon_x-small {
+/* svg.slds-icon.slds-icon_x-small {
     width: 25px;
     height: 25px;
-}
+} */
 
 .slds-path__nav .slds-is-current {
     background-color: var(--mon-light-grey-color);
@@ -329,6 +329,732 @@ svg.slds-icon.slds-icon_x-small {
     left: unset;
     right: unset;
 }
+
+/* 
+------------------------------------------
+Cambios 2022 
+------------------------------------------
+*/
+
+.slds-page-header--object-home.slds-page-header_joined.slds-page-header_bleed.slds-page-header.slds-shrink-none.test-headerRegion.forceListViewManagerHeader {
+    padding: 35px 27px 14px 35px;
+    margin: -40px -30px 0px;
+    border-radius: 18px 18px 0px 0px;
+    background: #254c74b8;
+    color: white;
+}
+
+.test-listViewManager.slds-card.slds-card_boundary.slds-grid.slds-grid--vertical.forceListViewManager.forceCommunityRecordListDesktop.forceCommunityObjectHome {
+    background: transparent !important;
+}
+
+.undefined.hideSelection.forceListViewManagerGrid,
+.undefined.forceListViewManagerGrid {
+    margin-top: 30px;
+}
+
+span.triggerLinkText.selectedListView.slds-page-header__title.slds-truncate.slds-p-right--xx-small.uiOutputText {
+    color: white;
+}
+
+span.countSortedByFilteredBy {
+    color: white;
+}
+
+.forceIcon.slds-button__icon .slds-icon[data-key="down"] {
+    fill: white !important;
+    height: 20px;
+}
+
+.slds-text-link--faux,
+.slds-text-link_faux,
+.slds-type-focus,
+.slds-text-link--faux:focus,
+.slds-text-link_faux:focus,
+.slds-type-focus:focus {
+    border-bottom: white solid transparent;
+    border-radius: 0;
+    color: currentColor;
+    cursor: pointer;
+}
+
+.listViewContent.slds-table--header-fixed_container {
+    border-radius: 10px 10px 20px 20px;
+}
+
+.nos-gusta-text {
+    color: white;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    margin-top: -105px;
+}
+
+.button-container.slds-text-align_center.forceRecordEditActions {
+    background: unset;
+    margin-top: 10px;
+}
+
+.slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    background: #254c74b8 !important;
+}
+
+.slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout * {
+    color: white !important;
+}
+
+button.slds-button.slds-button--neutral.not-selected.slds-not-selected.uiButton * {
+    color: black !important;
+    fill: black;
+}
+
+button.slds-button.slds-button--neutral.not-selected.slds-not-selected.uiButton:hover * {
+    color: white !important;
+    fill: white;
+}
+
+.slds-clearfix.slds-card.groupDependentFieldEnabled.forceDetailPanelDesktop.inlineEditEnabled {
+    background: #e8f2ff7a !important;
+    -webkit-animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.5s;
+    border: 1px solid #254c7429;
+}
+
+ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
+    border-top: 1px solid #74cad952;
+    margin-top: 23px;
+    margin-left: -31px;
+    margin-right: -31px;
+    padding-left: 30px;
+}
+
+.comm-page-detail-500 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
+    margin-top: 25px;
+}
+
+.primaryFieldWrapper {
+    margin-left: 20px;
+}
+
+button.slds-button.slds-button--neutral.closeBtn.slds-button.slds-button_icon.uiButton {
+    filter: invert(1);
+}
+
+/* Home */
+
+.comm-page-home lightning-icon.slds-icon-utility-event.slds-button__icon.slds-icon_container.forceIcon svg.slds-icon,
+.comm-page-home lightning-icon.slds-icon-utility-down.slds-button__icon.slds-icon_container.forceIcon svg.slds-icon {
+    fill: black !important;
+}
+
+.comm-page-home li.slds-button--neutral > a div {
+    color: var(--lwc-brandAccessible, rgb(6, 143, 199));
+}
+
+.comm-page-home li.slds-button--neutral > a:hover div {
+    color: white;
+}
+
+button.slds-button.slds-button_neutral.today-button:hover,
+button.slds-button.slds-button_neutral.new-event-button:hover {
+    color: white;
+    background: #254c74b8;
+}
+
+svg.slds-icon.slds-icon_x-small[data-key="clock"],
+svg.slds-icon.slds-icon_x-small[data-key="search"] {
+    width: unset;
+    height: unset;
+}
+
+.comm-page-list-006 p.contentSubtitleCustom,
+.comm-page-detail-006 p.contentSubtitleCustom {
+    max-width: 59% !important;
+}
+
+.uiTabset--base.uiTabset--default.uiTabset {
+    background: unset;
+}
+
+.recordHomeSecondaryContent {
+    margin-top: 52px;
+}
+
+/* Related List => Cases Page */
+
+.comm-page-relatedlist-500 .slds-col--padded.contentRegion.comm-layout-column {
+    margin-top: 56px;
+    animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.4s;
+}
+
+.comm-page-relatedlist-500 .slds-col.slds-has-flexi-truncate.firstHeaderRow * {
+    color: white;
+}
+
+.comm-page-relatedlist-500 p.slds-text-body--small * {
+    color: white;
+}
+
+.comm-page-relatedlist-500 .std-hero-container {
+    height: 440px !important;
+}
+
+.comm-page-relatedlist-500 .hero {
+    min-height: 440px;
+}
+
+.comm-page-relatedlist-500 .std-hero-overlay {
+    height: 442px !important;
+}
+
+/* Related List => Opportunity Page */
+
+.comm-page-relatedlist-006 .slds-col--padded.contentRegion.comm-layout-column {
+    margin-top: 56px;
+    animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.4s;
+}
+
+.comm-page-relatedlist-006 .slds-col.slds-has-flexi-truncate.firstHeaderRow * {
+    color: white;
+}
+
+.comm-page-relatedlist-006 p.slds-text-body--small * {
+    color: white;
+}
+
+.comm-page-relatedlist-006 .std-hero-container {
+    height: 440px !important;
+}
+
+.comm-page-relatedlist-006 .hero {
+    min-height: 440px;
+}
+
+.comm-page-relatedlist-006 .std-hero-overlay {
+    height: 442px !important;
+}
+
+/* Related List => Contact Page */
+
+.comm-page-relatedlist-003 .slds-col--padded.contentRegion.comm-layout-column {
+    margin-top: 56px;
+    animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.4s;
+}
+
+.comm-page-relatedlist-003 .slds-col.slds-has-flexi-truncate.firstHeaderRow * {
+    color: white;
+}
+
+.comm-page-relatedlist-003 p.slds-text-body--small * {
+    color: white;
+}
+
+.comm-page-relatedlist-003 .std-hero-container {
+    height: 440px !important;
+}
+
+.comm-page-relatedlist-003 .hero {
+    min-height: 440px;
+}
+
+.comm-page-relatedlist-003 .std-hero-overlay {
+    height: 442px !important;
+}
+
+/* Related List => Contact Page */
+
+.comm-page-relatedlist-001 .slds-col--padded.contentRegion.comm-layout-column {
+    margin-top: 56px;
+    animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.4s;
+}
+
+.comm-page-relatedlist-001 .slds-col.slds-has-flexi-truncate.firstHeaderRow * {
+    color: white;
+}
+
+.comm-page-relatedlist-001 p.slds-text-body--small * {
+    color: white;
+}
+
+.comm-page-relatedlist-001 .std-hero-container {
+    height: 440px !important;
+}
+
+.comm-page-relatedlist-001 .hero {
+    min-height: 440px;
+}
+
+.comm-page-relatedlist-001 .std-hero-overlay {
+    height: 442px !important;
+}
+
+/* Related List General */
+
+.comm-page-relatedlist .slds-col--padded.contentRegion.comm-layout-column {
+    margin-top: 56px;
+    animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.4s;
+}
+
+.comm-page-relatedlist .slds-col.slds-has-flexi-truncate.firstHeaderRow * {
+    color: white;
+}
+
+.comm-page-relatedlist p.slds-text-body--small * {
+    color: white;
+}
+
+.comm-page-relatedlist .std-hero-container {
+    height: 440px !important;
+}
+
+.comm-page-relatedlist .hero {
+    min-height: 440px;
+}
+
+.comm-page-relatedlist .std-hero-overlay {
+    height: 442px !important;
+}
+
+.test-listViewManager.slds-card.slds-card_boundary.slds-grid.slds-grid--vertical.forceListViewManager {
+    background: none;
+    border: none;
+}
+
+/* Accounts Detail */
+
+.comm-page-detail-001 .std-hero-container {
+    background-position: 0px 0px;
+}
+
+.comm-page-detail-001 .std-hero-container {
+    height: 440px !important;
+}
+
+.comm-page-detail-001 .hero {
+    min-height: 440px;
+}
+
+.comm-page-detail-001 .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    margin-top: -103px;
+}
+
+.comm-page-detail-001 .std-hero-overlay {
+    height: 442px !important;
+}
+
+/* All buttons List */
+
+li.slds-button.slds-button--neutral:hover * {
+    color: white;
+}
+
+li.slds-button.slds-button--neutral * {
+    color: white;
+}
+
+li.slds-button.slds-button--neutral {
+    color: white !important;
+    background-color: transparent;
+}
+
+li.slds-button.slds-button--neutral {
+    color: white !important;
+    background-color: transparent;
+}
+
+.oneActionsRibbon li.slds-button--neutral > a:hover,
+.oneActionsRibbon li.slds-button--neutral > button:hover,
+.oneActionsRibbon li.slds-button--neutral > a:focus,
+.oneActionsRibbon li.slds-button--neutral > button:focus {
+    background-color: #0b2d6085;
+    border-radius: 5px;
+}
+
+li.slds-button.slds-button--icon-border-filled.oneActionsDropDown {
+    background: unset;
+}
+
+li.slds-button.slds-button--icon-border-filled.oneActionsDropDown:hover {
+    background-color: #0b2d6085;
+}
+
+lightning-icon.slds-icon-utility-down.slds-button__icon.slds-icon_container.forceIcon {
+    /* width: 24px; */
+    height: 19px;
+}
+
+lightning-icon.slds-button__icon.slds-button__icon--left.slds-icon_container.forceIcon.slds-icon-utility-check * {
+    fill: white !important;
+}
+
+/* Related List */
+
+.container.forceRelatedListSingleContainer li.slds-button.slds-button--neutral,
+.container.forceRelatedListSingleContainer li.slds-button.slds-button--icon-border-filled.oneActionsDropDown {
+    background: #0b2d6085;
+}
+
+.forceCommunityRelatedList {
+    min-height: 631px !important;
+}
+
+/* Comment Post */
+
+button.slds-button.slds-button_brand.cuf-commentSubmit {
+    color: unset;
+}
+
+/* Cases Detail Banner */
+
+.comm-page-detail-500 .std-hero-overlay {
+    height: 442px !important;
+    z-index: -1;
+}
+
+.comm-page-detail-500 .std-hero-container {
+    height: 440px !important;
+    z-index: -1;
+}
+
+.comm-page-detail-500 .hero {
+    min-height: 440px;
+}
+
+/* Contact Detail Banner */
+
+.comm-page-detail-003 .std-hero-overlay {
+    height: 442px !important;
+    z-index: -1;
+}
+
+.comm-page-detail-003 .std-hero-container {
+    height: 440px !important;
+    z-index: -1;
+}
+
+.comm-page-detail-003 .hero {
+    min-height: 440px;
+}
+
+.comm-page-detail-003 .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    margin-top: -103px;
+}
+
+/* Product Detail */
+
+.comm-page-detail-01t .uiTabset--default .forceDetailPanelDesktop.slds-card,
+.uiTabset--default .forceDetailPanelDesktop2.slds-card {
+    background: #e8f2ff7a !important;
+    border: 1px solid #254c7429;
+}
+
+/* Product Detail Banner */
+
+.comm-page-detail-01t .std-hero-overlay {
+    height: 442px !important;
+}
+
+.comm-page-detail-01t .std-hero-container {
+    height: 440px !important;
+}
+
+.comm-page-detail-01t .hero {
+    min-height: 440px;
+}
+
+.comm-page-detail-01t .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    margin-top: -103px;
+}
+
+/* Product Related List */
+
+.comm-page-relatedlist-01t .slds-col--padded.contentRegion.comm-layout-column {
+    margin-top: 56px;
+    animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.4s;
+}
+
+.comm-page-relatedlist-01t .slds-col.slds-has-flexi-truncate.firstHeaderRow * {
+    color: white;
+}
+
+.comm-page-relatedlist-01t p.slds-text-body--small * {
+    color: white;
+}
+
+/* Product Related List Banner */
+
+.comm-page-relatedlist-01t .std-hero-overlay {
+    height: 442px !important;
+}
+
+.comm-page-relatedlist-01t .std-hero-container {
+    height: 440px !important;
+}
+
+.comm-page-relatedlist-01t .hero {
+    min-height: 440px;
+}
+
+.comm-page-relatedlist-01t
+    .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    margin-top: -103px;
+}
+
+/* Opportunity Detail */
+
+.comm-page-detail-006 li.slds-button.slds-button--neutral {
+    background: unset;
+}
+
+.comm-page-detail-006 a.forceActionLink:hover {
+    color: white !important;
+}
+
+.comm-page-detail-006 .oneActionsRibbon li.slds-button--neutral > a:hover,
+.oneActionsRibbon li.slds-button--neutral > button:hover,
+.oneActionsRibbon li.slds-button--neutral > a:focus,
+.oneActionsRibbon li.slds-button--neutral > button:focus {
+    background-color: #0b2d6085;
+}
+
+/* Left Detail List Common */
+
+.test-id__section.slds-section.slds-is-open.full.forcePageBlockSection.forcePageBlockSectionView {
+    padding: 10px;
+}
+
+/* Ralated List on Detail Object */
+
+.slds-grid.slds-page-header.forceRelatedListCardHeader {
+    background: #e8f2ff7a !important;
+}
+
+/* Opportunity Detail Banner */
+
+.comm-page-detail-006 .std-hero-overlay {
+    height: 442px !important;
+}
+
+.comm-page-detail-006 .std-hero-container {
+    height: 440px !important;
+}
+
+.comm-page-detail-006 .hero {
+    min-height: 440px;
+}
+
+.comm-page-detail-006 .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    margin-top: -103px;
+}
+
+/* Campaign Detail Banner */
+
+.comm-page-detail-701 .std-hero-overlay {
+    height: 442px !important;
+}
+
+.comm-page-detail-701 .std-hero-container {
+    height: 440px !important;
+}
+
+.comm-page-detail-701 .hero {
+    min-height: 440px;
+}
+
+.comm-page-detail-701 .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    margin-top: -103px;
+}
+
+/* Info Popup Container */
+
+.panel-content.scrollable .profilePicPrimaryFieldWrapper {
+    display: flex;
+}
+
+.panel-content.scrollable .small.roundedSquare.forceEntityIcon img {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: unset;
+}
+
+.panel-content.scrollable .small.roundedSquare.forceEntityIcon {
+    height: 40px;
+    width: 40px;
+}
+
+/* User Profile Detail */
+
+.comm-page-detail-005 .siteforceSldsOneColLayout.siteforceContentArea {
+    margin-top: -135px;
+}
+
+.comm-page-detail-005 .userHeaderDetail.overflowHidden.slds-grid.slds-m-bottom--xx-small {
+    background: #eff4fa9e !important;
+}
+
+.comm-page-detail-005 li.slds-button.slds-button--neutral {
+    color: white !important;
+    background-color: #0b2d6085;
+}
+
+.comm-page-detail-005 .slds-scope.forceCommunityUserProfileStats {
+    background: #eff4fa !important;
+}
+
+.comm-page-detail-005 .forceCommunityUserRecordHome {
+    animation: var(--hero-object-section-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.4s;
+}
+
+.comm-page-detail-005 h1.h1.slds-m-bottom--none.slds-wrap span {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
+.comm-page-detail-005 .userKnowledge.slds-m-bottom--medium {
+    margin-top: -12px;
+}
+
+.comm-page-detail-005 article.slds-card.slds-card_boundary.headerBottomBorder.forceRelatedListCardDesktop {
+    margin-top: 16px;
+}
+
+.comm-page-detail-005 .userHeaderDetail.overflowHidden.slds-grid.slds-m-bottom--xx-small {
+    border-radius: 82px 5px 5px 35px;
+}
+
+.comm-page-detail-005 img.circularPhoto {
+    margin-top: -24px;
+    margin-left: -24px;
+}
+
+/* User Profile Detail Banner */
+
+.comm-page-detail-005 .std-hero-overlay {
+    height: 442px !important;
+    z-index: -1;
+}
+
+.comm-page-detail-005 .std-hero-container {
+    height: 440px !important;
+    z-index: -1;
+}
+
+.comm-page-detail-005 .hero {
+    min-height: 440px;
+}
+
+.comm-page-detail-005 .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    margin-top: -103px;
+}
+
+/* Task Detail */
+
+button.slds-button.slds-button_stateful.slds-button_neutral.slds-not-selected.runtime_sales_activitiesTaskStatusButton {
+    background: unset;
+}
+
+button.slds-button.slds-button_stateful.slds-button_neutral.slds-not-selected.runtime_sales_activitiesTaskStatusButton:hover {
+    background: #0b2d6085;
+}
+
+/* Task Detail Banner */
+
+.comm-page-detail-00T .std-hero-overlay {
+    height: 442px !important;
+    z-index: -1;
+}
+
+.comm-page-detail-00T .std-hero-container {
+    height: 440px !important;
+    z-index: -1;
+}
+
+.comm-page-detail-00T .hero {
+    min-height: 440px;
+}
+
+.comm-page-detail-00T .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    margin-top: -103px;
+}
+
+/* Image View */
+
+button.slds-button.slds-button--icon-inverse.staticActionButton.uiButton {
+    border: 1px solid white;
+}
+
+button.slds-button.slds-button--icon-inverse.staticActionButton.uiButton svg {
+    fill: white;
+}
+
+/* Login */
+
+.comm-page-login-home .siteforceSldsOneColLayout.siteforceContentArea {
+    background: #254c74b8 !important;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.comm-page-login-home .salesforceIdentityCommunityLogo2 .communityLogo {
+    max-width: 100%;
+    width: 100%;
+}
+
+.comm-page-login-home svg.slds-icon.slds-icon_xx-small {
+    margin-top: 6px;
+}
+
+.comm-page-login-home .salesforceIdentityLoginBody2 a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Forget Password */
+
+.comm-page-forgot-password .slds-col--padded.contentRegion.comm-layout-column {
+    background: #254c74b8 !important;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.comm-page-forgot-password .forceCommunityRichText.forceCommunityRichTextInline * {
+    color: white;
+}
+
+.comm-page-forgot-password .forceCommunityRichText.forceCommunityRichTextInline:hover a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Check Email Forget Password */
+
+.comm-page-check-password .slds-col--padded.contentRegion.comm-layout-column {
+    background: #254c74b8;
+    padding: 30px;
+    border-radius: 30px;
+    color: white;
+}
+
+.comm-page-check-password .slds-col--padded.contentRegion.comm-layout-column a {
+    color: white;
+}
+
+.comm-page-check-password .slds-col--padded.contentRegion.comm-layout-column a:hover {
+    text-decoration: underline;
+}
+
+/* FIN Cambios 2022 */
 
 /* // MARK: ANIMATION DELAY 0.05s SCCS
 
