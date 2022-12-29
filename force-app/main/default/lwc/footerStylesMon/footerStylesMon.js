@@ -1,6 +1,6 @@
 import { LightningElement, track } from 'lwc';
 import { loadStyle, loadScript } from 'lightning/platformResourceLoader';
-import clubresources from '@salesforce/resourceUrl/clubresources';
+import myResources from '@salesforce/resourceUrl/clubresources';
 
 export default class FooterStylesMon extends LightningElement {
 
@@ -8,10 +8,11 @@ export default class FooterStylesMon extends LightningElement {
     @track recordBannerHeader;
     
     connectedCallback() {
-        loadStyle(this, clubresources + '/clubresources/css/variables.css');
-        loadStyle(this, clubresources + '/clubresources/css/commonstyles.css');
-        loadStyle(this, clubresources + '/clubresources/css/standardvariables.css');
-        loadStyle(this, clubresources + '/clubresources/css/standardstyles.css');
+        loadStyle(this, myResources + '/clubresources/css/variables.css');
+        loadStyle(this, myResources + '/clubresources/css/commonstyles.css');
+        loadStyle(this, myResources + '/clubresources/css/standardvariables.css');
+        loadStyle(this, myResources + '/clubresources/css/standardstyles.css');
+        loadStyle(this, myResources + '/clubresources/css/std-hero.css');
         // loadStyle(this, clubresources + '/clubresources/css/upsa.css');
         
     }

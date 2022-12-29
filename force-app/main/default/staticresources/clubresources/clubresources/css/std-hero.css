@@ -1,0 +1,54 @@
+.hero {
+    z-index: -1;
+    border-bottom: 2px solid var(--secondary-color);
+    min-height: var(--hero-height);
+}
+
+.bgOverlay.comm-is-absolute {
+    background: linear-gradient(180deg, rgb(0 0 0 / 35%) 0%, var(--hero-overlay-color)) !important;
+    opacity: var(--hero-overlay-opacity);
+}
+
+/* Hero Buttons */
+
+.forceCommunityThemeHeroStarter .ctaBtnOne {
+    background: var(--primary-color);
+    font-size: var(--button-font-size);
+    -webkit-animation: var(--hero-button-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: var(--hero-button-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.5s;
+}
+
+.forceCommunityThemeHeroStarter .ctaBtnOne,
+.forceCommunityThemeHeroStarter .ctaBtnTwo {
+    padding: 10px 24px !important;
+}
+
+a.ctaBtnOne.slds-button.slds-truncate {
+    background: var(--primary-color);
+    font-size: 22px;
+}
+
+/* Hero Titles */
+
+h2.contentTitle,
+h1.contentCaption {
+    color: #ffffff;
+    text-shadow: 1px 1px 0 rgb(42 139 155 / 70%) !important;
+}
+
+p.contentSubtitle {
+    width: 70%;
+    color: #ffffff;
+    text-shadow: 1px 1px 0 rgb(42 139 155 / 70%) !important;
+}
+
+/* Others */
+
+.citizenHomeHero.dummyCommThemeGroupId.commThemeCmp.comm-is-relative.forceCommunityThemeHeroBase.forceCommunityThemeHeroStarter {
+    padding: 180px 30px !important;
+}
+
+.citizenInnerHero.dummyCommThemeGroupId.commThemeCmp.comm-is-relative.forceCommunityThemeHeroBase.forceCommunityThemeHeroStarter {
+    padding: 180px 30px !important;
+}

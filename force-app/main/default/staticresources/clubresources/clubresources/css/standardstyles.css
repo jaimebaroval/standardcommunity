@@ -10,33 +10,6 @@ body {
 
 /* 
 ********************************
-//MARK: Hero
-********************************
-*/
-
-.hero {
-    z-index: -1;
-    border-bottom: 2px solid var(--secondary-color);
-    min-height: var(--hero-height);
-}
-
-.bgOverlay.comm-is-absolute {
-    background: linear-gradient(180deg, rgb(0 0 0 / 35%) 0%, var(--hero-overlay-color)) !important;
-    opacity: var(--hero-overlay-opacity);
-}
-
-/* Hero Button */
-
-.forceCommunityThemeHeroStarter .ctaBtnOne {
-    background: var(--primary-color);
-    font-size: var(--button-font-size);
-    -webkit-animation: var(--hero-button-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: var(--hero-button-animation) 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation-delay: 0.5s;
-}
-
-/* 
-********************************
 //MARK: Navbar 
 ********************************
 */
