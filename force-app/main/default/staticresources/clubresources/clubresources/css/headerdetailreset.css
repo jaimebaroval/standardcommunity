@@ -6,7 +6,7 @@
     border-radius: 20px !important;
     /* margin-top: -103px; */
     z-index: 100;
-    transition: height 0.3s ease-in-out;
+    transition: height 0s ease-in-out;
     /* transition: height 0.5s ease-in-out; */
     top: 0px;
     height: 212px !important;
@@ -14,7 +14,7 @@
 
 .comm-page-detail-006 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
     height: 103px !important;
-    transition: height 0.2s ease-in-out;
+    /* transition: height 0s ease-in-out; */
     margin-top: 23px;
 }
 
@@ -24,7 +24,7 @@
 
 .comm-page-detail-006 .siteforceSldsOneColLayout.siteforceContentArea {
     margin-top: -103px;
-    transition: all 0.2s ease-in-out;
+    /* transition: all 0s ease-in-out; */
 }
 
 .comm-page-detail-006 .recordHomePrimaryContent ul.tabs__nav {
@@ -53,7 +53,7 @@
     border-radius: 20px !important;
     /* margin-top: -103px; */
     z-index: 100;
-    transition: height 0.3s ease-in-out;
+    transition: height 0s ease-in-out;
     /* transition: height 0.5s ease-in-out; */
     top: 0px;
     height: 212px !important;
@@ -61,7 +61,7 @@
 
 .comm-page-detail-701 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
     height: 103px !important;
-    transition: height 0.2s ease-in-out;
+    /* transition: height 0.2s ease-in-out; */
     margin-top: 23px;
 }
 
@@ -71,7 +71,7 @@
 
 .comm-page-detail-701 .siteforceSldsOneColLayout.siteforceContentArea {
     margin-top: -103px;
-    transition: all 0.2s ease-in-out;
+    /* transition: all 0.2s ease-in-out; */
 }
 
 .comm-page-detail-701 .recordHomePrimaryContent ul.tabs__nav {
@@ -100,15 +100,16 @@
     border-radius: 20px !important;
     /* margin-top: -103px; */
     z-index: 100;
-    transition: height 0.3s ease-in-out;
+    transition: height 0s ease-in-out;
     /* transition: height 0.5s ease-in-out; */
     top: 0px;
     height: 212px !important;
+    box-shadow: unset;
 }
 
 .comm-page-detail-001 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
     height: 103px !important;
-    transition: height 0.2s ease-in-out;
+    /* transition: height 0.2s ease-in-out; */
     margin-top: 23px;
 }
 
@@ -118,7 +119,7 @@
 
 .comm-page-detail-001 .siteforceSldsOneColLayout.siteforceContentArea {
     margin-top: -103px;
-    transition: all 0.2s ease-in-out;
+    /* transition: all 0.2s ease-in-out; */
 }
 
 .comm-page-detail-001 .recordHomePrimaryContent ul.tabs__nav {

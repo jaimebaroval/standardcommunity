@@ -14,7 +14,7 @@
 }
 .comm-page-detail-006 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
     height: 0px !important;
-    transition: height 0.2s ease-in-out;
+    /* transition: height 0.2s ease-in-out; */
     margin-top: -90px;
 }
 
@@ -23,8 +23,8 @@
 }
 
 .comm-page-detail-006 .siteforceSldsOneColLayout.siteforceContentArea {
-    margin-top: 170px;
-    transition: all 0.2s ease-in-out;
+    margin-top: 180px;
+    /* transition: all 0.5s ease-in-out; */
 }
 
 .comm-page-detail-006 .recordHomePrimaryContent ul.tabs__nav {
@@ -65,7 +65,7 @@
 }
 .comm-page-detail-701 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
     height: 0px !important;
-    transition: height 0.2s ease-in-out;
+    /* transition: height 0.2s ease-in-out; */
     margin-top: -90px;
 }
 
@@ -74,8 +74,8 @@
 }
 
 .comm-page-detail-701 .siteforceSldsOneColLayout.siteforceContentArea {
-    margin-top: 170px;
-    transition: all 0.2s ease-in-out;
+    margin-top: 180px;
+    /* transition: all 0.2s ease-in-out; */
 }
 
 .comm-page-detail-701 .recordHomePrimaryContent ul.tabs__nav {
@@ -88,7 +88,7 @@
     z-index: 90;
     height: 46px;
     padding-left: 30px;
-    box-shadow: 0px 1px 41px 4px rgb(0 0 0 / 30%);
+    box-shadow: 0px 1px 41px 4px rgb(56 105 165 / 40%);
     border-bottom: 1px solid #18638e;
 }
 
@@ -109,14 +109,15 @@
     border-radius: 0px !important;
     margin: 0 -14px;
     z-index: 100;
-    transition: height 0.2s ease-in-out;
+    /* transition: height 0.2s ease-in-out; */
     /* transition: height 0.5s ease-in-out; */
     top: -1px;
     height: 105px !important;
+    box-shadow: 0px 1px 41px 4px rgb(56 105 165 / 40%);
 }
 .comm-page-detail-001 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
     height: 0px !important;
-    transition: height 0.2s ease-in-out;
+    /* transition: height 0.2s ease-in-out; */
     margin-top: -90px;
 }
 
@@ -125,8 +126,8 @@
 }
 
 .comm-page-detail-001 .siteforceSldsOneColLayout.siteforceContentArea {
-    margin-top: 170px;
-    transition: all 0.2s ease-in-out;
+    margin-top: 137px;
+    /* transition: all 0.2s ease-in-out; */
 }
 
 .comm-page-detail-001 .recordHomePrimaryContent ul.tabs__nav {
@@ -139,7 +140,7 @@
     z-index: 90;
     height: 46px;
     padding-left: 30px;
-    box-shadow: 0px 1px 41px 4px rgb(0 0 0 / 30%);
+    box-shadow: 0px 1px 41px 4px rgb(56 105 165 / 40%);
     border-bottom: 1px solid #18638e;
 }
 

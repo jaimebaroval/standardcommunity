@@ -246,7 +246,7 @@ span.slds-path__title {
 /* Panels */
 
 .uiPanel {
-    border: 2px solid #b6b6b6;
+    border: 2px solid #18638e45;
     border-radius: 10px;
 }
 
@@ -256,8 +256,8 @@ span.slds-path__title {
 
 .uiPanel.east > .pointer {
     border: 0;
-    border-left: 2px solid #b6b6b6;
-    border-bottom: 2px solid #b6b6b6;
+    border-left: 2px solid #18638e45;
+    border-bottom: 2px solid #18638e45;
 }
 
 .forceHoverPanel .pointer {
