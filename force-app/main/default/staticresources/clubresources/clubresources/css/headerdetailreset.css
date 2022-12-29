@@ -33,10 +33,12 @@
     left: unset;
     background: unset;
     width: unset;
-    margin-top: unset;
+    margin-top: 20px;
     z-index: unset;
     height: unset;
     padding-left: unset;
+    box-shadow: unset;
+    border-bottom: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #d4d4d4);
 }
 
 .comm-page-detail-006 .recordHomePrimaryContent a.tabHeader {
@@ -78,10 +80,12 @@
     left: unset;
     background: unset;
     width: unset;
-    margin-top: unset;
+    margin-top: 20px;
     z-index: unset;
     height: unset;
     padding-left: unset;
+    box-shadow: unset;
+    border-bottom: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #d4d4d4);
 }
 
 .comm-page-detail-701 .recordHomePrimaryContent a.tabHeader {
@@ -123,10 +127,12 @@
     left: unset;
     background: unset;
     width: unset;
-    margin-top: unset;
+    margin-top: 20px;
     z-index: unset;
     height: unset;
     padding-left: unset;
+    box-shadow: unset;
+    border-bottom: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #d4d4d4);
 }
 
 .comm-page-detail-001 .recordHomePrimaryContent a.tabHeader {

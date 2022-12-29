@@ -10,32 +10,6 @@ body {
 
 /* 
 ********************************
-//MARK: Navbar 
-********************************
-*/
-
-.logoImage {
-    width: 210px !important;
-    height: 80px !important;
-    margin-top: -8px;
-}
-
-.forceCommunityThemeNav.navMenuType-expanded .mainNavItem .linkBtn.comm-navigation__top-level-item-link--active {
-    border-bottom: 2px dotted white;
-}
-
-li.mainNavItem.comm-navigation__top-level-item.comm-navigation__menu-item {
-    padding-left: var(--navbar-items-space);
-    font-size: var(--navbar-items-font-size);
-    font-weight: var(--navbar-items-font-weight);
-}
-
-.forceCommunityThemeHeaderCompact .themeNav {
-    margin-left: var(--navbar-margin-left);
-}
-
-/* 
-********************************
 //MARK: Home 
 ********************************
 */
@@ -174,55 +148,6 @@ button.slds-button.slds-button--brand {
     background: var(--primary-color);
 }
 
-/* 
-********************************
-//MARK: Login 
-********************************
-*/
-
-.salesforceIdentityCommunityLogo2 .communityLogo {
-    max-width: 100%;
-    width: 70% !important;
-}
-
-.salesforceIdentityCommunityLogo2.communityLogoContainer {
-    text-align: left !important;
-}
-
-.salesforceIdentityLoginBody2 .ui-widget {
-    padding-bottom: 0;
-    padding-top: 0;
-}
-
-.login-overlay {
-    height: 100vh;
-    width: 100vw;
-    background: var(--login-overlay);
-    opacity: 0.8;
-    animation: opacity-anim 16s infinite ease-in-out;
-}
-
-.comm-page-login-home .mon-footer-container {
-    display: none;
-}
-
-.comm-page-login-home .slds-col--padded.contentRegion.comm-layout-column {
-    background: var(--login-container);
-    padding: 20px 50px;
-    border-radius: var(--box-border-radius);
-    animation: change-color 16s infinite ease-in-out;
-    box-shadow: var(--login-box-shadow);
-    border: 1px solid #18696c42;
-}
-
-.salesforceIdentityLoginForm2 .inputContainer {
-    display: flex;
-    align-items: center;
-}
-
-.comm-page-login-home button.slds-button.slds-button--brand {
-    background: var(--secondary-color);
-}
 
 /* 
 ********************************

@@ -13,12 +13,9 @@ export default class FooterStylesMon extends LightningElement {
         loadStyle(this, myResources + '/clubresources/css/standardvariables.css');
         loadStyle(this, myResources + '/clubresources/css/standardstyles.css');
         loadStyle(this, myResources + '/clubresources/css/std-hero.css');
-        // loadStyle(this, clubresources + '/clubresources/css/upsa.css');
+        loadStyle(this, myResources + '/clubresources/css/std-navbar.css');
+        loadStyle(this, myResources + '/clubresources/css/std-delay-anim.css');
         
     }
-    
-    // renderedCallback() {
-    //     loadScript(this, clubresources + '/clubresources/js/globalscript.js');
-    // }
 
 }
