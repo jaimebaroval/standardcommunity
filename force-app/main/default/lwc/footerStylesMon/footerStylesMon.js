@@ -5,6 +5,7 @@ import clubresources from '@salesforce/resourceUrl/clubresources';
 export default class FooterStylesMon extends LightningElement {
 
     @track logoImage;
+    @track recordBannerHeader;
     
     connectedCallback() {
         loadStyle(this, clubresources + '/clubresources/css/variables.css');

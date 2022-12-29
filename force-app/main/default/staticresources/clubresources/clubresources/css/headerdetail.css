@@ -1,0 +1,146 @@
+/* Opportinuty */
+
+.comm-page-detail-006 .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    background: var(--mon-footer-color) !important;
+    position: fixed;
+    /* margin-top: -50px !important; */
+    border-radius: 0px !important;
+    margin: 0 -14px;
+    z-index: 100;
+    transition: height 0.2s ease-in-out;
+    /* transition: height 0.5s ease-in-out; */
+    top: -1px;
+    height: 105px !important;
+}
+.comm-page-detail-006 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
+    height: 0px !important;
+    transition: height 0.2s ease-in-out;
+    margin-top: -90px;
+}
+
+.comm-page-detail-006 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row li {
+    visibility: hidden;
+}
+
+.comm-page-detail-006 .siteforceSldsOneColLayout.siteforceContentArea {
+    margin-top: 170px;
+    transition: all 0.2s ease-in-out;
+}
+
+.comm-page-detail-006 .recordHomePrimaryContent ul.tabs__nav {
+    position: fixed;
+    top: 104px;
+    left: 0;
+    background: #ccdef9;
+    width: 100%;
+    margin-top: -3px;
+    z-index: 90;
+    height: 46px;
+    padding-left: 30px;
+}
+
+.comm-page-detail-006 .recordHomePrimaryContent a.tabHeader {
+    padding-top: 16px;
+}
+
+.comm-page-detail-006 .recordHomeSecondaryContent {
+    margin-top: 29px;
+}
+
+/* Campaigns */
+
+.comm-page-detail-701 .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    background: var(--mon-footer-color) !important;
+    position: fixed;
+    /* margin-top: -50px !important; */
+    border-radius: 0px !important;
+    margin: 0 -14px;
+    z-index: 100;
+    transition: height 0.2s ease-in-out;
+    /* transition: height 0.5s ease-in-out; */
+    top: -1px;
+    height: 105px !important;
+}
+.comm-page-detail-701 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
+    height: 0px !important;
+    transition: height 0.2s ease-in-out;
+    margin-top: -90px;
+}
+
+.comm-page-detail-701 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row li {
+    visibility: hidden;
+}
+
+.comm-page-detail-701 .siteforceSldsOneColLayout.siteforceContentArea {
+    margin-top: 170px;
+    transition: all 0.2s ease-in-out;
+}
+
+.comm-page-detail-701 .recordHomePrimaryContent ul.tabs__nav {
+    position: fixed;
+    top: 104px;
+    left: 0;
+    background: #ccdef9;
+    width: 100%;
+    margin-top: -3px;
+    z-index: 90;
+    height: 46px;
+    padding-left: 30px;
+}
+
+.comm-page-detail-701 .recordHomePrimaryContent a.tabHeader {
+    padding-top: 16px;
+}
+
+.comm-page-detail-701 .recordHomeSecondaryContent {
+    margin-top: 29px;
+}
+
+/* Accounts */
+
+.comm-page-detail-001 .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
+    background: var(--mon-footer-color) !important;
+    position: fixed;
+    /* margin-top: -50px !important; */
+    border-radius: 0px !important;
+    margin: 0 -14px;
+    z-index: 100;
+    transition: height 0.2s ease-in-out;
+    /* transition: height 0.5s ease-in-out; */
+    top: -1px;
+    height: 105px !important;
+}
+.comm-page-detail-001 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
+    height: 0px !important;
+    transition: height 0.2s ease-in-out;
+    margin-top: -90px;
+}
+
+.comm-page-detail-001 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row li {
+    visibility: hidden;
+}
+
+.comm-page-detail-001 .siteforceSldsOneColLayout.siteforceContentArea {
+    margin-top: 170px;
+    transition: all 0.2s ease-in-out;
+}
+
+.comm-page-detail-001 .recordHomePrimaryContent ul.tabs__nav {
+    position: fixed;
+    top: 104px;
+    left: 0;
+    background: #ccdef9;
+    width: 100%;
+    margin-top: -3px;
+    z-index: 90;
+    height: 46px;
+    padding-left: 30px;
+}
+
+.comm-page-detail-001 .recordHomePrimaryContent a.tabHeader {
+    padding-top: 16px;
+}
+
+.comm-page-detail-001 .recordHomeSecondaryContent {
+    margin-top: 29px;
+}

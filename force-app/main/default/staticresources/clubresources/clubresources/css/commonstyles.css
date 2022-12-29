@@ -399,6 +399,8 @@ span.countSortedByFilteredBy {
 
 .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout {
     background: #254c74b8 !important;
+    top: 100px;
+    height: 212px !important;
 }
 
 .slds-page-header.slds-page-header_record-home.forceHighlightsStencilDesktop.forceRecordLayout * {
@@ -429,6 +431,7 @@ ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
     margin-left: -31px;
     margin-right: -31px;
     padding-left: 30px;
+    height: 93px;
 }
 
 .comm-page-detail-500 ul.slds-form.slds-form_stacked.slds-grid.slds-page-header__detail-row {
@@ -480,7 +483,7 @@ svg.slds-icon.slds-icon_x-small[data-key="search"] {
 }
 
 .recordHomeSecondaryContent {
-    margin-top: 52px;
+    margin-top: 51px;
 }
 
 /* Related List => Cases Page */
@@ -930,12 +933,23 @@ button.slds-button.slds-button_brand.cuf-commentSubmit {
 }
 
 .comm-page-detail-005 .userHeaderDetail.overflowHidden.slds-grid.slds-m-bottom--xx-small {
-    border-radius: 82px 5px 5px 35px;
+    border-radius: 82px 5px 5px 82px;
 }
 
 .comm-page-detail-005 img.circularPhoto {
-    margin-top: -24px;
-    margin-left: -24px;
+    margin-top: -25px;
+    margin-left: -25px;
+    border: 1px solid #e5e5e5;
+}
+
+.comm-page-detail-005 .slds-form-element__control.slds-grid.itemBody {
+    margin-top: -10px;
+    padding-bottom: 18px;
+}
+
+.comm-page-detail-005
+    .slds-form-element.slds-form-element_readonly.slds-grow.slds-hint-parent.override--slds-form-element {
+    margin-top: -6px;
 }
 
 /* User Profile Detail Banner */

@@ -1,6 +1,7 @@
 import { LightningElement, track, api, wire } from 'lwc';
 import myResource from '@salesforce/resourceUrl/clubresources';
 import heroInfoController from '@salesforce/apex/heroInfoController.heroInfoController';
+import { loadStyle, loadScript } from 'lightning/platformResourceLoader';
 
 export default class CustomHero extends LightningElement {
 
@@ -21,7 +22,8 @@ export default class CustomHero extends LightningElement {
     @track testListViewManager;
     @track accountList = [];
     @track contactItem;
-
+    @track contactDetailHeader;
+    
 
 
     connectedCallback() {
@@ -37,9 +39,9 @@ export default class CustomHero extends LightningElement {
             this.backgroundImage = this.template.querySelectorAll('.std-hero-container')[0];
             this.stdHeroOverlay = this.template.querySelectorAll('.std-hero-overlay')[0];
             this.stdHeroContainer = this.template.querySelectorAll('.std-hero-container')[0];
-            // this.monFooterContainer = this.template.querySelectorAll('.mon-footer-container')[0];
-            // this.testListViewManager = this.template.querySelectorAll('.test-listViewManager')[0];
         }, 100)
+
+        let showHeaderData = false;
 
         window.addEventListener('scroll', env => {
             //Background Parallax
@@ -55,7 +57,7 @@ export default class CustomHero extends LightningElement {
             // this.testListViewManager.style.marginTop = ((window.scrollY * 0.15) + 'px')
 
             //Hero Text
-            if (window.scrollY >= 105) {
+            if (window.scrollY > 105) {
                 this.contentCaptionCustomElem.classList.remove('delay08');
                 this.contentCaptionCustomElem.classList.replace('slide-in-bottom-anim', 'slide-out-bottom-anim');
                 this.contentTitleCustomElem.classList.replace('delay07', 'delay01');
@@ -67,6 +69,15 @@ export default class CustomHero extends LightningElement {
                 this.contentTitleCustomElem.classList.replace('slide-out-bottom-anim', 'slide-in-bottom-anim');
                 this.contentSubtitleCustomElem.classList.replace('slide-out-bottom-anim', 'slide-in-bottom-anim');
             }
+
+            if (window.scrollY > 330) {
+                showHeaderData = true;
+                loadStyle(this, myResource + '/clubresources/css/headerdetail.css');
+            } else if (window.scrollY < 330 && showHeaderData) {
+                showHeaderData = false;
+                loadStyle(this, myResource + '/clubresources/css/headerdetailreset.css');
+            }
+
         });
 
     }
