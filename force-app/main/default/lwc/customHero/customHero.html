@@ -1,9 +1,58 @@
 <template>
     <div class="std-hero-container" style={backImg}></div>
-    <div class="std-hero-overlay"></div>
-    <div class="std-hero-content">
+    <template if:true={isDefaultPage}>
+        <div class="std-hero-overlay" style={overlayColorStyle}></div>
+    </template>
+    <!-- <template if:true={isDetailPage}>
+        <div class="std-hero-overlay" style={overlayColorStyle}></div>
+    </template> -->
+    <template if:true={isHomePage}>
+        <div class="std-hero-container-home-anim">
+            <div class="std-hero-container-anim clouds-move-anim" style={backImgAnim}></div>
+        </div>
+        <div class="std-hero-overlay-home" style={overlayColorStyle}></div>
+    </template>
+    <template if:true={isProductPage}>
+        <div class="std-hero-overlay-prod" style={overlayColorStyle}></div>
+        <div class="std-hero-container-prod">
+            <div class="std-hero-container-prod-anim" style={backProdAnim}></div>
+        </div>
+    </template>
+    <template if:true={isDetailPage}>
+        <div class="std-hero-overlay-detail" style={overlayColorStyle}></div>
+    </template>
+    <template if:true={isProductDetailPage}>
+        <div class="std-hero-container-home">
+            <div class="std-hero-container-anim clouds-move-anim" style={backImgAnim}></div>
+        </div>
+        <div class="std-hero-overlay-home std-hero-overlay-prod" style={overlayColorStyle}></div>
+    </template>
+    <div class="std-hero-content"> 
         <h1 class="contentCaptionCustom slide-in-bottom-anim delay08">{contentCaptionCustom}</h1>
         <h2 class="contentTitleCustom slide-in-bottom-anim delay07">{contentTitleCustom}</h2>
         <p class="contentSubtitleCustom slide-in-bottom-anim delay06">{contentSubtitleCustom}</p>
     </div>
 </template>
+
+
+<!-- <c-custom-hero data-data-rendering-service-uid="78" data-aura-rendered-by="23:2;a" c-customhero_customhero-host=""><div c-customhero_customhero="" class="std-hero-container" style="background-image: url(&quot;/resource/1672944775000/clubresources/clubresources/images/event-opt.jpeg&quot;);background-repeat-x: repeat;background-position: 0px 0px;background-size: 87%;background-position-x: 1271px;background-position-y: -330px;"></div><div c-customhero_customhero="" class="std-hero-overlay" style="background: linear-gradient(180deg, rgb(0 0 0 / 43%) 0%,rgb(0 178 255 / 70%) 100%) !important;"></div><div c-customhero_customhero="" class="std-hero-content" style="
+    display: flex;
+">
+    <div class="video-cont" style="
+    width: 50.53%;
+    margin-top: -53px;
+">
+    <h1 c-customhero_customhero="" class="contentCaptionCustom slide-in-bottom-anim">Event</h1><h2 c-customhero_customhero="" class="contentTitleCustom slide-in-bottom-anim delay01">Detail</h2><p c-customhero_customhero="" class="contentSubtitleCustom slide-in-bottom-anim delay02" style="
+    max-width: 90%;
+">We specialize in the construction of unique and exclusive properties.</p>
+    </div>
+<iframe width="700" height="395" src="https://www.youtube.com/embed/hr2Kn6XXjiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-dashlane-frameid="2310" style="
+    margin-top: -53px;
+    border: 5px dotted #001d8c00;
+    border-radius: 20px;
+    z-index: 100;
+    -webkit-box-shadow: 0px 0px 91px 10px rgba(255,255,255,0.52);
+    -moz-box-shadow: 0px 0px 91px 10px rgba(255,255,255,0.52);
+    box-shadow: 0px 0px 91px 10px rgb(255 255 255 / 35%);
+"></iframe>
+</div></c-custom-hero> -->

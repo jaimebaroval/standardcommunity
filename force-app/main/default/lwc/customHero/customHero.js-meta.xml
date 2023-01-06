@@ -20,11 +20,13 @@
             default="{!recordId}" />
             <property name="volume" type="Integer"/>
             <property name="parallax" type="Integer"/>
-            <property name="objectPage" type="String" datasource="home,event,incidencias,contacts,account,inscripcion,campaign"/>
+            <property name="objectPage" type="String" datasource="home,event,incidencias,contacts,account,inscripcion,campaign,product,task"/>
             <property name="contentCaptionCustom" type="String"/>
             <property name="contentTitleCustom" type="String"/>
             <property name="contentSubtitleCustom" type="String"/>
             <property name="heroHeight" type="String"/>
+            <property name="overlayColor" type="String"/>
+            <property name="filterHue" type="String"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

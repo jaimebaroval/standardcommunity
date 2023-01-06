@@ -5,16 +5,132 @@
     top: 0;
     left: 0;
     width: 100%;
+    filter: saturate(1.2);
+    /* transition: all 0.01s linear; */
+}
+
+.std-hero-container-anim {
+    background-size: cover;
+    height: calc(var(--hero-height) - 2px);
+    position: absolute;
+    top: 0;
+    width: 150%;
+    left: 0px;
+    /* filter: revert; */
+    filter: drop-shadow(122px -79px 55px);
+    /* transition: all 0.01s linear; */
+}
+
+/* .std-hero-container-prod-anim {
+    background-size: contain;
+    height: 450px;
+    position: absolute;
+    top: 198px;
+    width: 270%;
+    left: -1245px;
+    background-repeat-y: no-repeat;
+} */
+
+/* .std-hero-container-prod-anim {
+    background-size: contain;
+    height: 380px;
+    position: absolute;
+    top: 268px;
+    width: 270%;
+    left: -785px;
+    background-repeat-y: no-repeat;
+} */
+
+.std-hero-container-home {
+    width: 100vw;
+    position: absolute;
+    height: 440px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    /* transition: all 0.01s linear; */
+}
+
+.std-hero-container-home-anim {
+    width: 100vw;
+    position: absolute;
+    height: calc(var(--hero-height) - 2px);
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    /* transition: all 0.01s linear; */
+}
+
+.std-hero-container-detail {
+    width: 100vw;
+    position: absolute;
+    height: 440px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    /* transition: all 0.01s linear; */
+}
+
+.std-hero-container-prod {
+    width: 100vw;
+    height: 400px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 248px;
+    /* transition: all 0.01s linear; */
+}
+
+.std-hero-container-prod-anim {
+    background-size: contain;
+    height: 400px;
+    position: absolute;
+    top: 0px;
+    width: 270%;
+    left: -1879px;
+    background-repeat-y: no-repeat;
+    /* transition: all 0.01s linear; */
 }
 
 .std-hero-overlay {
     position: absolute;
     height: calc(var(--hero-height) - 2px);
-    background: linear-gradient(180deg, rgb(0 0 0 / 35%) 0%, var(--hero-overlay-color)) !important;
+    background: linear-gradient(180deg, rgb(0 0 0 / 30%) 0%, var(--hero-overlay-color)) !important;
     opacity: var(--hero-overlay-opacity);
     top: 0;
     left: 0;
     width: 100%;
+}
+
+.std-hero-overlay-home {
+    position: absolute;
+    height: calc(var(--hero-height) - 2px);
+    background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, var(--hero-overlay-color)) !important;
+    opacity: var(--hero-overlay-opacity);
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.std-hero-overlay-detail {
+    position: absolute;
+    height: 440px;
+    background: linear-gradient(180deg, rgb(0 0 0 / 30%) 0%, rgb(0 178 255 / 60%) 100%) !important;
+    opacity: var(--hero-overlay-opacity);
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.std-hero-overlay-prod {
+    position: absolute;
+    height: calc(var(--hero-height) - 2px);
+    /* background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(255 0 0 / 53%) 100%) !important; */
+    opacity: var(--hero-overlay-opacity);
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(39 0 255 / 53%) 100%) !important;
 }
 
 .std-hero-content {
@@ -52,4 +168,16 @@ p.contentSubtitleCustom {
     color: white;
     max-width: var(--hero-subtitle-width);
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
+}
+
+/* 
+********************************
+MEDIA QUERY MOBILE 480px
+********************************
+*/
+
+@media only screen and (max-width: 485px) {
+    .std-hero-content {
+        width: unset;
+    }
 }

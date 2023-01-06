@@ -1,59 +1,108 @@
-.mon-footer-container {
-    width: 100%;
-    height: 95px;
-    background-color: var(--footer-color);
-    border-top: 1px solid var(--light-primary);
+.footer {
+    padding-top: 100px;
 }
 
-.mon-footer-content {
+.nos-gusta-text {
+    color: white;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.std-footer-container {
+    width: 100%;
+    min-height: 146px;
+    background-color: var(--mon-footer-color);
+}
+
+.std-footer-content {
     max-width: 1440px;
     margin: auto;
-    padding: 20px 0 8px;
+    padding: 31px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /* margin-bottom: -20px; */
+    align-items: flex-end;
 }
 
-.mon-footer-content-logo-info {
+.std-footer-content-logo-info {
     display: flex;
     align-items: center;
 }
 
-.mon-footer-content-info {
+.std-footer-content-info {
     color: white;
     margin-left: 60px;
 }
 
-.mon-footer-info-subtitle {
+.std-footer-info-subtitle {
     color: rgb(156, 156, 156);
 }
 
-.mon-footer-content-social-privacity {
+.std-footer-content-social-privacity {
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: flex-end;
 }
 
-.mon-footer-content-social-privacity img {
+.std-footer-content-social-privacity img {
     width: 70%;
     margin-bottom: 20px;
 }
 
-p.mon-footer-content-privacity {
+p.std-footer-content-privacity {
     color: white;
 }
 
-.mon-footer-content-privacity-separator {
-    color: var(--secondary-color);
+.std-footer-content-privacity-separator {
+    color: var(--mon-secondary-color);
     padding: 0 5px;
 }
 
-.mon-footer-content-logo img {
-    width: 180px;
+.std-footer-content-logo img {
+    width: 200px;
 }
 
-.mon-footer-info {
-    color: lightgrey;
+/* 
+********************************
+MEDIA QUERY MOBILE 480px
+********************************
+*/
+
+@media only screen and (max-width: 485px) {
+    .std-footer-content {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .std-footer-content-social-privacity {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    p.std-footer-content-privacity {
+        text-align: center;
+        font-size: 2.8vw;
+    }
+
+    .std-footer-content-info {
+        color: white;
+        margin-left: 20px;
+        font-size: 12px;
+    }
+
+    .nos-gusta-text[c-footerStylesMon_footerStylesMon] {
+        font-size: 10px;
+    }
+
+    .std-footer-content-logo-info[c-footerStylesMon_footerStylesMon] {
+        align-items: flex-start;
+    }
+
+    .std-footer-content-logo {
+        margin-top: -8px;
+    }
 }
